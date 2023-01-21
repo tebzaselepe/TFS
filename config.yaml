@@ -1,0 +1,17 @@
+cookie:
+  expiry_days: 1
+  key: some_signature_key
+  name: some_cookie_name
+credentials:
+  usernames:
+    tebza:
+      email: tebogo.selepe001@gmail.com
+      name: tebogo
+      password: $2b$12$7vVmqmD.lVE76LlxQwGZxOw1lzQVZQ6U889.cTp2.csE8Pc0c2JSm
+    ntavha:
+      email: nnemkula@gmail.com
+      name: ntavha
+      password: $2b$12$e8YMx1KyJJfTZU5rh5PLge49zwmEkHel/R8/yQSa9YwkJwsEFQkRy
+preauthorized:
+  emails:
+  - tebogo.selepe001@gmail.com
