@@ -1,3 +1,7 @@
 import streamlit as st
 
-st.balloons()
+def main():
+    st.balloons()
+
+if __name__ == "__main__":
+    main()
