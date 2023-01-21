@@ -1,2 +1,5 @@
 streamlit
 pyyaml
+bcrypt
+PyJWT
+extra-streamlit-components
