@@ -2,14 +2,13 @@ import streamlit as st
 import yaml
 from yaml.loader import SafeLoader
 import streamlit.components.v1 as components
-
 from hasher import Hasher
 from authenticate import Authenticate
+import streamlit_extras as stx
+from db_fxn import *
 
 def main():
-    # hashed_passwords = Hasher(['123', '123']).generate()
-    # st.write(hashed_passwords)
-    # Loading config file
+    # hashed_passwords = Hasher(['xxx', 'xxx']).generate()
     with open('./config.yaml') as file:
         config = yaml.load(file, Loader=SafeLoader)
 
@@ -27,9 +26,11 @@ def main():
         authenticator.logout('Logout', 'main')
         st.write(f'Welcome *{name}*')
         st.title('Some content')
+        st.write(show_existing_client_data())
     elif authentication_status == False:
         st.error('Username/password is incorrect')
     elif authentication_status == None:
         st.warning('Please enter your username and password')
+        
 if __name__ == "__main__":
     main()
