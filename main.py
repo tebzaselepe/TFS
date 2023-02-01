@@ -4,7 +4,6 @@ from yaml.loader import SafeLoader
 import streamlit.components.v1 as components
 from hasher import Hasher
 from authenticate import Authenticate
-import streamlit_extras as stx
 from db_fxn import *
 
 def main():
