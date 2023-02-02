@@ -4,3 +4,4 @@ bcrypt
 PyJWT
 extra-streamlit-components
 pymongo
+deta
