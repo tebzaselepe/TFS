@@ -16,33 +16,27 @@ import pymongo
 from pymongo import MongoClient
 import random
 import string
-from deta import Deta
 
-deta = Deta('d0uymudg_Ti9ED5mPgiUt6k7WMeNK4wQPPBP7nE4R') # configure your Deta project
-db = deta.Base('test_DB')
+# mongodb+srv://cluster0.sfcysmi.mongodb.net/?authSource=%24external&authMechanism=MONGODB-X509&retryWrites=true&w=majority
+# connection_str = f"mongodb+srv://cluster0.sfcysmi.mongodb.net/test?tls=true&tlsCertificateKeyFile=C%3A%5CUsers%5CPfunzo%5CDesktop%5Cstreamlit_mongo%5CX509-cert-3952646099818541177.pem&tlsAllowInvalidCertificates=true&tlsAllowInvalidHostnames=true&authMechanism=MONGODB-X509&authSource=%24external"
+connection_str = "mongodb://localhost:27017"
+client = MongoClient(connection_str)
+
+db = client.tfs_db
+clients = db.client_data
+employees = db.emps
 
 def generate_policy_number():
     digits = string.digits
     policy_number = "TFS_" + ''.join(random.choice(digits) for i in range(10))
     return policy_number
 
-# print(generate_policy_number())
-
 def generate_employee_id():
     letters = string.ascii_letters
     employee_id = ''.join(random.choice(letters + string.digits) for i in range(10))
     return employee_id
 
-# print(generate_employee_id())
 
-# mongodb+srv://cluster0.sfcysmi.mongodb.net/?authSource=%24external&authMechanism=MONGODB-X509&retryWrites=true&w=majority
-# connection_str = f"mongodb+srv://cluster0.sfcysmi.mongodb.net/test?tls=true&tlsCertificateKeyFile=C%3A%5CUsers%5CPfunzo%5CDesktop%5Cstreamlit_mongo%5CX509-cert-3952646099818541177.pem&tlsAllowInvalidCertificates=true&tlsAllowInvalidHostnames=true&authMechanism=MONGODB-X509&authSource=%24external"
-# connection_str = "mongodb://localhost:27017"
-# client = MongoClient(connection_str)
-
-# db = client.tfs_db
-# clients = db.client_data
-# employees = db.emps
 
 df = pd.read_csv( 
     "data.csv"
@@ -124,8 +118,8 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,id_photo,payment_method,beneficiary_names,beneficiary_phone,policy_type,policy_cover,policy_premium,pay_date,reminder_date,dependents):
-
+def insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,id_photo,payment_method,beneficiary_names,beneficiary_phone,policy_type,policy_cover,policy_premium,payment_date,reminder_date,age,dependents):
+    n_client = db.new_client_data
     client_document = {
         "first_name" : first_name,
         "last_name" : last_name,
@@ -135,27 +129,27 @@ def insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,
         "race" : race,
         "id_no" : id_no,
         "date_of_birth" : dob.isoformat(),
-        "age" : calculate_age(dob),
+        "age" : age,
         "photo_id" : id_photo,
         "reminder_date" : reminder_date,
         "premium" : policy_premium,
-        "pay_date" : pay_date,
+        "payment_date" : payment_date,
         "payment_method": payment_method,
         "has_paid": 'no',
         "beneficiary" : {
             "full_names" : beneficiary_names,
-            "contact_phone" : beneficiary_phone
+            "contact_phone" : beneficiary_phone,
         },
         "policy" : {
             "policy_number": generate_policy_number(),
             "type" : policy_type,
             "cover" : policy_cover,
-            "status" : determine_policy_status()
+            "status" : determine_policy_status(),
         },
         "dependents" : dependents
     }
-    db.put(client_document)
-    # client.insert_one(client_document)
+    # db.put(client_document)
+    n_client.insert_one(client_document)
     
 # def show_client_data():
 #     items = client.find()
@@ -177,8 +171,7 @@ def insert_emp_doc(first_name,last_name,email,password,role,status):
         "hire_date" : today,
         "status" : status
     }
-    db.put(emp_doc)
-    # inserted_id =  employees.insert_one(emp_doc).inserted_id
+    inserted_id =  employees.insert_one(emp_doc).inserted_id
 
 def calculate_age(dob):
     today = datetime.datetime.today()
@@ -187,21 +180,60 @@ def calculate_age(dob):
         age -= 1
     return age
 
-def calculate_policy_premium(policy_type, num_dependants):
-    if policy_type == "silver":
-        if num_dependants == 0:
-            return 100.00
+def calculate_premiums(tier, members, dob):
+    from datetime import datetime, timedelta
+    
+    # Function to calculate the age from the date of birth
+    def calculate_age_(dob):
+        today = datetime.now()
+        age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
+        return age
+    
+    # Dictionary to store the cost for each tier
+    tier_cost = {'silver': 1000, 'gold': 1500, 'platinum': 2000}
+    
+    # Cost for each tier
+    cost = tier_cost.get(tier.lower(), 0)
+    
+    # Calculate the age
+    age = calculate_age_(dob)
+    
+    # Additional cost for members
+    if age < 65:
+        if members > 1:
+            cost += (members - 1) * 500
+    else:
+        cost = cost * 1.5
+        if members > 1:
+            cost += (members - 1) * 500
+        
+    return cost
+
+
+def calculate_premium(tier, cover, age, members):
+    # Dictionary to store the cost for each tier and cover
+    tier_cost = {'silver': {'single': {'age_64': 90, 'age_65': 100}, 'family': 110},
+                 'gold': {'single': {'age_64': 110, 'age_65': 120}, 'family': 130},
+                 'platinum': {'single': {'age_64': 130, 'age_65': 140}, 'family': 160}}
+    
+    # Cost for each tier and cover
+    cost = tier_cost.get(tier.lower(), {'single': {'age_64': 0, 'age_65': 0}, 'family': 0}).get(cover.lower(), 0)
+    
+    # Check age to determine the cost of single cover
+    if cover.lower() == 'single':
+        if age <= 64:
+            cost = cost['age_64']
         else:
-            return 150.00
-    elif policy_type == "gold":
-        if num_dependants == 0:
-            return 200.00
+            cost = cost['age_65']
+    
+    # Additional cost for members
+    if members > 3:
+        cost += (members - 3) * 20
     else:
-        return 300.00        
-    if num_dependants == 0:
-        return 300.00
-    else:
-        return 450.00        
+        cost += (members * 500)
+        
+    return cost
+# premium = calculate_premium('gold', 'single', 68, 2)
 
 # def show_existing_client_data():
 #     items = clients.find()

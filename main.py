@@ -3,6 +3,7 @@ import yaml
 from yaml.loader import SafeLoader
 import streamlit.components.v1 as components
 from hasher import Hasher
+from datetime import datetime
 from authenticate import Authenticate
 from db_fxn import *
 
@@ -42,6 +43,7 @@ def main():
             last_name = st.text_input("last name", value="selepe", key='ln')
             dob = st.date_input("Date of Birth", key='dob')
             id_no = st.text_input("ID Number", value=1130125766082, max_chars=13, key='idNo')
+            age = calculate_age(dob)
             email = st.text_input("Email", value="tebza.mre@gmail.com", key='mail')
             phone_no = st.text_input("Mobile number", value='+27', max_chars=12, key='fone')
             gender = st.selectbox("Gender", ('Male', 'Female','Transgender', 'Rather not say'), key='gender')
@@ -56,11 +58,11 @@ def main():
             if taken_id_photo is not None:
                 id_photo = taken_id_photo
             race = st.selectbox("Ethnecity", ('African', 'Colored', 'Indian', 'Asian', 'Other' 'White'), key='race')
-            pay_date = st.date_input("Payment date", key='payDate').isoformat()
+            payment_date = st.date_input("Payment date", key='payDate').isoformat()
             st.markdown('---')
             beneficiary_names = st.text_input("Beneficiary's First and Last Names", value="kgomotso selepe")
             beneficiary_phone = st.text_input("Beneficiary's contact number", value='+27', max_chars=12)
-            policy_type = st.radio("Policy type", ('Gold', 'Silver', 'Platinum'), horizontal=False)
+            policy_type = st.radio("Policy type", ('Gold', 'Silver', 'Platinum'), horizontal=True)
             policy_cover = st.radio("Policy cover", ('single', 'family'))
             num_dependents = 0
             payment_method = st.radio("Payment method", ('Cash', 'SASSA','Direct-Bank'), horizontal=False)
@@ -75,17 +77,17 @@ def main():
                     dependent_dob = st.date_input(f"Dependent {i+1} Date of Birth")
                     dependent_age = calculate_age(dependent_dob)
                     dependents.append({"name" : dependent_names ,"id" : dependent_id , "age" : dependent_age})
-            policy_premium = calculate_policy_premium(policy_type, num_dependents)
+            policy_premium = calculate_premiums(policy_type, num_dependents,dob)
                     
                     
             
-        btn_submit = st.button('submit')
-        if btn_submit:
-            if insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,id_photo,payment_method,beneficiary_names,beneficiary_phone,policy_type,policy_cover,policy_premium,pay_date,reminder_date,dependents):
-                st.success('success')
-                st.balloons()
-            else:
-                st.warning('fail')
+            btn_submit = st.button('submit')
+            if btn_submit:
+                if insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,id_photo,payment_method,beneficiary_names,beneficiary_phone,policy_type,policy_cover,policy_premium,payment_date,reminder_date,age,dependents):
+                    st.success('success')
+                    st.balloons()
+                else:
+                    st.warning('fail')
         with tab3:
             
             st.dataframe(filter_dataframe(df))
