@@ -1,12 +1,18 @@
 import streamlit as st
 import yaml
 from yaml.loader import SafeLoader
-import streamlit.components.v1 as components
 from hasher import Hasher
 from datetime import datetime
 from authenticate import Authenticate
 from streamlit_option_menu import option_menu
 from db_fxn import *
+    
+# st.set_page_config(page_title="Thoho Funeral Services", page_icon="🐞", layout="wide")
+
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+local_css("style.css")
 
 def read():
     df = pd.read_csv( 
@@ -88,7 +94,7 @@ def main():
                 with pol_col3:
                     payment_method = st.radio("Payment method", ('Cash', 'SASSA','Direct-Bank'), horizontal=False)
                 if policy_cover == 'family':
-                    num_dependents = st.number_input("Number of Dependents", min_value=1, step=1, max_value=6, help='minimum of 1, maximum of 6 dependants')
+                    num_dependents = st.number_input("Number of Dependents", min_value=1, step=1, max_value=6, help='maximum of 3 dependants, then extra charges for extended additional members')
                     
             st.markdown('---')
             dependents = []
@@ -107,14 +113,25 @@ def main():
                 dependents.append({"name" : dependent_names ,"id" : dependent_id , "age" : dependent_age, "relation": relation})
 
             policy_premium = calculate_premium(policy_type, policy_cover, age, num_dependents)
-
-            submit_button = st.button('submit')
-            if submit_button:
-                insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,id_photo,payment_method,beneficiary_names,beneficiary_phone,ben_relation,policy_type,policy_cover,policy_premium,payment_date,reminder_date,age,dependents)
-                st.success('success')
-                st.balloons()
-                
-        st.dataframe(filter_dataframe(df))
+            
+            sub1,sub2 = st.columns(2)
+            
+            with sub1:
+                has_paid = st.checkbox('Has paid the amount due upon signup?', key='has_paid', help='Amount due today')
+            with sub2:
+                has_agreed = st.checkbox('Do you agree to our Terms & Conditions?', key='has_agreed_terms', help='TFS Tcs & Cs to be read out by the sales rep')
+            # submit_button = st.button('submit', disabled=True, key='submit_client')
+            if has_agreed is True:
+                submit_button = st.button('submit', disabled=False, key='submit_client')
+                if submit_button:
+                    insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,id_photo,payment_method,beneficiary_names,beneficiary_phone,ben_relation,policy_type,policy_cover,policy_premium,payment_date,reminder_date,age,has_paid,dependents)
+                    st.success('success')
+                    st.balloons()
+            else:
+                submit_button = st.button('submit', disabled=True, key='submit_client')
+        
+        if selected == "Data Visualization":
+            st.dataframe(filter_dataframe(df))
     elif authentication_status == False:
         st.error('Username/password is incorrect')
     elif authentication_status == None:

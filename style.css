@@ -1,0 +1,10 @@
+.stAlert > div {
+    border: 1px solid #6faadc33;
+    width: max-content;
+    margin: auto;
+    background-color: #6faadc00;
+}
+
+footer {
+    display: none;
+}
