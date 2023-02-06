@@ -10,8 +10,6 @@ from pandas.api.types import (
 )
 import streamlit_book as stb
 
-# stb.render_file('admin\charts.py')
-
 def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     """
     Adds a UI on top of a dataframe to let viewers filter columns

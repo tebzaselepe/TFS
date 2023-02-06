@@ -1,30 +1,56 @@
 import streamlit as st
+import pandas as pd
 import os
 import pprint
 import datetime
 from datetime import date, timedelta
-import pandas as pd
 import uuid
+import pymongo
+from pymongo import MongoClient
 from pandas.api.types import (
     is_categorical_dtype,
     is_datetime64_any_dtype,
     is_numeric_dtype,
     is_object_dtype,
 )
-import datetime
-import pymongo
-from pymongo import MongoClient
 import random
 import string
 
-# mongodb+srv://cluster0.sfcysmi.mongodb.net/?authSource=%24external&authMechanism=MONGODB-X509&retryWrites=true&w=majority
-# connection_str = f"mongodb+srv://cluster0.sfcysmi.mongodb.net/test?tls=true&tlsCertificateKeyFile=C%3A%5CUsers%5CPfunzo%5CDesktop%5Cstreamlit_mongo%5CX509-cert-3952646099818541177.pem&tlsAllowInvalidCertificates=true&tlsAllowInvalidHostnames=true&authMechanism=MONGODB-X509&authSource=%24external"
-connection_str = "mongodb://localhost:27017"
-client = MongoClient(connection_str)
+# Initialize connection.
+# Uses st.experimental_singleton to only run once.
+@st.experimental_singleton
+def init_connection():
+    # return pymongo.MongoClient(**st.secrets["mongo"])
+    return pymongo.MongoClient("mongodb://localhost:27017")
+client = init_connection()
 
-db = client.tfs_db
-clients = db.client_data
-employees = db.emps
+try:
+# Uses st.experimental_memo to only rerun when the query changes or after 10 min.
+    @st.experimental_memo(ttl=600)
+    def get_data():
+        db = client.tfs_db
+        items = db.new_client_data.find()
+        items = list(items)  # make hashable for st.experimental_memo
+        return items
+    items = get_data()
+    
+    # @st.experimental_memo(ttl=600)
+    def get_client_collection():
+        db = client.tfs_db
+        # items = db.new_client_data.find()
+        items = db['new_client_data']
+        st.write(items)
+        return items
+    new_client_collection = get_client_collection()
+    
+    
+except Exception:
+    st.warning("Unable to connect to server.")
+
+# st.write(items)
+# query_df =  pd.DataFrame(items)
+# st.dataframe(query_df)
+# employees = db.emps
 
 def generate_policy_number():
     digits = string.digits
@@ -35,8 +61,6 @@ def generate_employee_id():
     letters = string.ascii_letters
     employee_id = ''.join(random.choice(letters + string.digits) for i in range(10))
     return employee_id
-
-
 
 df = pd.read_csv( 
     "data.csv"
@@ -117,9 +141,8 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                     df = df[df[column].str.contains(user_text_input, na=False)]
     return df
 
-
-def insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,id_photo,payment_method,beneficiary_names,beneficiary_phone,ben_relation,policy_type,policy_cover,policy_premium,payment_date,reminder_date,age,dependents):
-    n_client = db.new_client_data
+def insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,id_photo,payment_method,beneficiary_names,beneficiary_phone,ben_relation,policy_type,policy_cover,policy_premium,payment_date,reminder_date,age,has_paid,dependents):
+    clients = get_client_collection()
     client_document = {
         "first_name" : first_name,
         "last_name" : last_name,
@@ -135,7 +158,7 @@ def insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,
         "premium" : policy_premium,
         "payment_date" : payment_date,
         "payment_method": payment_method,
-        "has_paid": 'no',
+        "has_paid": has_paid,
         "beneficiary" : {
             "full_names" : beneficiary_names,
             "contact_phone" : beneficiary_phone,
@@ -149,8 +172,7 @@ def insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,
         },
         "dependents" : dependents
     }
-    # db.put(client_document)
-    n_client.insert_one(client_document)
+    clients.insert_one(client_document)
     
 # def show_client_data():
 #     items = client.find()
