@@ -1,2 +1,13 @@
 .streamlit
 .streamlit/secrets.toml
+.env
+__pycache__/authenticate.cpython-311.pyc
+__pycache__/authenticate.cpython-311.pyc
+__pycache__/authenticate.cpython-311.pyc
+X509-cert-3952646099818541177.pem
+X509-cert-8217658088935252207.pem
+__pycache__/authenticate.cpython-311.pyc
+__pycache__/db_fxn.cpython-311.pyc
+__pycache__/exceptions.cpython-311.pyc
+__pycache__/hasher.cpython-311.pyc
+__pycache__/utils.cpython-311.pyc
