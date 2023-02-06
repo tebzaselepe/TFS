@@ -118,7 +118,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,id_photo,payment_method,beneficiary_names,beneficiary_phone,policy_type,policy_cover,policy_premium,payment_date,reminder_date,age,dependents):
+def insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,id_photo,payment_method,beneficiary_names,beneficiary_phone,ben_relation,policy_type,policy_cover,policy_premium,payment_date,reminder_date,age,dependents):
     n_client = db.new_client_data
     client_document = {
         "first_name" : first_name,
@@ -139,6 +139,7 @@ def insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,
         "beneficiary" : {
             "full_names" : beneficiary_names,
             "contact_phone" : beneficiary_phone,
+            "relation" : ben_relation,
         },
         "policy" : {
             "policy_number": generate_policy_number(),
@@ -188,37 +189,16 @@ def calculate_premiums(tier, members, dob):
         today = datetime.now()
         age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
         return age
-    
-    # Dictionary to store the cost for each tier
-    tier_cost = {'silver': 1000, 'gold': 1500, 'platinum': 2000}
-    
-    # Cost for each tier
-    cost = tier_cost.get(tier.lower(), 0)
-    
-    # Calculate the age
-    age = calculate_age_(dob)
-    
-    # Additional cost for members
-    if age < 65:
-        if members > 1:
-            cost += (members - 1) * 500
-    else:
-        cost = cost * 1.5
-        if members > 1:
-            cost += (members - 1) * 500
-        
-    return cost
-
 
 def calculate_premium(tier, cover, age, members):
     # Dictionary to store the cost for each tier and cover
-    tier_cost = {'silver': {'single': {'age_64': 90, 'age_65': 100}, 'family': 110},
-                 'gold': {'single': {'age_64': 110, 'age_65': 120}, 'family': 130},
-                 'platinum': {'single': {'age_64': 130, 'age_65': 140}, 'family': 160}}
+    tier_cost = {'silver': {'single': {'age_64': 70, 'age_65': 90}, 'family': 110},
+                'gold': {'single': {'age_64': 100, 'age_65': 120}, 'family': 130},
+                'platinum': {'single': {'age_64': 130, 'age_65': 150}, 'family': 160}}
     
     # Cost for each tier and cover
     cost = tier_cost.get(tier.lower(), {'single': {'age_64': 0, 'age_65': 0}, 'family': 0}).get(cover.lower(), 0)
-    
+    st.write(members)
     # Check age to determine the cost of single cover
     if cover.lower() == 'single':
         if age <= 64:
@@ -229,11 +209,10 @@ def calculate_premium(tier, cover, age, members):
     # Additional cost for members
     if members > 3:
         cost += (members - 3) * 20
-    else:
-        cost += (members * 500)
+    # elif members <= 3:
+    #     cost += (members * 500)
         
     return cost
-# premium = calculate_premium('gold', 'single', 68, 2)
 
 # def show_existing_client_data():
 #     items = clients.find()

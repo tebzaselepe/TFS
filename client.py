@@ -74,4 +74,4 @@ for i in range(num_dependents):
         dependent_dob = st.date_input(f"Dependent {i+1} Date of Birth")
     dependent_age = calculate_age(dependent_dob)
     dependents.append({"name" : dependent_names ,"id" : dependent_id , "age" : dependent_age})
-policy_premium = calculate_policy_premium(policy_type, num_dependents)
+policy_premium = calculate_premium(policy_type, num_dependents)
