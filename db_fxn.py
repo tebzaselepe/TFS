@@ -1,27 +1,31 @@
-import streamlit as st
-import pandas as pd
 import os
+import streamlit as st
+import uuid
+import random
+import string
 import pprint
 import datetime
-from datetime import date, timedelta
-import uuid
 import pymongo
+import pandas as pd
+
 from pymongo import MongoClient
+from datetime import date, timedelta
 from pandas.api.types import (
     is_categorical_dtype,
     is_datetime64_any_dtype,
     is_numeric_dtype,
     is_object_dtype,
 )
-import random
-import string
 
 # Initialize connection.
 # Uses st.experimental_singleton to only run once.
 @st.experimental_singleton
 def init_connection():
     # return pymongo.MongoClient(**st.secrets["mongo"])
+    # mongodb+srv://tebogo:<password>@cluster0.sfcysmi.mongodb.net/?retryWrites=true&w=majority
     return pymongo.MongoClient("mongodb://localhost:27017")
+# mongodb+srv://cluster0.sfcysmi.mongodb.net/TFS_DB?tls=true&tlsCertificateKeyFile=C%3A%5CUsers%5CPfunzo%5CDesktop%5Cstreamlit_mongo%5CX509-cert-3952646099818541177.pem&authMechanism=MONGODB-X509&authSource=%24external
+
 client = init_connection()
 
 try:
@@ -34,7 +38,6 @@ try:
         return items
     items = get_data()
     
-    # @st.experimental_memo(ttl=600)
     def get_client_collection():
         db = client.tfs_db
         # items = db.new_client_data.find()
@@ -44,13 +47,15 @@ try:
     new_client_collection = get_client_collection()
     
     
+    
 except Exception:
     st.warning("Unable to connect to server.")
 
 # st.write(items)
 # query_df =  pd.DataFrame(items)
 # st.dataframe(query_df)
-# employees = db.emps
+
+
 
 def generate_policy_number():
     digits = string.digits
@@ -76,7 +81,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     Returns:
         pd.DataFrame: Filtered dataframe
     """
-    modify = st.checkbox("Add filters")
+    modify = st.checkbox("Add filters", key='mod')
 
     if not modify:
         return df
@@ -168,18 +173,20 @@ def insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,
             "policy_number": generate_policy_number(),
             "type" : policy_type,
             "cover" : policy_cover,
-            "status" : determine_policy_status(),
+            "status" : init_policy_status(),
         },
         "dependents" : dependents
     }
     clients.insert_one(client_document)
     
-# def show_client_data():
-#     items = client.find()
-#     items = list(items)
-#     return items
+def init_policy_status():
+      status = 'new'
+      return status
 
-def determine_policy_status():
+def update_policy_status(policy_no):
+    # TODO
+    # find policy to be updated using passed policy_no
+    # conditions that determine status i.e waiting periods etc
     status = 'new'
     return status
 
@@ -203,15 +210,6 @@ def calculate_age(dob):
         age -= 1
     return age
 
-def calculate_premiums(tier, members, dob):
-    from datetime import datetime, timedelta
-    
-    # Function to calculate the age from the date of birth
-    def calculate_age_(dob):
-        today = datetime.now()
-        age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
-        return age
-
 def calculate_premium(tier, cover, age, members):
     # Dictionary to store the cost for each tier and cover
     tier_cost = {'silver': {'single': {'age_64': 70, 'age_65': 90}, 'family': 110},
@@ -220,7 +218,7 @@ def calculate_premium(tier, cover, age, members):
     
     # Cost for each tier and cover
     cost = tier_cost.get(tier.lower(), {'single': {'age_64': 0, 'age_65': 0}, 'family': 0}).get(cover.lower(), 0)
-    st.write(members)
+
     # Check age to determine the cost of single cover
     if cover.lower() == 'single':
         if age <= 64:
@@ -231,12 +229,14 @@ def calculate_premium(tier, cover, age, members):
     # Additional cost for members
     if members > 3:
         cost += (members - 3) * 20
-    # elif members <= 3:
-    #     cost += (members * 500)
-        
     return cost
 
-# def show_existing_client_data():
-#     items = clients.find()
-#     items = list(items)
-#     return items
+def show_client_data():
+    items = client.find()
+    items = list(items)
+    return items
+
+def show_existing_client_data():
+    items = client.find()
+    items = list(items)
+    return items
