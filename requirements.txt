@@ -6,3 +6,4 @@ extra-streamlit-components
 pymongo
 deta
 streamlit_option_menu
+plotly
