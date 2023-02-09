@@ -5,6 +5,7 @@ from hasher import Hasher
 from datetime import datetime
 from authenticate import Authenticate
 from streamlit_option_menu import option_menu
+import plotly.express as px
 from db_fxn import *
     
 # st.set_page_config(page_title="Thoho Funeral Services", page_icon="🐞", layout="wide")
@@ -35,9 +36,9 @@ def main():
     # creating a login widget
     name, authentication_status, username = authenticator.login('Login', 'main')
     if authentication_status:
-        authenticator.logout('Logout', 'main')
-        st.write(f'Welcome *{name}*')
-        st.title('Some content')
+        authenticator.logout('Logout', 'sidebar')
+
+        st.title(f'Welcome back *{name}*')
         
         selected = option_menu(
         menu_title=None,
@@ -48,55 +49,48 @@ def main():
 
 # --- INPUT & SAVE PERIODS ---
         if selected == "Data Entry":
-
-            with st.expander('Principle member', expanded=True):
-                col1,col2 = st.columns(2)
-                id_photo = ""
+            # with st.expander('Principle member'):
+            st.subheader('Principle member')
+            col1,col2 = st.columns(2)
+            id_photo = ""
+            
+            with col1:
+                first_name = st.text_input("First name", value="Tebza")
+                id_no = st.text_input("ID Number", value=1130125766082, max_chars=13)
+                email = st.text_input("Email", value="tebza.mre@gmail.com")
+                gender = st.selectbox("Gender", ('Male', 'Female','Transgender', 'Rather not say'))
+                payment_date = st.date_input("Payment date").isoformat()
+            
                 
-                with col1:
-                    first_name = st.text_input("First name", value="Tebza")
-                    id_no = st.text_input("ID Number", value=1130125766082, max_chars=13)
-                    email = st.text_input("Email", value="tebza.mre@gmail.com")
-                    gender = st.selectbox("Gender", ('Male', 'Female','Transgender', 'Rather not say'))
-                    payment_date = st.date_input("Payment date").isoformat()
-                selected_id_photo_method = st.radio('Do you wish to upload an existing photo of your ID? or take a picture using camera?', ('Upload existing', 'Take a picture'))
-                if selected_id_photo_method == 'Upload existing':
-                    uploaded_id_photo = st.file_uploader('Upload ID photo')
-                    if uploaded_id_photo is not None:
-                        id_photo = uploaded_id_photo
-                else:
-                    taken_id_photo = st.camera_input(label='Take a picture of the ID photo', key=None, help='picture must be clear, well lit and not cropped', on_change=None, args=None, kwargs=None, disabled=False)
-                    if taken_id_photo is not None:
-                        id_photo = taken_id_photo
-                    
-                with col2:
-                    last_name = st.text_input("last name", value="selepe")
-                    dob = st.date_input("Date of Birth")
-                    age = calculate_age(dob)
-                    phone_no = st.text_input("Mobile number", value='+27', max_chars=12)
-                    race = st.selectbox("Ethnecity", ('African', 'Colored', 'Indian', 'Asian', 'Other' 'White'))
-                    reminder_date = st.date_input("Reminder date").isoformat()
-                st.markdown('---')
-                ben_col1,ben_col2, ben_col3 = st.columns(3)
-                with ben_col1:
-                    beneficiary_names = st.text_input("Beneficiary's First and Last Names", value="kgomotso selepe")
-                with ben_col2:
-                    beneficiary_phone = st.text_input("Beneficiary's contact number", value='+27', max_chars=12)
-                with ben_col3:
-                    ben_relation = st.text_input(f"Relation with the principle member", key='beneficiary_relation')
-            with st.expander('Dependants & Beneficiaries'):
-                pol_col1,pol_col2,pol_col3 = st.columns(3)
-                with pol_col1: 
-                    policy_type = st.radio("Policy type", ('silver', 'gold', 'platinum'), horizontal=False)
-                with pol_col2:
-                    policy_cover = st.radio("Policy cover", ('single', 'family'))
-                    num_dependents = 0
-                with pol_col3:
-                    payment_method = st.radio("Payment method", ('Cash', 'SASSA','Direct-Bank'), horizontal=False)
-                if policy_cover == 'family':
-                    num_dependents = st.number_input("Number of Dependents", min_value=1, step=1, max_value=6, help='maximum of 3 dependants, then extra charges for extended additional members')
-                    
+            with col2:
+                last_name = st.text_input("last name", value="selepe")
+                dob = st.date_input("Date of Birth")
+                age = calculate_age(dob)
+                phone_no = st.text_input("Mobile number", value='+27', max_chars=12)
+                race = st.selectbox("Ethnecity", ('African', 'Colored', 'Indian', 'Asian', 'Other' 'White'))
+                reminder_date = st.date_input("Reminder date").isoformat()
             st.markdown('---')
+            st.subheader('Beneficiary/Next of kin')
+            ben_col1,ben_col2, ben_col3 = st.columns(3)
+            with ben_col1:
+                beneficiary_names = st.text_input("Beneficiary's First and Last Names", value="kgomotso selepe")
+            with ben_col2:
+                beneficiary_phone = st.text_input("Beneficiary's contact number", value='+27', max_chars=12)
+            with ben_col3:
+                ben_relation = st.text_input(f"Relation with the principle member", key='beneficiary_relation')
+        # with st.expander('Dependants & Beneficiaries'):
+            st.subheader('Policy Cover/Type')
+            pol_col1,pol_col2,pol_col3 = st.columns(3)
+            with pol_col1: 
+                policy_type = st.radio("Policy type", ('silver', 'gold', 'platinum'), horizontal=False)
+            with pol_col2:
+                policy_cover = st.radio("Policy cover", ('single', 'family'))
+                num_dependents = 0
+            with pol_col3:
+                payment_method = st.radio("Payment method", ('Cash', 'SASSA','Direct-Bank'), horizontal=False)
+            if policy_cover == 'family':
+                num_dependents = st.number_input("Number of Dependents", min_value=1, step=1, max_value=6, help='maximum of 3 dependants, then extra charges for extended additional members')
+                    
             dependents = []
             dep_col1, dep_col2,dep_col3,dep_col4 = st.columns(4)
 
@@ -120,7 +114,7 @@ def main():
                 has_paid = st.checkbox('Has paid the amount due upon signup?', key='has_paid', help='Amount due today')
             with sub2:
                 has_agreed = st.checkbox('Do you agree to our Terms & Conditions?', key='has_agreed_terms', help='TFS Tcs & Cs to be read out by the sales rep')
-            # submit_button = st.button('submit', disabled=True, key='submit_client')
+
             if has_agreed is True:
                 submit_button = st.button('submit', disabled=False, key='submit_client')
                 if submit_button:
@@ -129,9 +123,75 @@ def main():
                     st.balloons()
             else:
                 submit_button = st.button('submit', disabled=True, key='submit_client')
-        
-        if selected == "Data Visualization":
-            st.dataframe(filter_dataframe(df))
+        elif selected == "Data Visualization":
+            selected_data = st.sidebar.selectbox('Selelct which data to filter', ('___', '📈 Existing Data', '🗃 New Data'))
+            if selected_data == '📈 Existing Data':                
+                city = st.sidebar.multiselect(
+                    "Select the City:",
+                    options=df["CITY"].unique(),
+                    default=df["CITY"].unique()
+                )
+
+                policy_type = st.sidebar.multiselect(
+                    "Select the Policy Type:",
+                    options=df["POLICY_TYPE"].unique(),
+                    default=df["POLICY_TYPE"].unique(),
+                )
+
+                policy_cover = st.sidebar.multiselect(
+                    "Select the Policy Cover:",
+                    options=df["POLICY_COVER"].unique(),
+                    default=df["POLICY_COVER"].unique(),
+                )
+
+                gender = st.sidebar.multiselect(
+                    "Select the Gender:",
+                    options=df["GENDER"].unique(),
+                    default=df["GENDER"].unique()
+                )
+
+                paid = st.sidebar.multiselect(
+                    "Select the paid the month:",
+                    options=df["HAS_PAID"].unique(),
+                    default=df["HAS_PAID"].unique()
+                )
+
+                df_selection = df.query(
+                    "HAS_PAID == @paid & POLICY_COVER == @policy_cover & POLICY_TYPE == @policy_type & GENDER == @gender"
+                )
+                
+                st.title(":bar_chart: Existing Client Data")
+                st.markdown("##")
+
+                # TOP KPI's
+                total_sales = int(df_selection["MONTHLY_PREMIUM"].sum())
+                st.subheader("Estimated Total Premiums:")
+                st.subheader(f"R {total_sales:,}")
+                
+                sales_by_product_line = (
+                    df_selection.groupby(by=["POLICY_TYPE"]).sum()[["MONTHLY_PREMIUM"]].sort_values(by="MONTHLY_PREMIUM")
+                )
+                st.dataframe(sales_by_product_line)
+                
+                fig_product_sales = px.bar(
+                    sales_by_product_line,
+                    x="MONTHLY_PREMIUM",
+                    y=sales_by_product_line.index,
+                    orientation="h",
+                    title="<b>Sales by Policy Type</b>",
+                    color_discrete_sequence=["#0083B8"] * len(sales_by_product_line),
+                    template="plotly_white",
+                )
+                fig_product_sales.update_layout(
+                    plot_bgcolor="rgba(0,0,0,0)",
+                    xaxis=(dict(showgrid=True))
+                )
+
+                # left_column.plotly_chart(fig_hourly_sales, use_container_width=True)
+                st.plotly_chart(fig_product_sales, use_container_width=True)
+                
+                st.dataframe(sales_by_product_line)
+                
     elif authentication_status == False:
         st.error('Username/password is incorrect')
     elif authentication_status == None:
