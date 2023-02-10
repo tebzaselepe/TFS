@@ -1,0 +1,906 @@
+policy_number;policy_type;policy_status;premium;id_number;mobile_number;first_name;middle_name;last_name;payment_date;reminder_date;has_paid;waiting_period_past;bank_acc_number;bank_name;payment_method;gender;race;city;province
+TFS-P0001;platinum;active;180;4607025503085;737037851;Msondi;Simon;Mhlambi;2022/11/03;2022/11/03;yes;yes;98765445211;absa;cash;female;black;frankfort;free state
+TFS-P0004;platinum;active;190;8708155440084;781687298;Peter;Moeketsi;Mofokeng;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-P0005;platinum;active;170;7101021040083;734420365;Daliena;Martha;Thwala;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-P0006;platinum;active;150;9407300300082;736253065;Szakele;Mfuphi;no data;2022/11/03;2022/11/03;yes;yes;;capitec;cash;;white;frankfort;free state
+TFS-P0007;platinum;active;170;4701055622087;no data;Joseph;Makamane;Khumalo;2022/11/03;2022/11/03;yes;yes;;absa;cash;;colored;frankfort;free state
+TFS-P0008;platinum;active;160;no data;no data;Isaac;Mabandla;Chamu;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-P0009;platinum;active;160;9111200270086;765497714;Catherine;Nokuhlupheka;Motloung;2022/11/03;2022/11/03;yes;no;;fnb;cash;;black;frankfort;free state
+TFS-P0010;platinum;active;no data;8004251074085;828155460;Daphney;Mashinini;no data;2022/11/03;2022/11/03;yes;no;;capitec;cash;;black;frankfort;free state
+TFS-P0012;platinum;active;150;8409135360084;739761360;Disema;Koos;Mokoena;2022/11/03;2022/11/03;no;no;;absa;cash;;white;frankfort;free state
+TFS-P0013;platinum;active;210;7209285427084;633669933;Zakia;Tsietsi;Maleka;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-P0014;platinum;active;130;6012030747082;737237351;Dimakatso;Victoria;Njoku;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0015;platinum;active;210;7006015900087;732393858;Fanie;Isiaiah;Mokoena;2022/11/03;2022/11/03;no;yes;;capitec;cash;;black;frankfort;free state
+TFS-P0016;platinum;active;150;7305052124084;713869322;Rebecca;Mangaka;Mkhwanazi;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-P0017;platinum;active;150;no data;787563627;Lindiwe;Liesbeth;Dlamini;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;white;frankfort;free state
+TFS-P0018;platinum;active;150;7908185864086;792957527;Velaphi;Andries;Nhlapo;2022/11/03;2022/11/03;no;yes;;fnb;cash;;colored;frankfort;free state
+TFS-P0019;platinum;active;210;7110205492085;725032040;Hlaole;Daniel;Kanye;2022/11/03;2022/11/03;yes;no;;capitec;bank tranfer;;black;frankfort;free state
+TFS-P0020;platinum;active;180;390850228080;824378120;Alina;Shabalala;no data;2022/11/03;2022/11/03;yes;no;;absa;bank tranfer;;black;frankfort;free state
+TFS-P0022;platinum;active;150;no data;no data;Johannes;Bongani;Msimanga;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0023;platinum;active;190;no data;789726959;Shirlly;Dibuseng;Mthembu;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-P0024;platinum;active;150;8608230310080;823643028;Sibongile;Vilakazi;no data;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;colored;frankfort;free state
+TFS-P0025;platinum;active;150;5705080280083;837183686;Mphuthi;Mohanuwa;Selina;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-P0026;platinum;active;170;6212055521087;760486757;Khoabeng;Johannes;Thai;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0027;platinum;active;150;9502060390081;611517292;Lindiwe;Florence;Motsoeneng;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0028;platinum;active;150;9403195207086;785643030;Puseletso;David;Mollo;2022/11/03;2022/11/03;no;no;;capitec;cash;;white;frankfort;free state
+TFS-P0029;platinum;active;150;9607110120089;840687632;Nthete;Innocentia;Nhlapo;2022/11/03;2022/11/03;yes;no;;absa;cash;;colored;frankfort;free state
+TFS-P0032;platinum;active;150;3408090894086;no data;Maria;Dlamini;no data;2022/11/03;2022/11/03;no;no;;fnb;cash;;black;frankfort;free state
+TFS-P0033;platinum;active;170;8106140395085;791643002;Petros;Modupi;Moletsane;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-P0034;platinum;active;150;5203040795085;716356663;Anna;Olifant;no data;2022/11/03;2022/11/03;no;no;;capitec;bank tranfer;;black;frankfort;free state
+TFS-P0035;platinum;active;150;72071015564085;729589809;Thabo;Sam;Motaung;2022/11/03;2022/11/03;yes;yes;;absa;bank tranfer;;white;frankfort;free state
+TFS-P0037;platinum;active;150;3005095169088;810647393;Shoalai;Samuel;Leshoro;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-P0038;platinum;active;190;7503120841081;764611794;Nomadlovu;S;Maseko;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0039;platinum;active;170;7811170643087;618857537;Dikeledi;Ester;Moshoadiba;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-P0040;platinum;active;170;9906290855088;626249441;Rethabile;Motloung;no data;2022/11/03;2022/11/03;yes;no;;absa;cash;;black;frankfort;free state
+TFS-P0044;platinum;active;150;8212105971082;no data;Jabulani;Benjamin;Mnisi;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;white;frankfort;free state
+TFS-P0046;platinum;active;190;8708011051083;792814147;Jermina;Motsweneng;no data;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-P0047;platinum;active;130;7912185425088;742629216;Oupa;Solomon;Radebe;2022/11/03;2022/11/03;yes;yes;;capitec;cash;;black;frankfort;free state
+TFS-P0049;platinum;active;150;3606140297087;588133658;Ngcana;Madibuseng;Ngcaba;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-P0051;platinum;active;210;9612175754087;710944740;Paki;Mphuthi;no data;2022/11/03;2022/11/03;no;yes;;fnb;cash;;black;frankfort;free state
+TFS-P0052;platinum;active;150;9305080161080;737264831;Nandi;Sharon;Kumalo;2022/11/03;2022/11/03;no;yes;;fnb;cash;;white;frankfort;free state
+TFS-P0053;platinum;active;190;7404015885087;766452591;Samuel;Mathanzima;Mngwevu;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;colored;frankfort;free state
+TFS-P0054;platinum;active;210;8410190284086;762682667;Sellwane;Anna;Motaung;2022/11/03;2022/11/03;no;no;;absa;bank tranfer;;black;frankfort;free state
+TFS-P0055;platinum;active;150;6212195472084;734306215;Solomon;Mofokeng;no data;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0056;platinum;active;150;8101256011089;722777267;Abel;Oupa;Motaung;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0057;platinum;active;210;8508190271084;716155394;Anna;Dlamini;no data;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;white;frankfort;free state
+TFS-P0058;platinum;active;150;680910;no data;Joseph;Sekholo;no data;2022/11/03;2022/11/03;yes;no;;absa;cash;;colored;frankfort;free state
+TFS-P0059;platinum;active;150;no data;783304849;Nobengazi;E.Chamu;no data;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0060;platinum;active;170;8909270572088;734782826;Thandekile;Agnes;Mgcina;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0061;platinum;active;130;5605190502089;818834811;Sannah;Nomqebelo;Kheswa;2022/11/03;2022/11/03;no;yes;;capitec;cash;;black;frankfort;free state
+TFS-P0062;platinum;active;170;7808055414089;639319940;Kolom;Sampie;Mosia;2022/11/03;2022/11/03;no;yes;;absa;cash;;white;frankfort;free state
+TFS-P0063;platinum;active;170;6809280785088;no data;Nombuyiselo;Cynthia;Masiteng;2022/11/03;2022/11/03;yes;no;;fnb;cash;;colored;frankfort;free state
+TFS-P0065;platinum;active;170;8912250589080;794357381;Puleng;Annastasia;Gcindi;2022/11/03;2022/11/03;no;no;;fnb;cash;;black;frankfort;free state
+TFS-P0066;platinum;active;150;4607275207080;820811931;Letsatsi;Simon;Mokoena;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-P0067;platinum;active;160;4205030308085;820811931;Xachile;Maria;Mthiyane;2022/11/03;2022/11/03;no;yes;;absa;bank tranfer;;black;frankfort;free state
+TFS-P0068;platinum;active;150;3903080243084;835848025;Miya;Emily;no data;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-P0069;platinum;active;190;8607300790080;799561535;Phindile;Roselina;Nhlapo;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-P0070;platinum;active;190;no data;734992837;Moeketsi;Danniel;Phiri;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-P0071;platinum;active;210;9503290953086;629022095;Lydia;Lebohang;Tsotetsi;2022/11/03;2022/11/03;no;yes;;absa;cash;;black;frankfort;free state
+TFS-P0072;platinum;active;150;8504091201080;788400461;Magdeline;Grieta;Olyn;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0073;platinum;active;160;8305190819089;728907418;Makhoba;Philisiwe;no data;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;white;frankfort;free state
+TFS-P0074;platinum;active;150;8705145508087;824212530;Speelman;Mahlasela;no data;2022/11/03;2022/11/03;yes;no;;capitec;cash;;colored;frankfort;free state
+TFS-P0077;platinum;active;190;9603070145083;826748065;Tsotetsi;Katleho;Innocentia;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-P0078;platinum;active;130;5701230753087;724353048;Hlatshwayo;Nomsombuluko;Martha;2022/11/03;2022/11/03;yes;no;;fnb;cash;;black;frankfort;free state
+TFS-P0079;platinum;active;150;8306035766084;822112136;Khanye;Makgeka;Johannes;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-P0081;platinum;active;190;8605235759089;786323406;Mbatha;Pule;Patrick;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;white;frankfort;free state
+TFS-P0082;platinum;active;150;7804090620087;738773843;Makhoba;Maria;Zanele;2022/11/03;2022/11/03;yes;yes;;absa;bank tranfer;;colored;frankfort;free state
+TFS-P0083;platinum;active;190;7806195291086;724054023;Motaung;Koli;Samuel;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0084;platinum;active;170;9006120613086;721955591;Phakathi;Meiki;Lydia;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0085;platinum;active;210;8504265376080;797597894;Moloi;Peter;Mokgolwane;2022/11/03;2022/11/03;no;no;;capitec;bank tranfer;;black;frankfort;free state
+TFS-P0088;platinum;active;150;280417025804;716241283;Mahlaba;Evelina;no data;2022/11/03;2022/11/03;no;yes;;absa;cash;;white;frankfort;free state
+TFS-P0089;platinum;active;210;no data;no data;Mahlasela;Bernice;Dikeledi;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-P0090;platinum;active;150;7809066070084;837336276;Sibiloane;Petrose;no data;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0091;platinum;canceled;130;6205070575088;723048875;Motaung;Ida;Mmabathabo;2022/11/03;2022/11/03;yes;yes;;capitec;cash;;black;frankfort;free state
+TFS-P0093;platinum;active;170;6509115308086;733170650;Maboea;Elias;Kgobotsi;2022/11/03;2022/11/03;no;yes;;absa;cash;;black;frankfort;free state
+TFS-P0094;platinum;active;190;7703275315085;835730263;Nhlapo;Fani;Edwin;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;white;frankfort;free state
+TFS-P0095;platinum;canceled;150;3408090172083;780395394;Dlamini;Maria;no data;2022/11/03;2022/11/03;yes;no;;fnb;cash;;colored;frankfort;free state
+TFS-P0096;platinum;canceled;190;8111295366089;762914048;Hlubi;Bongane;Sydney;2022/11/03;2022/11/03;no;no;;capitec;bank tranfer;;black;frankfort;free state
+TFS-P0097;platinum;active;150;8411145262086;836696171;Mokoena;Tefo;no data;2022/11/03;2022/11/03;no;no;;absa;bank tranfer;;black;frankfort;free state
+TFS-P0098;platinum;active;150;5407260445087;818092226;Mahlophe;Francinah;no data;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0100;platinum;canceled;150;59080507150845;7863616772;Nhlapo;Modiehi;Maria;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;white;frankfort;free state
+TFS-P0102;platinum;canceled;210;7011145316089;824264917;Masiteng;Obi;no data;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;colored;frankfort;free state
+TFS-P0103;platinum;active;190;9203015661086;638942827;Mofokeng;Abel;Makubetsa;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-P0104;platinum;canceled;150;7703241095084;631181477;Moshoadiba;Sesi;no data;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0105;platinum;active;170;5405110697089;784624473;Sibiloane;Selinah;Mathoto;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0106;platinum;active;190;6111245497085;794705397;Mofokeng;Petrus;no data;2022/11/03;2022/11/03;no;no;;capitec;cash;;white;frankfort;free state
+TFS-P0107;platinum;active;190;8502215808087;730433757;Maleka;Stephen;no data;2022/11/03;2022/11/03;yes;no;;absa;cash;;colored;frankfort;free state
+TFS-P0108;platinum;active;210;8109091091083;734210443;Dludlu;Mpho;Laureta;2022/11/03;2022/11/03;no;yes;;fnb;cash;;black;frankfort;free state
+TFS-P0109;platinum;active;170;8909270572088;734782826;Mgcia;Thandekile;Agnes;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-P0118;platinum;active;150;5703095870089;769058459;Miya;Leeto;Paulos;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-P0120;platinum;active;190;6508215245081;829595396;Mchunu;Mbhekwa;Richard;2022/11/03;2022/11/03;yes;yes;;absa;bank tranfer;;white;frankfort;free state
+TFS-P0122;platinum;active;150;5210210235081;715867292;Mosia;Maria;Popi;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-P0204;platinum;active;230;no data;764139951;Mahlaba;Mzwakhe;Jan;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0207;platinum;active;150;8005180844087;765538230;Mngomezulu;Sophy;Masepetlele;2022/11/03;2022/11/03;yes;no;;capitec;bank tranfer;;black;frankfort;free state
+TFS-P0208;platinum;active;210;7110205492085;725032040;Kanye;Daniel;Hlaole;2022/11/03;2022/11/03;yes;no;;absa;cash;;black;frankfort;free state
+TFS-P0209;platinum;active;190;no data;719948071;Moloi;Phumzile;Agnes;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;white;frankfort;free state
+TFS-P0210;platinum;active;150;no data;no data;Mokoena;Esther;Matlakala;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-P0211;platinum;active;150;7904246260083;725757160;Motloung;David;no data;2022/11/03;2022/11/03;no;no;;capitec;cash;;black;frankfort;free state
+TFS-P0215;platinum;active;190;9701181132089;630625606;Speelman;Sebina;no data;2022/11/03;2022/11/03;no;yes;;absa;cash;;black;frankfort;free state
+TFS-P0227;platinum;active;150;8612221016084;680616418;Kheswa;Carol;Busisiwe;2022/11/03;2022/11/03;no;yes;;fnb;cash;;black;frankfort;free state
+TFS-P0228;platinum;active;160;450427;no data;Pitso;Alina;no data;2022/11/03;2022/11/03;no;yes;;fnb;cash;;white;frankfort;free state
+TFS-P0229;platinum;active;150;8103200284085;842004583;Setungwane;Zondwa;Leah;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;colored;frankfort;free state
+TFS-P0230;platinum;active;no data;9805165945085;718979573;Tladi;Samuel;Motsamai;2022/11/03;2022/11/03;yes;no;;absa;bank tranfer;;black;frankfort;free state
+TFS-P0231;platinum;active;150;9709170372087;763063123;Dhlamini;Thokozile;Jessie;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0233;platinum;active;150;6310270715086;823855339;Mokoena;Mathoto;Emmah;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0234;platinum;active;150;8705085426084;793204675;Bucibo;CydneySiphiwe;no data;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;white;frankfort;free state
+TFS-P0235;platinum;active;170;8209221146086;789965165;Mosia;Lebo;no data;2022/11/03;2022/11/03;no;yes;;absa;cash;;colored;frankfort;free state
+TFS-P0238;platinum;active;170;8309011201081;no data;Mophete;Makgaitse;Maria;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0239;platinum;active;170;8106151243083;794735868;Mphuthi;Emah;Manko;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0240;platinum;active;170;920322;717885771;Mthabela;Nompe;Winnie;2022/11/03;2022/11/03;yes;yes;;capitec;cash;;black;frankfort;free state
+TFS-P0241;platinum;active;160;4406165364089;631610874;Mokoena;Petrus;no data;2022/11/03;2022/11/03;no;no;;absa;cash;;white;frankfort;free state
+TFS-P0242;platinum;active;190;8409296287084;747146622;Mphuthi;Piet;Mabutana;2022/11/03;2022/11/03;yes;no;;fnb;cash;;colored;frankfort;free state
+TFS-P0243;platinum;active;190;9009175485087;764945463;Khanye;Stuurman;no data;2022/11/03;2022/11/03;no;no;;fnb;cash;;black;frankfort;free state
+TFS-P0244;platinum;active;150;8105130765083;722673009;Tshabalala;Elizabeth;no data;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-P0247;platinum;active;150;9501245088081;780771972;Hlatshwayo;Jabulani;Michael;2022/11/03;2022/11/03;no;no;;absa;bank tranfer;;black;frankfort;free state
+TFS-P0249;platinum;active;160;520819;820826415;Mvelase;Tswakae;Martha;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-P0250;platinum;canceled;190;7109270337084;782753358;Ncala;Gogo;Martha;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-P0252;platinum;active;150;9310081255089;0810 791474;Radebe;Phindile;Emelda;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-P0253;platinum;active;170;9001181207084;739880410;Moloi;Lydia;Matieho;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-P0254;platinum;active;130;no data;no data;Miya;Lefu;Richard;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0257;platinum;active;170;9207301197085;no data;Tsotetsi;Nthabiseng;Julia;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;white;frankfort;free state
+TFS-P0260;platinum;active;130;5407260445087;663907303;Motaung;Maboel;Francina;2022/11/03;2022/11/03;yes;yes;;capitec;cash;;colored;frankfort;free state
+TFS-P0262;platinum;active;150;6302155501087;716825068;Mokoena;Khorai;Ariel;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-P0263;platinum;active;150;8512215702081;788520799;Tsotetsi;Petrus;Thabo;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-P0264;platinum;active;150;8608201061084;622843749;Mokoena;Matshidiso;Petunia;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-P0267;platinum;active;170;5210065660086;732493603;Magagula;Msebenzi;John;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;white;frankfort;free state
+TFS-P0268;platinum;active;150;8907260570088;662455997;Hadebe;Petunia;Makhosazana;2022/11/03;2022/11/03;no;yes;;absa;bank tranfer;;colored;frankfort;free state
+TFS-P0269;platinum;active;150;5105060287085;844030431;Makhubu;Nomacala;Elizabeth;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0271;platinum;active;190;7903250417084;729568340;Myeza;Gugulethu;Nonkululeko;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0272;platinum;active;170;88803030573082;638803722;Gatebe;Elizabeth;Memase;2022/11/03;2022/11/03;no;no;;capitec;bank tranfer;;black;frankfort;free state
+TFS-P0273;platinum;active;190;8304160241087;639726137;Tsotetsi;Nesi;Johanna;2022/11/03;2022/11/03;yes;yes;;absa;cash;;white;frankfort;free state
+TFS-P0275;platinum;active;130;7405051820086;768912901;Moloi;Masetjhaba;Josiphine;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-P0276;platinum;active;130;11235256085;768912901;Moloi;Lebohang;Gladwill;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0277;platinum;active;150;9201290620082;736660749;Booysen;Mapule;Michelle;2022/11/03;2022/11/03;yes;yes;;capitec;cash;;black;frankfort;free state
+TFS-P0278;platinum;active;190;740217500082;723612653;Radebe;Sekati;Meshack;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-P0280;platinum;active;150;8912285579080;658331296;Tsotetsi;Buti;July;2022/11/03;2022/11/03;no;yes;;fnb;cash;;white;frankfort;free state
+TFS-P0282;platinum;active;150;3903080249081;636185999;Mofokeng;Alina;no data;2022/11/03;2022/11/03;no;no;;fnb;cash;;colored;frankfort;free state
+TFS-P0283;platinum;active;160;5509080352086;823455114;Mahlango;Bako;Roseline;2022/11/03;2022/11/03;no;no;;capitec;bank tranfer;;black;frankfort;free state
+TFS-P0285;platinum;active;150;8912081192080;737709013;Mabuya;Jane;Deliwe;2022/11/03;2022/11/03;yes;yes;;absa;bank tranfer;;black;frankfort;free state
+TFS-P0286;platinum;active;150;5409255734087;733250235;Mokoena;Tumane;Paulus;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0287;platinum;active;210;9603090553084;727611914;Mkhwane;Mirriam;Lindiwe;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-P0288;platinum;active;190;9411010254084;829243738;Mazibuko;Nthabeleng;Magret;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;colored;frankfort;free state
+TFS-P0290;platinum;active;170;7412065491086;no data;Motseke;Rafoqho;J;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-P0291;platinum;active;170;9001160300082;761248803;Tsotetsi;Linah;Lebohang;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0292;platinum;active;170;9706280196083;789630216;Radebe;Zanele;Ellen;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0293;platinum;active;150;940226086084;768878318;Nhlapo;Evelyn;Nobantu;2022/11/03;2022/11/03;no;no;;capitec;cash;;white;frankfort;free state
+TFS-P0296;platinum;active;190;8111295366089;659894773;Mokoena;Bongani;Sydney;2022/11/03;2022/11/03;yes;no;;absa;cash;;colored;frankfort;free state
+TFS-P0297;platinum;active;150;9405110937085;685712401;Gamede;Joana;no data;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-P0298;platinum;active;130;5704190715088;825448621;Mojola;Sylvia;Elsie;2022/11/03;2022/11/03;yes;no;;fnb;cash;;black;frankfort;free state
+TFS-P0299;platinum;active;150;8312055695085;734306215;Mofokeng;Teboho;Thys;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-P0301;platinum;active;150;9012131262087;no data;Tsotetsi;Dinah;no data;2022/11/03;2022/11/03;yes;yes;;absa;bank tranfer;;white;frankfort;free state
+TFS-P0304;platinum;active;190;9706210280080;6500329583;Radebe;Mosela;Gloria;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-P0305;platinum;active;150;8310195838086;848018770;Zimu;Mzingeli;Timothy;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0306;platinum;active;190;7907315416080;764254801;Motsoeneng;Letshabisa;G;2022/11/03;2022/11/03;yes;no;;capitec;bank tranfer;;black;frankfort;free state
+TFS-P0307;platinum;active;150;1280644087;719693575;Masangane;Keneuwe;Gloria;2022/11/03;2022/11/03;yes;no;;absa;cash;;black;frankfort;free state
+TFS-P0308;platinum;active;210;no data;616804339;Motsoeneng;Tsoene;no data;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-P0320;platinum;active;150;87050885426084;793204675;Bucibo;Cydney;Siphiwe;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-P0321;platinum;active;210;9403195207086;616350286;Mollo;Puseletso;David;2022/11/03;2022/11/03;no;yes;;capitec;cash;;black;frankfort;free state
+TFS-P0322;platinum;active;210;890404043086;713927390;Mbamba;Gloria;Buyisisiwe;2022/11/03;2022/11/03;no;yes;;absa;cash;;black;frankfort;free state
+TFS-P0323;platinum;active;170;8909076160088;731050748;Dube;Alfred;Bongane;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-P0326;platinum;active;130;8201235500085;606201091;Mokoena;Emanuel;Mokhoantle;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;white;frankfort;free state
+TFS-P0327;platinum;active;150;4612090316082;783520124;Twala;Evelina;no data;2022/11/03;2022/11/03;no;no;;capitec;bank tranfer;;colored;frankfort;free state
+TFS-P0342;platinum;active;210;9204195352082;833333202;Majola;Mpho;no data;2022/11/03;2022/11/03;yes;no;;absa;bank tranfer;;black;frankfort;free state
+TFS-P0345;platinum;active;100;8509151718089;785448948;Madonsela;Nthabiseng;Selinah;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0370;platinum;active;150;3802045199086;837183686;Simela;Isaac;no data;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0390;platinum;active;150;5412040835086;764326827;Hadebe;Emily;Topi;2022/11/03;2022/11/03;no;no;;capitec;bank tranfer;;white;frankfort;free state
+TFS-P0393;platinum;active;210;9035217083;792206608;Mollo;Fezile;Kabelo;2022/11/03;2022/11/03;no;yes;;absa;cash;;colored;frankfort;free state
+TFS-P0395;platinum;active;170;no data;665638004;Mosia;Lebohang;no data;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0426;platinum;active;150;6307030722089;no data;Nhlapo;Nontando;Martha;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-P0427;platinum;active;70;5611195461081;665760257;Motloung;Molato;Kleinbooi;2022/11/03;2022/11/03;yes;yes;;capitec;cash;;black;frankfort;free state
+TFS-P0503;platinum;active;140;9310045465089;660772098;Molamodi;Pat;Motlalepula;2022/11/03;2022/11/03;no;no;;absa;cash;;white;frankfort;free state
+TFS-P0504;platinum;active;160;5301065194083;649970991;Ncala;Charlie;Nkani;2022/11/03;2022/11/03;yes;no;;fnb;cash;;colored;frankfort;free state
+TFS-P0508;platinum;active;210;8611060886088;736393336;Radebe;Majwalane;Maria;2022/11/03;2022/11/03;no;yes;;fnb;cash;;black;frankfort;free state
+TFS-P0509;platinum;active;150;7705195273088;731602272;Radebe;Themba;no data;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-P0510;platinum;active;150;7309110850086;784233020;Moloi;Lindiwe;Maria;2022/11/03;2022/11/03;no;yes;;absa;bank tranfer;;black;frankfort;free state
+TFS-P0530;platinum;active;160;8611060886088;7335798361;Radebe;Alina;no data;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-P0951;platinum;active;150;no data;82;Sibanyoni;Jonah;no data;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-P0957;platinum;active;170;no data;no data;Mofokeng;Mmosanyana;Jon;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-P0958;platinum;active;190;no data;no data;Motloung;Puleng;Paulina;2022/11/03;2022/11/03;yes;no;;absa;cash;;black;frankfort;free state
+TFS-P0959;platinum;active;150;7902205296080;791401230;Tsotetsi;Oupa;Andries;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0001;silver;active;100;6406066763080;726243711;Msele;Munikazi;Samuel;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0002;silver;active;100;7810240885082;763790249;Mashiloane;Joyce;Priscilla;2022/11/03;2022/11/03;yes;yes;;capitec;cash;;colored;frankfort;free state
+TFS-B0003;silver;;160;6407110396082;783520124;Mahlasela;Liena;;2022/11/03;2022/11/03;yes;no;;absa;cash;;black;frankfort;free state
+TFS-P0004;silver;active;120;;734255888;Damani;Vuyiswa;Emily;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0006;silver;;90;;783520124;Twala;Evelina;;2022/11/03;2022/11/03;no;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0007;silver;active;120;;717885771;Mthabela;Nompe;Winie;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;white;frankfort;free state
+TFS-B0008;silver;;100;;835109407;Dlamini;Paul;;2022/11/03;2022/11/03;no;yes;;absa;bank tranfer;;colored;frankfort;free state
+TFS-B0009;silver;active;70;;712653410;Tsotetsi;Ntebeleng;A;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0010;silver;active;100;6204240405086;735461852;Cheema;Ahmed;Elizabeth;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0011;silver;active;100;;735461852;Khubeka;Anna;Ntediseng;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0012;silver;active;140;;620937547;Mokoena;Petrus;Leotla;2022/11/03;2022/11/03;no;yes;;absa;cash;;white;frankfort;free state
+TFS-B0013;silver;active;120;;799679025;Tsotetsi;Dinnah;Matshidiso;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0014;silver;active;110;;634715335;Malinga;Tsotetsi;Paulina;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0015;silver;active;160;;747847327;Kubeka;Thandi;Elizabeth;2022/11/03;2022/11/03;no;yes;;capitec;cash;;black;frankfort;free state
+TFS-B0016;silver;;70;;no data;Mofokeng;Tampane;;2022/11/03;2022/11/03;no;yes;;absa;cash;;black;frankfort;free state
+TFS-B0017;silver;active;120;8111195435083;736185294;Mochane;Mohemi;Ellias;2022/11/03;2022/11/03;no;no;;fnb;cash;;white;frankfort;free state
+TFS-B0018;silver;;120;;736185294;Mofokeng;Mochane;;2022/11/03;2022/11/03;yes;no;;fnb;cash;;colored;frankfort;free state
+TFS-B0032;silver;;100;7310031405083;no data;Moshoadiba;Sana;;2022/11/03;2022/11/03;no;no;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0034;silver;;130;4106055342084;no data;Mokoena;Johannes;;2022/11/03;2022/11/03;yes;yes;;absa;bank tranfer;;black;frankfort;free state
+TFS-B0039;silver;;140;9403246086083;738300247;Motaung;Lucas;;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0040;silver;;90;3311055101081;738300247;Motaung;Petrus;;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0041;silver;active;70;5410270789080;732313084;Moloi;Jabulile;Anna;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;colored;frankfort;free state
+TFS-B0042;silver;active;100;7512165385086;730160031;Tsotetsi;Lefu;Samuel;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-B0045;silver;;120;8501160671086;735461852;Mofokeng;Emely;;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0046;silver;active;100;9512135850084;728272376;Radebe;Mpho;William;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0048;silver;active;130;9507146056085;631107338;Mashiloane;Siyabonga;Charles;2022/11/03;2022/11/03;yes;no;;capitec;cash;;white;frankfort;free state
+TFS-B0062;silver;active;100;8004136013087;746564927;Moshoaliba;William;Puseletso;2022/11/03;2022/11/03;yes;yes;;absa;cash;;colored;frankfort;free state
+TFS-B0069;silver;;70;5601235500089;no data;Xaba;Philip;;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0073;silver;active;70;8312205729081;no data;Mbatha;Bongane;Steven;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0076;silver;active;130;8804246166083;743635924;Mofokeng;Puseletso;Jacob;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0080;silver;active;70;6403230460081;no data;Mazibuko;Mmantso;Emely;2022/11/03;2022/11/03;yes;yes;;absa;bank tranfer;;white;frankfort;free state
+TFS-B0081;silver;active;160;7608295439080;786598629;Tsotetsi;kolocho;Jacob;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0083;silver;;100;8509111210086;767747394;Radebe;Ntombizodwa;;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0085;silver;active;160;6910095478081;622480017;Nhlapo;Piet;Shadrack;2022/11/03;2022/11/03;no;no;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0088;silver;active;140;8802121047084;744436800;Mazibuko;Lefina;Mashembe;2022/11/03;2022/11/03;no;no;;absa;cash;;black;frankfort;free state
+TFS-B0092;silver;;90;4608230397081;720773846;Semela;Josephine;;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0096;silver;active;70;7607235399081;634016056;Tshabalala;Thabo;John;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0097;silver;active;90;6610140645086;714550981;Makate;Thojane;Florina;2022/11/03;2022/11/03;yes;yes;;capitec;cash;;black;frankfort;free state
+TFS-B0099;silver;active;100;8403260546088;733336310;Shabalala;Evelinah;Nomsebenzi;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-B0101;silver;active;90;9905110484087;603141554;Nyamade;Nthabiseng;Christina;2022/11/03;2022/11/03;no;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0102;silver;active;100;9003175285084;no data;Mpinga;Steven;Mzayifane;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;white;frankfort;free state
+TFS-B0103;silver;;100;9701070740083;767587045;Selepe;Lerato;;2022/11/03;2022/11/03;yes;no;;capitec;bank tranfer;;colored;frankfort;free state
+TFS-B0106;silver;active;150;6905240426084;743635924;Sekhoto;Nrateng;Rylinah;2022/11/03;2022/11/03;no;no;;absa;bank tranfer;;black;frankfort;free state
+TFS-B0112;silver;;110;3608040274083;717898972;Makhalimela;Maria;;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0113;silver;active;70;9204090996082;622480017;Moloi;Fikile;Emely;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0115;silver;active;100;6512035497088;798321630;Nhlapo;Jan;Khabonina;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;white;frankfort;free state
+TFS-B0116;silver;active;110;8606236301087;798321630;Nhlapo;Transvaal;Oupa;2022/11/03;2022/11/03;no;yes;;absa;cash;;colored;frankfort;free state
+TFS-B0120;silver;active;100;760529;734931120;Nyamande;Maki;Evelina;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0124;silver;active;100;8906105291082;729568094;Mofokeng;Willem;Tieho;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0126;silver;;120;105101271085;737306247;Molakeng;Lerato;;2022/11/03;2022/11/03;yes;no;;capitec;cash;;black;frankfort;free state
+TFS-B0130;silver;;100;;784290214;Moeketsane;Jacob;;2022/11/03;2022/11/03;no;no;;absa;cash;;white;frankfort;free state
+TFS-B0134;silver;active;120;7906300627081;835848205;Miya;Simangele;Elizabeth;2022/11/03;2022/11/03;yes;no;;fnb;cash;;colored;frankfort;free state
+TFS-B0138;silver;;110;9104080298087;716356663;Olifant;Itumeleng;;2022/11/03;2022/11/03;no;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0144;silver;active;70;7412085253086;740250865;Tsotetsi;Molatudi;William;2022/11/03;2022/11/03;yes;no;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0145;silver;active;100;6001075471088;0764874176v;Mollo;Lephara;Joseph;2022/11/03;2022/11/03;yes;yes;;absa;bank tranfer;;black;frankfort;free state
+TFS-B0151;silver;active;100;640727026087;no data;Mgcina;Martha;Khephu;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0154;silver;active;100;7605290619088;608265862;Nyamade;Maki;Evelina;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0155;silver;;140;6503030246083;719524028;Motsoeneng;Sarah;;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0156;silver;active;120;8204210318085;729633512;Motloung;Ntsepiseng;Annah;2022/11/03;2022/11/03;yes;no;;absa;cash;;black;frankfort;free state
+TFS-B0157;silver;active;160;8001050643086;7381941000;Mahlasela;Mmadika;Maria;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0158;silver;active;130;7802030520086;711625338;Mpinga;Nozinja;Tabita;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0159;silver;active;100;6704245551081;783794754;Mahlasela;Tanki;Isak;2022/11/03;2022/11/03;yes;yes;;capitec;cash;;colored;frankfort;free state
+TFS-B0161;silver;active;90;8807135789089;738194000;Mahlasela;Pheello;Simon;2022/11/03;2022/11/03;no;yes;;absa;cash;;black;frankfort;free state
+TFS-B0163;silver;active;100;9101081427087;673925706;Tsotetsi;Ntsamayeng;Selina;2022/11/03;2022/11/03;no;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0165;silver;active;110;6511120409081;796255708;Tsotetsi;Malitaba;Selina;2022/11/03;2022/11/03;no;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0171;silver;;70;7012175584083;744378170;Shabalala;Solomon;;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;white;frankfort;free state
+TFS-B0172;silver;active;120;8007031097089;797100822;Dlamini;Nobayeni;Evelyn;2022/11/03;2022/11/03;yes;no;;absa;bank tranfer;;colored;frankfort;free state
+TFS-B0175;silver;;90;3903080249081;636185999;Mofokeng;Alina;;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0177;silver;active;160;;828635522;Moloi;Maria;Sibongile;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0179;silver;active;90;;711882824;Moloi;Selina;Puleng;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0181;silver;;100;8707126193087;no data;Mphuti;Struurman;;2022/11/03;2022/11/03;yes;no;;absa;cash;;white;frankfort;free state
+TFS-B0182;silver;active;100;5908280557082;783847411;Dhladhla;Sekutukutu;Sana;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0183;silver;active;100;7910021261089;788815843;Nkomo;Velile;Linah;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0185;silver;active;100;8810171017084;769786011;Tsotetsi;Lettie;Mmamoya;2022/11/03;2022/11/03;no;yes;;capitec;cash;;black;frankfort;free state
+TFS-B0197;silver;active;70;7906062210084;765789734;Mothokoa;Mapule;Selina;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-B0201;silver;active;70;???????????;no data;Motloung;Tiisetso;Isaac;2022/11/03;2022/11/03;no;no;;fnb;cash;;white;frankfort;free state
+TFS-B0203;silver;active;90;4011205300083;796287230;Nkhotho;Sereme;Samson;2022/11/03;2022/11/03;yes;no;;fnb;cash;;colored;frankfort;free state
+TFS-B0205;silver;active;90;4302045249089;717757955;Gamede;Piekie;Shadrack;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0211;silver;;120;9708191186088;720530014;Sekhoto;Roset;;2022/11/03;2022/11/03;yes;yes;;absa;bank tranfer;;black;frankfort;free state
+TFS-B0212;silver;active;100;6101012079083;716371416;Moloi;Masenate;Paulinah;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0213;silver;active;110;9108125828089;787788862;Mofokeng;Mishack;Mozimokhulu;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0215;silver;active;120;6804090482083;729760923;Sikhosana;Mantombi;Ivy;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;colored;frankfort;free state
+TFS-B0216;silver;;70;7705195273088;731602272;Radebe;Themba;;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-B0217;silver;active;90;44061820233083;843508688;Mbokazi;Mandla;Poulos;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0225;silver;active;100;8708165725086;736776890;Mofokeng;Mmosanyana;Jon;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0229;silver;active;70;9207265106080;762619176;Mphuthi;Tema;Ephraim;2022/11/03;2022/11/03;yes;no;;capitec;cash;;white;frankfort;free state
+TFS-B0232;silver;active;100;790111;638437481;Mokoena;Paulinah;Ntswaki;2022/11/03;2022/11/03;yes;yes;;absa;cash;;colored;frankfort;free state
+TFS-B0235;silver;active;90;4402245284082;823485697;Motaung;Tokelo;Samauel;2022/11/03;2022/11/03;yes;no;;fnb;cash;;black;frankfort;free state
+TFS-B0236;silver;active;100;8008185801086;792150856;Bookholane;Molefi;Moses;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0238;silver;active;160;7501240626085;818834811;Madonsela;Emely;Evelyn;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0239;silver;active;100;no data;783395230;Mofokeng;Lettia;Patowe;2022/11/03;2022/11/03;yes;yes;;absa;bank tranfer;;white;frankfort;free state
+TFS-B0241;silver;;100;8812061088084;no data;Motsoeneng;Aletta;;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0242;silver;active;120;8904270592087;743537484;Motaung;Lydia;Khayelihle;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0243;silver;active;100;6707115272084;no data;Mokoena;Moqwatsi;Abram;2022/11/03;2022/11/03;no;no;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0244;silver;active;100;7702105406080;no data;Twala;Bafana;G;2022/11/03;2022/11/03;no;yes;;absa;cash;;black;frankfort;free state
+TFS-B0246;silver;active;70;6309070683080;827827923;Radebe;Lesaya;Maria;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0247;silver;active;100;8403276037080;827827923;Radebe;Mojalefa;Paulos;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0248;silver;active;140;8910195974086;763679321;Mokoena;Simon;Motlalepule;2022/11/03;2022/11/03;no;yes;;capitec;cash;;black;frankfort;free state
+TFS-B0249;silver;active;160;880225600089;no data;Dlamini;Simon;Fanky;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-B0250;silver;active;120;6809070386089;781157821;Moloi;Alina;Ntauleng;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0255;silver;active;70;5406240689087;731602272;Radebe;Ntombizodwa;Emily;2022/11/03;2022/11/03;no;no;;fnb;cash;;white;frankfort;free state
+TFS-B0262;silver;active;100;7907180737081;631277732;Semela;Elizabeth;Sedudla;2022/11/03;2022/11/03;no;no;;capitec;bank tranfer;;colored;frankfort;free state
+TFS-B0263;silver;active;90;4707270235084;no data;Sekhotho;Rosetha;Ntswaki;2022/11/03;2022/11/03;no;no;;absa;bank tranfer;;black;frankfort;free state
+TFS-B0266;silver;;120;6805100458083;722466012;Sekhoto;Elizabeth;;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0267;silver;;160;9301115529086;722466012;Radebe;Sizwe;;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0268;silver;active;90;9510235787081;no data;Mokoena;Morake;Edward;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;white;frankfort;free state
+TFS-B0270;silver;active;120;8808160753081;635092234;Majola;Thandi;Sarah;2022/11/03;2022/11/03;no;yes;;absa;cash;;colored;frankfort;free state
+TFS-B0274;silver;active;110;5307030325082;no data;Mokoena;Mmetenki;lydia;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0278;silver;active;70;550714;768912901;Mokholu;Siyaya;Morgan;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0280;silver;active;100;9311160473080;738385208;Radebe;Nthabiseng;Portia;2022/11/03;2022/11/03;yes;no;;capitec;cash;;black;frankfort;free state
+TFS-B0281;silver;active;100;8407280331082;797685764;Shabalala;Gabisile;Lizzy;2022/11/03;2022/11/03;no;no;;absa;cash;;white;frankfort;free state
+TFS-B0282;silver;active;70;7902055345086;no data;Shabalala;Jabu;Abram;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;colored;frankfort;free state
+TFS-B0283;silver;active;70;5511205427082;797685764;Geland;Buti;Joseph;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0285;silver;active;100;7511201177085;825937867;Motloung;Boitumelo;Julia;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0288;silver;active;70;960803;no data;Mahlangu;Justice;M;2022/11/03;2022/11/03;yes;yes;;absa;bank tranfer;;black;frankfort;free state
+TFS-B0289;silver;active;100;761220;no data;Mokoena;Matisetso;Rose;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0290;silver;active;70;8203206259089;782864506;Miya;Johannes;Doctor;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0291;silver;active;140;8910030380085;763639095;Mosia;Esther;Nrateng;2022/11/03;2022/11/03;yes;no;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0293;silver;active;100;8309232159084;627251925;Sekhoto;Gloria;Madingaka;2022/11/03;2022/11/03;yes;no;;absa;cash;;black;frankfort;free state
+TFS-B0294;silver;;140;8612036049082;742148265;Molakeng;Kabelo;;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0296;silver;active;90;4404015296080;634158164;Msibi;Daniel;Rammota;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0297;silver;active;100;8005290796086;765089445;Mhlambi;Selina;Zandile;2022/11/03;2022/11/03;no;no;;capitec;cash;;colored;frankfort;free state
+TFS-B0298;silver;active;110;9012140439080;829633482;Makhoba;Linah;Deliwe;2022/11/03;2022/11/03;no;yes;;absa;cash;;black;frankfort;free state
+TFS-B0299;silver;active;100;8505041293082;832554747;Mahlangu;Mahlapho;Maria;2022/11/03;2022/11/03;no;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0300;silver;;110;4402055400083;735580435;Twala;Samuel;;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0301;silver;active;70;6404035745080;no data;Motsoeneng;Moferefere;Samson;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;white;frankfort;free state
+TFS-B0302;silver;active;100;no data;no data;Tsotetsi;Morena;Samuel;2022/11/03;2022/11/03;no;no;;absa;bank tranfer;;colored;frankfort;free state
+TFS-B0303;silver;;160;9410110401082;no data;Tshabangu;Thulisile;;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0304;silver;active;160;6611080400086;719417030;Motaung;Masesi;Roselina;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0305;silver;active;100;8607190828081;731547326;Moloi;Disomo;Grace;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0306;silver;active;70;6003215401082;722094450;Nhlapo;Mhlupheki;Meshack;2022/11/03;2022/11/03;no;yes;;absa;cash;;white;frankfort;free state
+TFS-B0309;silver;active;90;5310101538088;no data;Twala;Modiehi;Annah;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0311;silver;active;100;7309220339087;715313540;Moloi;Dieketseng;Selinah;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0312;silver;active;140;9509115509086;;Moloi;Thabo;Dan;2022/11/03;2022/11/03;no;yes;;capitec;cash;;black;frankfort;free state
+TFS-B0313;silver;active;100;7205180807081;839886935;Mthimkhulu;Elly;Skozo;2022/11/03;2022/11/03;yes;no;;absa;cash;;black;frankfort;free state
+TFS-B0314;silver;active;120;no data;604419908;Mbele;Mameso;Perseverence;2022/11/03;2022/11/03;no;no;;fnb;cash;;white;frankfort;free state
+TFS-B0315;silver;;100;7403235579082;836928637;Zwane;Mshiyeni;;2022/11/03;2022/11/03;yes;no;;fnb;cash;;colored;frankfort;free state
+TFS-B0320;silver;active;90;3212250178082;731547326;Mbele;Norah;Mbele;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0324;silver;active;120;7805205355084;783701445;Twala;Nhlanhla;J;2022/11/03;2022/11/03;yes;no;;absa;bank tranfer;;black;frankfort;free state
+TFS-B0333;silver;active;100;7805160919085;782048764;Dlamini;Flatha;Jane;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0334;silver;;140;5309190813089;no data;Khanye;Selinah;;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0337;silver;active;90;421145225082;715867292;Hlamapi;Abram;Solly;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;colored;frankfort;free state
+TFS-B0338;silver;active;70;7810280786083;782937905;Tsotetsi;Maki;Selinah;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-B0339;silver;;70;9901061154084;826476712;Tsotetsi;Gladys;;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0340;silver;active;110;5011220748083;799982914;Mofokeng;Mosela;Josephinah;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0341;silver;active;130;71020413087;610194092;Mollo;Lentshi;Ngono;2022/11/03;2022/11/03;yes;yes;;capitec;cash;;white;frankfort;free state
+TFS-B0342;silver;active;140;9010021044086;717464001;Mollo;Joyce;Malefa;2022/11/03;2022/11/03;yes;yes;;absa;cash;;colored;frankfort;free state
+TFS-B0343;silver;active;140;5509080352086;823455114;Mahlango;Bako;Roseline;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0344;silver;active;160;8802190236084;781363822;Mahlango;Nomadhlozi;M;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0345;silver;active;100;8509151718089;785448948;Madonsela;Nthabiseng;Selinah;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0346;silver;;90;4502060221083;no data;Mokoena;Bettie;;2022/11/03;2022/11/03;no;yes;;absa;bank tranfer;;white;frankfort;free state
+TFS-B0348;silver;active;70;7703121233086;no data;Thusi;Baby;Sarah;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0349;silver;active;100;7306221005089;no data;Thusi;Matshidiso;Selina;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0350;silver;active;100;8105280935085;731628584;Mofokeng;Jane;Maria;2022/11/03;2022/11/03;yes;no;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0352;silver;active;120;9606200545080;848190848;Gamede;Thobile;Buhlekazi;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-B0353;silver;active;140;7308050566082;no data;Motsoeneng;Puleng;Martha;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0354;silver;active;70;8508195353085;733468773;Miya;Richard;Lefu;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0356;silver;active;100;8202251772086;no data;Moloi;Happy;Joyce;2022/11/03;2022/11/03;yes;yes;;capitec;cash;;black;frankfort;free state
+TFS-B0357;silver;active;100;9609061442082;no data;Thusi;Lerato;Sanna;2022/11/03;2022/11/03;no;yes;;absa;cash;;black;frankfort;free state
+TFS-B0358;silver;active;90;4210040368087;742148265;Molakeng;Masekoala;Paulina;2022/11/03;2022/11/03;no;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0359;silver;;70;5812015495081;634174180;Mojaki;Elijah;;2022/11/03;2022/11/03;no;no;;fnb;cash;;white;frankfort;free state
+TFS-B0360;silver;;70;waiting id;no data;Molakeng;Ati;;2022/11/03;2022/11/03;yes;no;;capitec;bank tranfer;;colored;frankfort;free state
+TFS-B0361;silver;active;100;6210145590080;no data;Radebe;Lehlohonolo;Aaron;2022/11/03;2022/11/03;no;yes;;absa;bank tranfer;;black;frankfort;free state
+TFS-B0363;silver;active;100;9205210459083;787651112;Tsotetsi;Nthabiseng;Elizabeth;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0367;silver;active;90;9007191023080;no data;Miya;Mamoya;Johanna;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0368;silver;active;90;4803080312088;823154659;Mokoena;Joalane;S;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;white;frankfort;free state
+TFS-B0370;silver;active;100;740703;783575525;Ndaba;Abram;Ente;2022/11/03;2022/11/03;no;yes;;absa;cash;;colored;frankfort;free state
+TFS-B0371;silver;active;70;7907265620087;646375190;Motloung;Motwa;David;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0372;silver;active;70;600322;no data;Mbaba;L;Dina;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0375;silver;active;110;7602027155080;768243310;Mofokeng;Sajene;Tjale;2022/11/03;2022/11/03;yes;no;;capitec;cash;;black;frankfort;free state
+TFS-B0376;silver;;90;2806200225082;768243310;Mofokeng;Elizabeth;;2022/11/03;2022/11/03;yes;no;;absa;cash;;white;frankfort;free state
+TFS-B0377;silver;active;100;7408175642089;788193966;Moloi;Polediso;C;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;colored;frankfort;free state
+TFS-B0378;silver;;70;6204160511085;768243310;Mofokeng;Mmeisi;;2022/11/03;2022/11/03;yes;no;;fnb;cash;;black;frankfort;free state
+TFS-B0379;silver;active;100;8801271022082;795036106;Molefe;Martha;Dipolelo;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0380;silver;active;140;8910085793083;786618934;Mofokeng;Ppeketh;Elias;2022/11/03;2022/11/03;yes;yes;;absa;bank tranfer;;black;frankfort;free state
+TFS-B0383;silver;active;100;8609130317084;765477991;Majola;Meisi;Magdeline;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0384;silver;active;100;8203231492085;730552031;Tsotetsi;Mamodise;Fetjie;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0386;silver;active;100;9204070592082;799698754;Tsotetsi;Mmatseleng;Gladys;2022/11/03;2022/11/03;yes;no;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0387;silver;active;110;5903140239088;799698754;Tsotetsi;Mphala;Maria;2022/11/03;2022/11/03;no;no;;absa;cash;;black;frankfort;free state
+TFS-B0388;silver;;90;5304070496089;822553889;Mokoena;Motshabi;;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0390;silver;active;120;9310310405083;732252515;Tsotetsi;Nrateng;Patricia;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0396;silver;;130;4310250235081;625411956;Maseko;Joseph;;2022/11/03;2022/11/03;no;yes;;capitec;cash;;colored;frankfort;free state
+TFS-B0398;silver;active;100;8106066557080;734210366;Mntambo;Petros;Mzesazi;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-B0400;silver;active;100;7709241120087;634088738;Mofokeng;Mamohloani;Gladys;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0401;silver;;100;5803275632083;no data;Mothlaping;Kenneth;;2022/11/03;2022/11/03;no;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0403;silver;active;70;810207;638253995;Mokoena;Mohapi;William;2022/11/03;2022/11/03;yes;no;;capitec;bank tranfer;;white;frankfort;free state
+TFS-B0404;silver;active;70;9007166319083;769701332;Twala;Mojalefa;Samuel;2022/11/03;2022/11/03;yes;no;;absa;bank tranfer;;colored;frankfort;free state
+TFS-B0405;silver;active;100;7706056789089;761411978;Mtambo;Patrick;Boy;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0406;silver;active;90;5408060563087;648282783;Motloung;Maria;Malekhotla;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0407;silver;active;120;9408210927087;713884032;Shabalala;Lindiwe;Nkantjie;2022/11/03;2022/11/03;no;no;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0408;silver;active;100;6504305735081;795328681;Shabalala;Mosebetsi;Petrus;2022/11/03;2022/11/03;yes;yes;;absa;cash;;white;frankfort;free state
+TFS-B0409;silver;active;120;9804271046084;795367033;Tshabalala;Lucy;Nompi;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0410;silver;active;90;5608265724083;no data;Hlahane;Mmata;Aaron;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0411;silver;active;70;6309280719088;730177487;Shabalala;Nomasonto;Lettia;2022/11/03;2022/11/03;no;yes;;capitec;cash;;black;frankfort;free state
+TFS-B0412;silver;active;100;7711170321082;788865989;Kwebu;Elizabeth;Nontozonke;2022/11/03;2022/11/03;yes;no;;absa;cash;;black;frankfort;free state
+TFS-B0413;silver;active;120;9206015527086;no data;Makhalemele;Msebetsi;Jacob;2022/11/03;2022/11/03;no;no;;fnb;cash;;white;frankfort;free state
+TFS-B0414;silver;;120;8901165546087;no data;Makhalemele;;;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;colored;frankfort;free state
+TFS-B0415;silver;active;90;5308220347084;768118753;Makhalemele;Maepato;Theresia;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0416;silver;active;100;7409270744081;no data;Mphuthi;Mapule;Martha;2022/11/03;2022/11/03;yes;yes;;absa;bank tranfer;;black;frankfort;free state
+TFS-B0417;silver;active;180;8411271193089;660241227;Mokoena;Liena;Mokgo;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0419;silver;active;100;8307260344081;769693767;Mphuthi;Maleqhwa;Elsie;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0420;silver;;100;9802101411080;643634553;Thusi;Queen;;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;colored;frankfort;free state
+TFS-B0421;silver;active;140;9204245450084;no data;Mothlaping;Lebohang;Reginald;2022/11/03;2022/11/03;yes;no;;absa;cash;;black;frankfort;free state
+TFS-B0422;silver;active;70;1135978086;783794754;Mahlasela;Neo;Bernet;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0423;silver;active;130;85121008910080;no data;Mokoena;Diyeketseng;Selinah;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0424;silver;active;70;6101050690080;no data;Mokoena;Maletsatsi;Naom;2022/11/03;2022/11/03;yes;yes;;capitec;cash;;white;frankfort;free state
+TFS-B0425;silver;active;70;8809176391080;no data;Mokoena;Thabo;Johannes;2022/11/03;2022/11/03;yes;no;;absa;cash;;colored;frankfort;free state
+TFS-B0427;silver;active;70;5611195461081;665760257;Motloung;Molato;Kleinbooi;2022/11/03;2022/11/03;no;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0428;silver;active;100;7309110850086;784233020;Moloi;Lindiwe;Maria;2022/11/03;2022/11/03;no;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0429;silver;active;70;6012265511088;732495727;Siyaya;Botha;Samson;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0430;silver;active;120;8708060290087;606624845;Maphiri;Nthabiseng;Betty;2022/11/03;2022/11/03;no;yes;;absa;bank tranfer;;white;frankfort;free state
+TFS-B0431;silver;active;70;8408075757085;no data;Xaba;Bafana;Simon;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0432;silver;;90;51112170279085;734855888;Damani;Maraia;;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0433;silver;;90;2904130174080;786432792;Moshoadiba;Martha;;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0434;silver;active;70;7404106576082;634174180;Mojake;Buda;Isaac;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-B0435;silver;active;110;5503020738082;634174180;Mthambo;Moipone;Elizabeth;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0436;silver;active;100;9104090872087;634174180;Mojaki;Annah;Nomaslazi;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0437;silver;;110;3604130223080;738220986;Maseko;Maria;;2022/11/03;2022/11/03;no;yes;;capitec;cash;;black;frankfort;free state
+TFS-B0438;silver;active;100;8505046050084;760819938;Tsotetsi;Molimi;Joseph;2022/11/03;2022/11/03;no;yes;;absa;cash;;black;frankfort;free state
+TFS-B0439;silver;active;90;961120651084;837878464;Tsotetsi;Palesa;Priscilla;2022/11/03;2022/11/03;yes;no;;fnb;cash;;black;frankfort;free state
+TFS-B0440;silver;active;100;8101275478087;788298917;Mdhlane;Solomon;Mpiyakhe;2022/11/03;2022/11/03;no;no;;fnb;cash;;white;frankfort;free state
+TFS-B0441;silver;active;70;7112110350085;723625908;Tsotetsi;Melita;Mphakiseng;2022/11/03;2022/11/03;yes;no;;capitec;bank tranfer;;colored;frankfort;free state
+TFS-B0442;silver;active;110;no data;739817986;Gamede;Mafete;Amos;2022/11/03;2022/11/03;no;yes;;absa;bank tranfer;;black;frankfort;free state
+TFS-B0443;silver;;140;no data;739817986;Gamede;Sbongile;;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0444;silver;active;100;8310270855088;609100698;Mpele;Thokozile;Jetty;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0445;silver;;110;5103125393089;781719674;Ramasedi;David;;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;white;frankfort;free state
+TFS-B0446;silver;active;120;7007095532089;no data;Radebe;Moferefere;Samuel;2022/11/03;2022/11/03;no;yes;;absa;cash;;colored;frankfort;free state
+TFS-B0452;silver;active;70;8505016536084;no data;Mokoena;Thabo;Meshack;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0453;silver;active;100;7107230460087;606984559;Mphuthi;Mmatsaba;Evelin;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0454;silver;active;90;9301250604082;606984559;Diseko;Puseletso;Tina;2022/11/03;2022/11/03;yes;no;;capitec;cash;;black;frankfort;free state
+TFS-B0455;silver;active;100;7101270398083;825448621;Sibanyoni;Johanna;Nokuhlupheka;2022/11/03;2022/11/03;yes;yes;;absa;cash;;white;frankfort;free state
+TFS-B0456;silver;active;70;6410065423084;825448621;Sibanyoni;Petrus;Oupa;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;colored;frankfort;free state
+TFS-B0458;silver;active;70;5704190715088;825448621;Majola;Sylvia;Elsie;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0459;silver;;90;2705145184083;633898609;Miya;Jacob;;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0460;silver;;100;6804085602083;810762434;Mphuthi;Robert;;2022/11/03;2022/11/03;yes;yes;;absa;bank tranfer;;black;frankfort;free state
+TFS-B0461;silver;;110;no data;no data;Motloung;Matebesi;;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0462;silver;;140;no data;no data;Motloung;Martha;;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0463;silver;;90;4002160268084;no data;Mazibuko;Elizabeth;;2022/11/03;2022/11/03;no;no;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0464;silver;;140;9204265648088;623237409;Mphuthi;Moeketsi;;2022/11/03;2022/11/03;no;no;;absa;cash;;black;frankfort;free state
+TFS-B0465;silver;active;110;6008120540080;766850463;Khanye;Selina;Dibuseng;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0466;silver;active;70;6608190299085;no data;Mbele;Nomachosa;Roselinah;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0467;silver;active;70;8101106306085;no data;Mokoena;Monnamoholo;Ishmael;2022/11/03;2022/11/03;yes;yes;;capitec;cash;;colored;frankfort;free state
+TFS-B0468;silver;active;100;8403090329085;no data;Mbele;Florie;Mmampai;2022/11/03;2022/11/03;no;yes;;absa;cash;;black;frankfort;free state
+TFS-B0470;silver;active;100;6810103042087;no data;Sikasa;Gozo;Selina;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0472;silver;active;120;8911035262088;632890623;Mabuya;Ticho;Jerry;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0476;silver;active;100;7204090511081;847659501;Moloi;Ntsoaki;Mary;2022/11/03;2022/11/03;no;no;;capitec;bank tranfer;;white;frankfort;free state
+TFS-B0477;silver;;70;6004180620086;826288203;Moloi;Anna;;2022/11/03;2022/11/03;no;no;;absa;bank tranfer;;colored;frankfort;free state
+TFS-B0478;silver;;70;9507310168088;no data;Bomela;Lerato;;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0479;silver;;110;9108295406088;638234268;Motloung;Jeremiah;;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0481;silver;active;90;3903105347084;839257951;Ndobe;Phonco;Elliot;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0483;silver;active;140;9401070236089;749336008;Mofokeng;Manana;Lydia;2022/11/03;2022/11/03;yes;yes;;absa;cash;;white;frankfort;free state
+TFS-B0484;silver;active;100;9301140251086;no data;Sithole;Buyisiwe;Maria;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0486;silver;active;70;7508161045088;847482286;Thusi;Pontjie;Portia;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0487;silver;;100;8510200332088;833617573;Booysen;Jemina;;2022/11/03;2022/11/03;no;no;;capitec;cash;;black;frankfort;free state
+TFS-B0490;silver;active;130;9610275811088;768912901;Mofokeng;Tshepiso;Ernest;2022/11/03;2022/11/03;yes;no;;absa;cash;;black;frankfort;free state
+TFS-B0491;silver;active;100;9011131077081;726318712;Motsoeneng;Mathabo;Maria;2022/11/03;2022/11/03;no;no;;fnb;cash;;white;frankfort;free state
+TFS-B0492;silver;active;100;no data;no data;Motloung;Nneheng;Sana;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;colored;frankfort;free state
+TFS-B0494;silver;;90;4908180565087;no data;Mokoena;Jermina;;2022/11/03;2022/11/03;yes;no;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0495;silver;;100;8912266281086;848504791;Mkhize;Nkosana;;2022/11/03;2022/11/03;yes;yes;;absa;bank tranfer;;black;frankfort;free state
+TFS-B0496;silver;active;100;9304030535089;732957602;Pungwa;Debra;Sibongile;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0497;silver;active;90;4708100699085;783769255;More;Makhamane;Martha;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0498;silver;;70;6802010503087;780933364;Bucibo;Maria;;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;colored;frankfort;free state
+TFS-B0499;silver;active;70;411045313086;797342022;Motaung;Thato;Victor;2022/11/03;2022/11/03;yes;no;;absa;cash;;black;frankfort;free state
+TFS-B0500;silver;;100;no data;no data;Moshoadiba;Lebohang;;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0503;silver;;130;no data;607806543;Radebe;Malefu;;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0505;silver;;120;6109150346081;607806543;Mofokeng;Maria;;2022/11/03;2022/11/03;no;yes;;capitec;cash;;white;frankfort;free state
+TFS-B0506;silver;active;100;6202020600082;639757818;Semela;Julia;Seipati;2022/11/03;2022/11/03;no;yes;;absa;cash;;colored;frankfort;free state
+TFS-B0507;silver;active;90;99072225272084;719417030;Paballo;;Motaung;2022/11/03;2022/11/03;no;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0508;silver;active;130;9909230494083;711878002;Motsoeneng;Puleng;Florence;2022/11/03;2022/11/03;no;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0509;silver;active;120;8705180697084;784239560;Motsoeneng;Refiloe;Maseteketsane;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0510;silver;;90;4301011847082;no data;Motloung;Maria;;2022/11/03;2022/11/03;yes;no;;absa;bank tranfer;;white;frankfort;free state
+TFS -B0511;silver;active;90;9412105233082;no data;Mokoena;Makoma;Isaac;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0512;silver;;100;6503145539083;727435288;Mokoena;Mohapi;;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0513;silver;active;100;8404190944088;no data;Mdhlane;Maria;Nonhlupheko;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0514;silver;active;90;4901050668081;788865989;Zondo;Dina;Ndlaleni;2022/11/03;2022/11/03;no;no;;absa;cash;;black;frankfort;free state
+TFS-B0515;silver;active;70;9911231036087;655018085;Ntombela;Alina;Maditaba;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0516;silver;active;100;8002090920081;655018085;Ntombela;Elizabeth;Malebusa;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0517;silver;;120;508230501084;737445218;Ncala;Nobuhle;;2022/11/03;2022/11/03;yes;yes;;capitec;cash;;black;frankfort;free state
+TFS-B0518;silver;active;70;67032852239086;723939631;Sibanyoni;Alfred;Mlandweni;2022/11/03;2022/11/03;no;yes;;absa;cash;;black;frankfort;free state
+TFS-B0519;silver;active;160;8610270293085;724629512;Mashinini;Yvonne;Phumzile;2022/11/03;2022/11/03;yes;no;;fnb;cash;;black;frankfort;free state
+TFS-B0520;silver;active;110;5301065194083;649970991;Ncala;Charlie;Nkani;2022/11/03;2022/11/03;no;no;;fnb;cash;;white;frankfort;free state
+TFS-B0521;silver;active;100;9311200106088;787084910;Mnguni;Julia;Buyisiwe;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;colored;frankfort;free state
+TFS-B0522;silver;;70;71100102245081;735172286;Mphuthi;Paulina;;2022/11/03;2022/11/03;no;yes;;absa;bank tranfer;;black;frankfort;free state
+TFS-B0523;silver;active;90;9310260149087;764825363;Baloyi;Nonhlnhla;Christabella;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0524;silver;;100;6802080339081;764825363;Baloyi;Helen;;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0525;silver;active;90;7010045536085;764825363;Masilo;Elvis;Lesizi;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;white;frankfort;free state
+TFS-B0526;silver;;160;7607030714088;781337818;Mazibuko;Ouma;;2022/11/03;2022/11/03;yes;yes;;absa;cash;;colored;frankfort;free state
+TFS-B0527;silver;active;160;8102255617082;736431510;Mokoena;Thabo;Michael;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0528;silver;active;100;7505215740086;7229741179;Sithathi;Nokuhlupheka;Sinna;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0529;silver;;110;9809255811080;729741179;Sithathi;Mahase;;2022/11/03;2022/11/03;yes;no;;capitec;cash;;black;frankfort;free state
+TFS-B0530;silver;active;160;8607221116084;781089728;Mabote;Lebohang;Josphina;2022/11/03;2022/11/03;yes;yes;;absa;cash;;white;frankfort;free state
+TFS-B0531;silver;active;90;7809036210083;no data;Sekhoto;Mjibha;Albert;2022/11/03;2022/11/03;yes;no;;fnb;cash;;colored;frankfort;free state
+TFS-B0532;silver;active;120;7905041091086;no data;Msibi;Nyane;Lettia;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0533;silver;active;110;no data;no data;Tsotetsi;Lefenya;Tumelo;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0534;silver;active;120;8803030573082;638803722;Gatebe;Elizabeth;Memase;2022/11/03;2022/11/03;no;yes;;absa;bank tranfer;;black;frankfort;free state
+TFS-B0535;silver;active;90;5204215698088;732053435;Hlahane;Rakhobatha;Philemon;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0536;silver;active;100;8403210692081;no data;Motloung;Aletta;Kenty;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0537;silver;active;70;6212015483089;no data;Molefe;Joseph;Tseko;2022/11/03;2022/11/03;no;no;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0538;silver;active;100;9808240774080;731331058;Mofokeng;Emily;Sellwane;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-B0539;silver;active;70;6012210663083;7992250008;Tsotetsi;Sara;Tlaleng;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0540;silver;active;100;8602111060088;73119691;Dlamini;Puleng;Violet;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0541;silver;;120;9205301190084;636544914;Khanye;Nthabiseng;;2022/11/03;2022/11/03;yes;yes;;capitec;cash;;colored;frankfort;free state
+TFS-B0542;silver;active;70;6209065485089;636544914;Khanye;Bereng;Jacob;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-B0543;silver;active;140;9211075269088;623482604;Mokoena;Neo;Mdududzi;2022/11/03;2022/11/03;no;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0544;silver;active;140;9805165945085;718979573;Tladi;Samuel;Motsamai;2022/11/03;2022/11/03;no;no;;fnb;cash;;black;frankfort;free state
+TFS-B0545;silver;active;70;6711030244087;733411650;Tladi;Joalane;Annah;2022/11/03;2022/11/03;no;no;;capitec;bank tranfer;;white;frankfort;free state
+TFS-B0546;silver;active;100;2200443089;610848933;Mbele;Palesa;Innocent;2022/11/03;2022/11/03;yes;no;;absa;bank tranfer;;colored;frankfort;free state
+TFS-B0548;silver;active;70;5909180704089;623676189;Mokoena;Rosy;;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0549;silver;active;160;7012260667082;632938516;Komane;Nhlale;Rebecca;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0550;silver;active;140;no data;632938516;Komane;Thabang;;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0551;silver;active;70;7211125589081;810305494;Moloi;McDonald;;2022/11/03;2022/11/03;yes;yes;;absa;cash;;white;frankfort;free state
+TFS-B0552;silver;active;90;3408090172083;713927390;Dlamini;Maria;;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0553;silver;active;100;8304046865083;839928831;Mokoena;Petrus;;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0554;silver;active;70;6512050282084;785821292;Tsotetsi;Ntsebeng;Christinah;2022/11/03;2022/11/03;no;no;;capitec;cash;;black;frankfort;free state
+TFS-B0555;silver;active;100;9410085269084;749357939;Mokoena;Sam;Tseko;2022/11/03;2022/11/03;yes;no;;absa;cash;;black;frankfort;free state
+TFS-B0556;silver;active;100;9306021325081;no data;Mtambo;Mosela;Elsie;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;white;frankfort;free state
+TFS-B0557;silver;active;100;8905080358080;no data;Tsotetsi;Nunu;Sophie;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;colored;frankfort;free state
+TFS-B0558;silver;active;70;1116014083;no data;Mhlambi;Mvulane;Johannes;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0559;silver;active;90;4812180414082;no data;Kubheka;Tampi;Emily;2022/11/03;2022/11/03;yes;yes;;absa;bank tranfer;;black;frankfort;free state
+TFS-B0560;silver;active;140;7407070370085;no data;Kobo;Masakhane;Leah;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0561;silver;active;90;no data;no data;Motsweni;Isaac;Motshoeneng;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0562;silver;active;100;6307030722089;no data;Nhlapo;Nontando;Martha;2022/11/03;2022/11/03;yes;no;;capitec;bank tranfer;;colored;frankfort;free state
+TFS-B0563;silver;active;110;8504050295081;787459102;Mazibuko;Tokozile;Jumaima;2022/11/03;2022/11/03;yes;no;;absa;cash;;black;frankfort;free state
+TFS-B0564;silver;active;90;4907110205087;no data;Motseke;Makie;Suzen;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0565;silver;active;140;7209170335087;no data;Motseke;Mosela;Elisa;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0566;silver;active;110;1805040405087;783915030;Mokoena;Lesedi;;2022/11/03;2022/11/03;no;no;;capitec;cash;;white;frankfort;free state
+TFS-B0567;silver;active;100;8003015259084;710268862;Mnqosini;Mzwandile;Daniel;2022/11/03;2022/11/03;no;yes;;absa;cash;;colored;frankfort;free state
+TFS-B0568;silver;active;160;9009036623082;711845196;Mgcina;Daniel;Mbalekelwa;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0569;silver;active;100;9304200379086;no data;Mqongo;Maria;;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0570;silver;active;130;940110;820826415;Mohlabai;Ntsoaki;Elizabeth;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0571;silver;active;110;520819;820826415;Mvelase;Tswakae;Martha;2022/11/03;2022/11/03;yes;no;;absa;bank tranfer;;white;frankfort;free state
+TFS-B0572;silver;active;100;7706050759088;no data;Mtholo;Mosela;Jeminah;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0573;silver;active;160;7707025933089;794675416;Maseko;Alfred;Butinyane;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0574;silver;active;70;6710100508082;784113505;Malindi;Matope;Dorah;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0575;silver;active;130;8806041004088;784113505;Malindi;Ntombi;Nelly;2022/11/03;2022/11/03;no;yes;;absa;cash;;black;frankfort;free state
+TFS-B0576;silver;active;120;9707010808088;no data;Tsotetsi;Puleng;Eunice;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0577;silver;active;70;6703056072088;798450197;Mthembu;Ngcaki;Lucas;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0578;silver;active;90;8912285579080;658331296;Tsotetsi;Buti;July;2022/11/03;2022/11/03;yes;yes;;capitec;cash;;black;frankfort;free state
+TFS-B0579;silver;active;100;7501130949084;607783090;Maduna;Josephine;Madiphoso;2022/11/03;2022/11/03;no;no;;absa;cash;;black;frankfort;free state
+TFS-B0580;silver;active;120;9809020773086;607783090;Maduna;Mpho;Phenicia;2022/11/03;2022/11/03;yes;no;;fnb;cash;;black;frankfort;free state
+TFS-B0581;silver;active;100;8904020334087;839274080;Mofokeng;Thandi;Georginah;2022/11/03;2022/11/03;no;no;;fnb;cash;;white;frankfort;free state
+TFS-B0582;silver;active;100;no data;no data;Mnune;Simon;Paseka;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;colored;frankfort;free state
+TFS-B0583;silver;active;70;no data;no data;Dlamini;Brigdget;;2022/11/03;2022/11/03;no;no;;absa;bank tranfer;;black;frankfort;free state
+TFS-B0584;silver;active;100;7502215548080;634173878;Mokoena;IU;Kristan;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0585;silver;active;90;9901291098085;634173878;Mokoena;Maletsatsi;Christina;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0586;silver;active;90;6502165380089;8358480205;Miya;Kenneth;;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;white;frankfort;free state
+TFS-B0587;silver;active;100;9705051357080;664075580;Monareng;Dieketseng;Dora;2022/11/03;2022/11/03;yes;yes;;absa;cash;;colored;frankfort;free state
+TFS-B0588;silver;active;90;3306060652086;837132752;Mashiloane;Martha;Mamokete;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0589;silver;active;160;9607051101080;837132752;Mashiloane;Jabulile;;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0590;silver;active;70;no data;782048764;Tsotetsi;Palesa;Martha;2022/11/03;2022/11/03;yes;yes;;capitec;cash;;black;frankfort;free state
+TFS-B0591;silver;active;70;6011225389080;661825637;Mofokeng;Nakedi;Samuel;2022/11/03;2022/11/03;yes;yes;;absa;cash;;white;frankfort;free state
+TFS-B0592;silver;active;90;7311275719080;664075580;Radebe;Panolla;John;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;colored;frankfort;free state
+TFS-B0593;silver;active;100;7803176000081;735057533;Mbele;Finthane;Antony;2022/11/03;2022/11/03;no;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0594;silver;active;160;9012290422084;733250235;Mokoena;Maditaba;Aletta;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0595;silver;active;90;5409255734087;733250235;Mokoena;Tumane;Paulus;2022/11/03;2022/11/03;no;yes;;absa;bank tranfer;;black;frankfort;free state
+TFS-B0596;silver;active;100;6712105424083;650039583;Radebe;Mishack;Richard;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0597;silver;active;90;9706210280080;6550039583;Radebe;Mosela;Gloria;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0598;silver;active;90;5108275013080;735800616;Smuts;Abram;;2022/11/03;2022/11/03;yes;no;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0599;silver;active;90;4706300253083;735800616;Maru;Dorah;;2022/11/03;2022/11/03;no;yes;;absa;cash;;black;frankfort;free state
+TFS-B0600;silver;active;100;no data;no data;Booysen;Jemina;;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0601;silver;active;120;9304160532088;731538466;Mokgothu;Thabang;;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0602;silver;active;100;7701280571080;655365149;Swarts;Loekie;Nomsa;2022/11/03;2022/11/03;no;yes;;capitec;cash;;colored;frankfort;free state
+TFS-B0603;silver;active;110;no data;no data;Mnune;Maggie;Sarah;2022/11/03;2022/11/03;no;yes;;absa;cash;;black;frankfort;free state
+TFS-B0604;silver;active;100;5210250176088;no data;Matona;Matselane;Anna;2022/11/03;2022/11/03;no;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0605;silver;active;100;7011280617085;673225551;Mokgothu;Dimakatso;Maria;2022/11/03;2022/11/03;yes;no;;fnb;cash;;black;frankfort;free state
+TFS-B0608;silver;active;100;8406221311088;no data;Motloung;Lebo;Yvonne;2022/11/03;2022/11/03;no;no;;capitec;bank tranfer;;white;frankfort;free state
+TFS-B0610;silver;active;70;9802260257084;no data;Khanye;Roselina;Mafrayi;2022/11/03;2022/11/03;yes;yes;;absa;bank tranfer;;colored;frankfort;free state
+TFS-B0613;silver;active;100;8112280343083;725201903;Mokoena;Martha;Malefu;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0615;silver;active;100;6409095292089;no data;Motloung;Japta;;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0616;silver;active;110;9509150280088;no data;Motloung;Palesa;Roselina;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0617;silver;active;90;4907010577080;no data;Tsotetsi;Ramoubana;Sarah;2022/11/03;2022/11/03;yes;yes;;absa;cash;;white;frankfort;free state
+TFS-B0618;silver;active;100;7808010538089;no data;Mlotshwa;Dieketseng;Rosunah;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0619;silver;active;140;8306280384085;714550981;Thanyile;Aleta;Nomate;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0622;silver;active;100;6503010588082;no data;Ngozo;Nomvula;Julia;2022/11/03;2022/11/03;yes;no;;capitec;cash;;black;frankfort;free state
+TFS-B0623;silver;active;120;9006280168087;717689217;Mofokeng;Salita;;2022/11/03;2022/11/03;yes;no;;absa;cash;;black;frankfort;free state
+TFS-B0652;silver;active;110;9011085267084;731436876;Moloi;Godfrey;;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;white;frankfort;free state
+TFS-B0653;silver;active;70;6602170409087;647732065;Sibeko;Meitjie;;2022/11/03;2022/11/03;yes;no;;fnb;cash;;colored;frankfort;free state
+TFS-B0654;silver;active;110;8907195516081;no data;Mbuli;Mfana;Jonny;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0656;silver;active;100;6404245472087;793396811;Radebe;Matjene;Johannes;2022/11/03;2022/11/03;yes;yes;;absa;bank tranfer;;black;frankfort;free state
+TFS-B0657;silver;active;110;8910285468080;631627410;Malakoane;Samuel;;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0658;silver;active;70;6007045935086;736228545;Mokoena;Jacob;Dishanyana;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0659;silver;active;70;1999;793396811;Radebe;Majesi;;2022/11/03;2022/11/03;no;no;;capitec;bank tranfer;;colored;frankfort;free state
+TFS-B0660;silver;active;70;7305101395081;737709013;Khumalo;Maria;;2022/11/03;2022/11/03;no;no;;absa;cash;;black;frankfort;free state
+TFS-B0661;silver;active;100;8012011201081;736379888;Mokoena;Makojang;Gands;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0662;silver;active;100;8809240376083;795569696;Ndhlela;Dineo;Minah;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0663;silver;active;100;105201098081;723634866;Mokoena;Mathapelo;Evelina;2022/11/03;2022/11/03;yes;yes;;capitec;cash;;white;frankfort;free state
+TFS-B0665;silver;active;120;9310310405083;785821292;Tsotetsi;Nrateng;Patricia;2022/11/03;2022/11/03;yes;yes;;absa;cash;;colored;frankfort;free state
+TFS-B0666;silver;active;100;no data;no data;Kubheka;Elizabeth;Thandi;2022/11/03;2022/11/03;no;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0667;silver;active;100;9202290407082;780372426;Mahlangu;Lebohang;Lydia;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0668;silver;active;70;9001106487084;no data;Mashiloane;Thabang;Jack;2022/11/03;2022/11/03;yes;no;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0669;silver;active;70;9302175480087;762895381;Mofokeng;Tshidiso;David;2022/11/03;2022/11/03;no;no;;absa;bank tranfer;;white;frankfort;free state
+TFS-B0670;silver;active;140;9902020541080;783935824;Modise;Masepetlele;D;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0672;silver;active;70;7404055907080;640850265;Mkhwanazi;Simon;Michael;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0673;silver;active;100;7111145814081;no data;Mofokeng;Ntshenki;Stofel;2022/11/03;2022/11/03;yes;no;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0674;silver;active;70;109136293080;no data;Mofokeng;Tefo;Ike;2022/11/03;2022/11/03;no;yes;;absa;cash;;black;frankfort;free state
+TFS-B0675;silver;active;70;7104065861083;no data;Motaung;Tsiripe;Daniel;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0676;silver;active;100;9001155333080;842021499;Kubheka;Bongani;Joseph;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0677;silver;active;160;8609091526087;no data;Mokoena;Motshabi;;2022/11/03;2022/11/03;yes;yes;;capitec;cash;;black;frankfort;free state
+TFS-B0678;silver;active;100;6204305486088;no data;Mokoena;Mosotho;S;2022/11/03;2022/11/03;no;no;;absa;cash;;black;frankfort;free state
+TFS-B0679;silver;active;100;8911110421088;no data;Motaung;Mmapule;Pulina;2022/11/03;2022/11/03;yes;no;;fnb;cash;;black;frankfort;free state
+TFS-B0681;silver;active;90;no data;no data;Shezi;Molantwa;;2022/11/03;2022/11/03;no;yes;;fnb;cash;;white;frankfort;free state
+TFS-B0683;silver;active;120;109040484080;no data;Mzini;Zanele;Leta;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;colored;frankfort;free state
+TFS-B0684;silver;active;100;8611121109082;656007412;Xaba;Nomsebenzi;Maria;2022/11/03;2022/11/03;yes;yes;;absa;bank tranfer;;black;frankfort;free state
+TFS-B0685;silver;active;140;7806290372088;719662969;Nhlapo;Maria;;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0686;silver;active;160;86021807090861;783314110;Tshabalala;Modiehi;Anna;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0687;silver;active;180;890412067081;;Dhlamini;Nomathemba;Lucy;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;white;frankfort;free state
+TFS-B0688;silver;active;90;5211260770084;764425876;Xaba;Maria;Makhosazana;2022/11/03;2022/11/03;yes;no;;absa;cash;;colored;frankfort;free state
+TFS-B0689;silver;active;90;404;711171443;Motaung;Mapule;;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0690;silver;active;100;6911040780084;711171443;Motaung;Anna;;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0691;silver;active;110;5401195467080;no data;Masiteng;Mishick;Mokutse;2022/11/03;2022/11/03;yes;yes;;capitec;cash;;black;frankfort;free state
+TFS-B0692;silver;active;90;891030;no data;Masiteng;Thabo;Samson;2022/11/03;2022/11/03;no;no;;absa;cash;;white;frankfort;free state
+TFS-B0693;silver;active;120;8403071077083;637443354;Moloi;Nthoto;Josephine;2022/11/03;2022/11/03;no;yes;;fnb;cash;;colored;frankfort;free state
+TFS-B0694;silver;active;100;8306100739088;673523459;Mofokeng;Seipate;Selina;2022/11/03;2022/11/03;no;yes;;fnb;cash;;black;frankfort;free state
+TFS-B0695;silver;active;100;7708100641084;796352619;Dladla;Nomakhaza;Emma;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0696;silver;active;100;no data;760176405;Steyn;Simon;;2022/11/03;2022/11/03;yes;yes;;absa;bank tranfer;;black;frankfort;free state
+TFS-B0697;silver;active;100;7912220974082;784770113;Makhoba;Julia;Elizabeth;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0698;silver;active;70;no data;784770113;Makhoba;Sannboy;;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-B0699;silver;active;90;4703030963081;no data;Mtholo;Matshidiso;Maria;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-B0700;silver;active;90;5606126114080;no data;Mofokeng;Tampane;Daniel;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-B0701;silver;active;70;7905310459089;no data;Nhlapo;Mqaze;Alina;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-B0702;silver;active;70;9706160744085;no data;Nhlapo;Sarah;;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-B0711;silver;active;100;90821;646323586;Mothlaping;Mahadi;M;2022/11/03;2022/11/03;no;yes;;capitec;cash;;colored;frankfort;free state
+TFS-B0712;silver;active;100;9002240885084;627928350;Tsotetsi;Evelina;Maditaba;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-M0001;gold;canceled;140;9210120844085;788624313;Ndaba;Phithile;Phumla;2022/11/03;2022/11/03;no;no;;fnb;cash;;black;frankfort;free state
+TFS-M0002;gold;active;160;8612011396086;788624313;Ndaba;Lethiwe;Lynewar;2022/11/03;2022/11/03;yes;no;;fnb;cash;;black;frankfort;free state
+TFS-M0004;gold;active;140;6204035349085;731794352;Phiri;Hloai;Johannes;2022/11/03;2022/11/03;no;no;;capitec;bank tranfer;;white;frankfort;free state
+TFS-M0006;gold;active;140;910903130083;633874140;Mashinini;Nonhlanhla;Goodness;2022/11/03;2022/11/03;yes;yes;;absa;bank tranfer;;colored;frankfort;free state
+TFS-M0007;gold;active;;;766326316;Mofokeng;Molato;Piet;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0009;gold;active;160;9604251257085;745089471;Ndwandwe;Bandlile;;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0010;gold;canceled;140;8903020362080;631765798;Makhoba;Lindiwe;Yvonne;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-M0011;gold;active;160;6408195471080;818092226;Mahlophe;Kemane;Isaac;2022/11/03;2022/11/03;yes;yes;;absa;cash;;white;frankfort;free state
+TFS-M0012;gold;active;160;9002171200089;633872023;Ntsondo;Christinah;;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-M0013;gold;active;160;6903165508085;603378580;Khambule;Selane;Kingsley;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0014;gold;active;100;8005051259084;747847327;Kubeka;Elizabeth;Manana;2022/11/03;2022/11/03;yes;no;;capitec;cash;;black;frankfort;free state
+TFS-M0016;gold;active;180;5603150692081;837195190;Mokoena;Joyce;Cikose;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-M0018;gold;active;120;7911056147086;765398540;Mokoena;Sikeme;;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;white;frankfort;free state
+TFS-M0019;gold;active;140;4704095241082;no data;Kobo;Elias;;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;colored;frankfort;free state
+TFS-M0020;gold;active;120;8209221146086;838585639;Mosiya;Lebo;;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-M0021;gold;active;140;9003140343083;784490673;Nhlapo;Veronica;Nomsebensi;2022/11/03;2022/11/03;yes;yes;;absa;bank tranfer;;black;frankfort;free state
+TFS-M0023;gold;active;120;7411045498088;833202671;Mbele;Njanyana;;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0024;gold;active;180;8903056193086;630772674;Mokoena;Jonas;Thedimane;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;white;frankfort;free state
+TFS-M0025;gold;active;120;8711185827080;795321712;Nhlapo;Mbuyiselwa;William;2022/11/03;2022/11/03;no;no;;capitec;bank tranfer;;colored;frankfort;free state
+TFS-M0026;gold;active;160;8806091088080;no data;Lempe;Elizabeth;;2022/11/03;2022/11/03;no;no;;absa;cash;;black;frankfort;free state
+TFS-M0027;gold;active;140;7508155353084;631218503;Mokoena;Tsholoane;Job;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0028;gold;active;180;8112170916089;746282615;Mkhumbeni;F;N;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0029;gold;active;120;9309180544088;624824023;Nhlapo;Sara;;2022/11/03;2022/11/03;no;yes;;capitec;cash;;white;frankfort;free state
+TFS-M0030;gold;active;100;51112170279085;734855888;Damani;Maria;Mohanuwa;2022/11/03;2022/11/03;yes;yes;;absa;cash;;colored;frankfort;free state
+TFS-M0031;gold;active;100;6804105748080;no data;Mphuthi;Lazarus;;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-M0033;gold;active;120;7410110391087;799603511;Ngcana;Boniswa;Emily;2022/11/03;2022/11/03;no;yes;;fnb;cash;;black;frankfort;free state
+TFS-M0034;gold;active;100;6404035745080;794707537;Motsoeneng;Moferefere;;2022/11/03;2022/11/03;no;no;;capitec;bank tranfer;;black;frankfort;free state
+TFS-M0035;gold;active;180;9301020803089;738128327;Mphuthing;Inncentia;Lerato;2022/11/03;2022/11/03;no;no;;absa;bank tranfer;;white;frankfort;free state
+TFS-M0036;gold;active;160;9204015760084;731009371;Mkoki;Teboho;Jefrey;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-M0037;gold;active;120;7407215617083;604386051;Moloi;Thapelo;Boy;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0038;gold;active;120;8808010639084;720440323;Dlamini;Emily;;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-M0039;gold;active;120;8901296016083;824700832;Ngcobo;Boy;Charles;2022/11/03;2022/11/03;no;yes;;absa;cash;;black;frankfort;free state
+TFS-M0040;gold;active;140;3606140297087;588133658;Ngcana;Madibuseng;;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-M0041;gold;active;120;880924;769058459;Miya;Ntsamayeng;;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-M0042;gold;active;120;5207195526088;604715217;Mokoena;Tahleo;Samuel;2022/11/03;2022/11/03;yes;no;;capitec;cash;;black;frankfort;free state
+TFS-M0043;gold;active;120;6704070576089;no data;Motsoeneng;Maria;;2022/11/03;2022/11/03;no;no;;absa;cash;;black;frankfort;free state
+TFS-M0044;gold;active;140;8005125794082;792856438;Mzizi;Nkosana;Elliot;2022/11/03;2022/11/03;yes;no;;fnb;cash;;black;frankfort;free state
+TFS-M0045;gold;active;140;4705205528086;735940482;Nale;Hermaans;;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;white;frankfort;free state
+TFS-M0046;gold;active;180;;736356746;Motsoeneng;Sanna;;2022/11/03;2022/11/03;yes;no;;capitec;bank tranfer;;colored;frankfort;free state
+TFS-M0047;gold;active;140;8309051069083;731088025;Mokoena;Modiehi;Maria;2022/11/03;2022/11/03;yes;yes;;absa;bank tranfer;;black;frankfort;free state
+TFS-M0048;gold;active;140;740305566087;640166268;Mokoena;Joseph;Lekena;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0049;gold;active;120;8205215773083;822674021;Khanye;Daniel;Tumelo;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0050;gold;active;120;9105050193083;791055123;Nhlapo;Nomasonto;Berice;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;white;frankfort;free state
+TFS-M0051;gold;active;180;8406170566088;732313036;Makhanda;Lettia;;2022/11/03;2022/11/03;yes;no;;absa;cash;;colored;frankfort;free state
+TFS-M0052;gold;canceled;160;8504180488085;780656700;Mofokeng;Mamohande;Pretty;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0053;gold;active;120;6410145504085;784984146;Motsoeneng;Pakiso;Abiel;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0054;gold;active;120;1989-25-05;828697413;Nkutha;Samue;;2022/11/03;2022/11/03;no;yes;;capitec;cash;;black;frankfort;free state
+TFS-M0055;gold;active;180;7110265450080;768880880;Moloi;Mokete;Timothy;2022/11/03;2022/11/03;no;yes;;absa;cash;;white;frankfort;free state
+TFS-M0056;gold;active;140;8208061244084;no data;Ndaba;Mpho;Bellina;2022/11/03;2022/11/03;no;yes;;fnb;cash;;colored;frankfort;free state
+TFS-M0057;gold;active;140;4501011725085;604715217;Mosia;Lucy;;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-M0058;gold;active;180;9306290382086;743868258;Mhlambi;Nonhlanhla;;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-M0059;gold;active;190;9010295541080;719281327;Khany;Fana;Lighte;2022/11/03;2022/11/03;no;no;;absa;bank tranfer;;black;frankfort;free state
+TFS-M0060;gold;active;120;8108175797086;787129270;Mokoena;Joshua;Mmusetsi;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;white;frankfort;free state
+TFS-M0061;gold;active;120;9101250407084;735598547;Morajane;Palesa;Alexis;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-M0063;gold;active;140;9604130420086;782705034;Mofokeng;Aletta;Hlateleng;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-M0064;gold;active;180;9605245709081;765282923;Ngubeni;Sephiwe;Hendrick;2022/11/03;2022/11/03;no;no;;absa;cash;;black;frankfort;free state
+TFS-M0065;gold;active;120;;717049389;Motaung;Mirriam;;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0066;gold;active;100;8109120723086;760979805;Mofokeng;Christinah;;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-M0067;gold;active;140;7901085983083;726486041;MekoTebello;Phillip;;2022/11/03;2022/11/03;no;yes;;capitec;cash;;colored;frankfort;free state
+TFS-M0068;gold;active;180;9112156463889;637883714;Bofelo;Patrick;;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-M0069;gold;active;160;79012015701088;714180022;Pitso;Pule;Simon;2022/11/03;2022/11/03;no;no;;fnb;cash;;black;frankfort;free state
+TFS-M0070;gold;active;100;5401017883088;781516968;Letsoalo;Masuane;;2022/11/03;2022/11/03;yes;no;;fnb;cash;;black;frankfort;free state
+TFS-M0071;gold;active;140;960508;616206895;Moloi;Mantwa;;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;white;frankfort;free state
+TFS-M0073;gold;active;120;8104071084083;835096388;Miya;Lucy;;2022/11/03;2022/11/03;yes;yes;;absa;bank tranfer;;colored;frankfort;free state
+TFS-M0074;gold;active;120;9701040294088;630766493;Motaung;Portia;Reitumetse;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0075;gold;active;160;941230118489;792842597;Sithole;Thembi;;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0078;gold;active;120;8902280339085;744436800;Mazibuko;Sizakele;Jane;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-M0079;gold;active;160;770126211082;763686163;Sibulwane;Kalani;Simon;2022/11/03;2022/11/03;yes;yes;;absa;cash;;white;frankfort;free state
+TFS-M0081;gold;active;120;8909110521089;no data;Mosia;Anna;Kubeka;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-M0082;gold;active;140;7306036293086;789296053;Tsotetsi;Petros;Bei;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0083;gold;active;120;;740170776;Mohlakoana;David;M;2022/11/03;2022/11/03;yes;no;;capitec;cash;;black;frankfort;free state
+TFS-M0084;gold;active;120;97;no data;Mokoena;Aros;Thabang;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-M0085;gold;active;120;9402110437083;767053776;Mokoena;Martha;Mamaki;2022/11/03;2022/11/03;yes;no;;fnb;cash;;white;frankfort;free state
+TFS-M0086;gold;active;180;9103125145089;766363258;Twala;Benjamime;Motsamai;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;colored;frankfort;free state
+TFS-M0088;gold;active;140;860830110080;634110381;Xaba;Lydia;Nomshado;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-M0089;gold;active;180;8408310744088;849113210;Modibedi;Puleng;Constance;2022/11/03;2022/11/03;no;yes;;absa;bank tranfer;;black;frankfort;free state
+TFS-M0090;gold;active;120;8408080828087;794673802;Mpondo;Maria;;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0091;gold;active;140;7904220760082;723964506;Hadebe;Ntombifuthi;Catherine;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;white;frankfort;free state
+TFS-M0093;gold;active;120;8910291238089;710281180;Masiteng;Ester;;2022/11/03;2022/11/03;yes;no;;capitec;bank tranfer;;colored;frankfort;free state
+TFS-M0094;gold;active;140;;834780573;Moloi;Thabiso;Joseph;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-M0095;gold;active;180;9304145339088;717898927;Mvelase;Linda;Nicholas;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0096;gold;active;160;8201013355082;711032269;Mosia;Linda;Nicholas;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0098;gold;active;160;8310200721087;844623438;Gamede;Mphakiseng;;2022/11/03;2022/11/03;yes;yes;;capitec;cash;;white;frankfort;free state
+TFS-M0099;gold;active;160;8109231440083;no data;Mahlangu;Lettia;Mhlopheng;2022/11/03;2022/11/03;no;yes;;absa;cash;;colored;frankfort;free state
+TFS-M0100;gold;active;120;8706180947081;738942965;Makhalemela;Linah;Puleng;2022/11/03;2022/11/03;no;yes;;fnb;cash;;black;frankfort;free state
+TFS-M0101;gold;active;120;9010031177082;781312162;Motaung;Roselina;;2022/11/03;2022/11/03;no;no;;fnb;cash;;black;frankfort;free state
+TFS-M0102;gold;active;140;;no data;Mbele;Thandi;Martha;2022/11/03;2022/11/03;yes;no;;capitec;bank tranfer;;black;frankfort;free state
+TFS-M0105;gold;active;120;9401230378086;810859176;Mokoena;Lerato;Getruth;2022/11/03;2022/11/03;no;no;;absa;bank tranfer;;white;frankfort;free state
+TFS-M0106;gold;active;140;9309126374081;720224370;Motaung;Napo;Leonard;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-M0107;gold;active;160;8109115685084;746350526;Tsotetsi;Kapoki;Petrus;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0108;gold;active;120;990316054080;725038428;Tsotetsi;Nthabeleng;Nelly;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-M0109;gold;active;140;8908310300088;749208445;Tshabangu;Sarah;Tez;2022/11/03;2022/11/03;no;yes;;absa;cash;;black;frankfort;free state
+TFS-M0110;gold;active;180;6911225513086;no data;Hlatswayo;Elijah;;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-M0111;gold;active;180;9310200859084;631432053;Khanye;Nthibe;Maria;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-M0112;gold;active;120;9209265941086;794053158;Qhamakoane;Thabo;Daniel;2022/11/03;2022/11/03;yes;no;;capitec;cash;;black;frankfort;free state
+TFS-M0113;gold;active;180;8506140363084;795190230;Tsotetsi;Martha;Mapaseka;2022/11/03;2022/11/03;yes;no;;absa;cash;;black;frankfort;free state
+TFS-M0114;gold;active;120;8806065464085;785081254;Setlaelo;Motete;Bethuel;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;black;frankfort;free state
+TFS-M0115;gold;active;180;8807090373085;616646487;Tsotetsi;Anna;;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;white;frankfort;free state
+TFS-M0116;gold;active;120;8201012184087;;Skhosana;Linah;Letie;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;colored;frankfort;free state
+TFS-M0117;gold;active;160;9603315338089;733467624;Mazibuko;Tumelo;Johannes;2022/11/03;2022/11/03;yes;yes;;absa;bank tranfer;;black;frankfort;free state
+TFS-M0118;gold;active;120;7904060286081;636509797;Mazibuko;Mamotaung;M;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0119;gold;active;120;8912141399087;717357178;Mzini;Rebecca;Seipati;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0120;gold;active;180;911512;no data;Mokoena;Masabata;;2022/11/03;2022/11/03;yes;no;;capitec;bank tranfer;;white;frankfort;free state
+TFS-M0121;gold;active;100;651008;no data;Motloung;Shiela;;2022/11/03;2022/11/03;no;no;;absa;cash;;colored;frankfort;free state
+TFS-M0122;gold;active;180;8704010416088;631894034;Mbele;Katty;Nomsa;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0123;gold;active;140;900216;no data;Moloi;Mahlomola;;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0124;gold;active;160;9304045157085;722079644;Mofokeng;Sello;Kgupiso;2022/11/03;2022/11/03;no;no;;capitec;cash;;black;frankfort;free state
+TFS-M0125;gold;active;160;9007166319083;746436816;Twala;Mojalefa;Samuel;2022/11/03;2022/11/03;yes;yes;;absa;cash;;white;frankfort;free state
+TFS-M0126;gold;active;120;9010120305081;781800616;Motaung;Emily;Lindiwe;2022/11/03;2022/11/03;yes;yes;;fnb;cash;;colored;frankfort;free state
+TFS-M0129;gold;active;120;6105205684088;822999962;Mokoena;Mohale;Jacob;2022/11/03;2022/11/03;no;yes;;fnb;cash;;black;frankfort;free state
+TFS-M0130;gold;active;180;8202141414080;631513247;Mabuka;Pulane;Sarah;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-M0132;gold;active;120;5906115845086;766416022;Dlamini;Swerie;S;2022/11/03;2022/11/03;yes;no;;absa;bank tranfer;;black;frankfort;free state
+TFS-M0133;gold;active;160;9607215497086;633822124;Gamede;Malefu;Aletta;2022/11/03;2022/11/03;no;no;;fnb;bank tranfer;;white;frankfort;free state
+TFS-M0134;gold;active;160;940321;791466824;Mazibuko;Tlaleng;;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-M0135;gold;active;180;9501031176082;781929118;Mazibuko;Cathrine;Sanah;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-M0136;gold;active;120;7010020631083;737603135;Ntuka;Nthabiseng;L;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-M0137;gold;active;180;9501031176082;797654592;Mazibuko;Cathrine;Sanah;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0138;gold;active;160;9302190857087;732865066;Scotland;Monica;B;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;white;frankfort;free state
+TFS-M0139;gold;active;120;8004120839083;827970884;Mahasela;Masefako;R;2022/11/03;2022/11/03;no;yes;;capitec;cash;;colored;frankfort;free state
+TFS-M0140;gold;active;140;9312040194086;no data;Mabate;Sana;Nomqebelo;2022/11/03;2022/11/03;yes;no;;absa;cash;;black;frankfort;free state
+TFS-M0141;gold;active;100;9104075659087;766850463;Khanye;Tshepo;Perseverance;2022/11/03;2022/11/03;no;no;;fnb;cash;;black;frankfort;free state
+TFS-M0142;gold;active;100;630206060109;764203222;Dhlamini;Marriam;;2022/11/03;2022/11/03;yes;no;;fnb;cash;;black;frankfort;free state
+TFS-M0143;gold;active;100;;no data;Mazibuko;Hadiyo;Algidia;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;white;frankfort;free state
+TFS-M0144;gold;active;160;8804080788083;728072072;Tsotetsi;Maria;;2022/11/03;2022/11/03;yes;no;;absa;bank tranfer;;colored;frankfort;free state
+TFS-M0146;gold;active;180;7211270660083;766416022;Mpele;Molelekeng;Christina;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0147;gold;active;140;7908015833087;789647019;Mokoena;Rakhoethe;Ishmael;2022/11/03;2022/11/03;yes;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0148;gold;active;180;780425773080;822931294;Moabi;Mirriam;;2022/11/03;2022/11/03;yes;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-M0149;gold;active;140;8811210737088;788168563;Mollo;Nthabiseng;Alinah;2022/11/03;2022/11/03;yes;yes;;absa;cash;;white;frankfort;free state
+TFS-M0150;gold;active;120;7510091160086;no data;Mgcina;Masitesh;Anna;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;colored;frankfort;free state
+TFS-M0151;gold;active;120;8307285292083;624201075;Morajane;Lehlohonolo;Joni;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0152;gold;active;140;8504111220086;728848521;Twala;Mphakiseng;Maria;2022/11/03;2022/11/03;yes;yes;;capitec;cash;;black;frankfort;free state
+TFS-M0153;gold;active;120;9212241508086;785055094;Tshabalala;Refiloe;;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-M0154;gold;active;160;8803030573082;638803722;Gatebe;Elizabeth;Memase;2022/11/03;2022/11/03;no;yes;;fnb;cash;;white;frankfort;free state
+TFS-M0155;gold;active;120;711125647081;no data;Mphuthi;Joseph;Mohloko;2022/11/03;2022/11/03;no;yes;;fnb;cash;;colored;frankfort;free state
+TFS-M0156;gold;active;120;7808090513085;713160259;Khanye;Evelina;Mapotlako;2022/11/03;2022/11/03;no;yes;;capitec;bank tranfer;;black;frankfort;free state
+TFS-M0157;gold;active;100;91110065970087;663328894;Mookeng;Pheelo;Samuel;2022/11/03;2022/11/03;no;yes;;absa;bank tranfer;;black;frankfort;free state
+TFS-M0158;gold;active;140;8806110253087;739175015;Nkutha;Elizabeth;Nomshuthu;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0159;gold;active;160;8702186199082;789317709;Chachane;Vuyane;Elias;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;white;frankfort;free state
+TFS-M0160;gold;active;160;801101100009;794791070;Tsotetsi;Maria;;2022/11/03;2022/11/03;no;no;;capitec;bank tranfer;;colored;frankfort;free state
+TFS-M0161;gold;active;120;9202131220082;730065447;Mokoena;Mamoeti;Talita;2022/11/03;2022/11/03;yes;yes;;absa;cash;;black;frankfort;free state
+TFS-M0162;gold;active;160;9605251246085;731732137;Mokoena;Chrestinah;Mmasepati;2022/11/03;2022/11/03;yes;no;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0163;gold;active;140;9003250257081;788815843;Moloi;Palesa;Gloria;2022/11/03;2022/11/03;no;yes;;fnb;bank tranfer;;black;frankfort;free state
+TFS-M0164;gold;active;180;;616502580;Mofokeng;Modiehi;Lettia;2022/11/03;2022/11/03;no;yes;;capitec;cash;;white;frankfort;free state
+TFS-M0165;gold;active;160;;835714680;Memeza;Ntombifuthi;;2022/11/03;2022/11/03;no;yes;;;cash;;colored;frankfort;free state
+TFS-M0167;gold;active;160;9512155361087;843508688;Mhlambi;Samuel;Sifiso;2022/11/03;2022/11/03;yes;yes;;;cash;;black;frankfort;free state
+TFS-M0169;gold;active;140;9308161305089;810907864;Mcena;Aletta;Nondabephe;2022/11/03;2022/11/03;no;no;;;cash;;black;frankfort;free state
+TFS-M0170;gold;active;120;8203030416087;712270638;Khanye;Nthabiseng;Synthia;2022/11/03;2022/11/03;yes;no;;;bank tranfer;;black;frankfort;free state
+TFS-M0171;gold;active;120;8506256011089;820750543;Tsotetsi;Mokete;Samuel;2022/11/03;2022/11/03;no;yes;;;bank tranfer;;white;frankfort;free state
+TFS-M0172;gold;active;120;8612306048087;833334756;Tsotetsi;Thabo;Charles;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;colored;frankfort;free state
+TFS-M0173;gold;active;140;9005126154087;622715121;Mofokeng;Lebohang;Christopher;2022/11/03;2022/11/03;no;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0174;gold;active;120;9305060501081;619920871;Mzini;Ntombizodwa;Maria;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0175;gold;active;140;8701060308082;630285179;Mosea;Anna;Mangaka;2022/11/03;2022/11/03;no;yes;;;cash;;black;frankfort;free state
+TFS-M0176;gold;active;140;8208011100089;797183042;Mofokeng;Disebo;Angelina;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;white;frankfort;free state
+TFS-M0177;gold;active;120;8910250318088;638959972;Moshoadiba;Motshidisi;Tina;2022/11/03;2022/11/03;yes;no;;;bank tranfer;;colored;frankfort;free state
+TFS-M0178;gold;active;180;;727735416;Motaung;Dibakiso;Selina;2022/11/03;2022/11/03;yes;no;;;cash;;black;frankfort;free state
+TFS-M0179;gold;active;160;87102458960085;788753604;Nkutha;David;Jabulane;2022/11/03;2022/11/03;yes;no;;;cash;;black;frankfort;free state
+TFS-M0180;gold;active;120;9110280566082;727735416;Motaung;Anastasia;;2022/11/03;2022/11/03;yes;yes;;;cash;;black;frankfort;free state
+TFS-M0181;gold;active;160;980914;604743005;Ngubeni;Njanyana;Daniel;2022/11/03;2022/11/03;yes;no;;;cash;;white;frankfort;free state
+TFS-M0182;gold;active;120;no data;no data;Motloung;Tiisetso;Isaac;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;colored;frankfort;free state
+TFS-M0185;gold;active;120;8709275598082;640241814;Mofokeng;Michael;Thabiso;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0186;gold;active;160;8210051467089;no data;Mzini;Nozinyanga;Liesbeth;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0187;gold;active;120;7103270492080;no data;Mzizi;Aleta;Horlosi;2022/11/03;2022/11/03;no;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0188;gold;active;120;6407175655084;835346932;Mahlangu;Samson;;2022/11/03;2022/11/03;no;no;;;bank tranfer;;white;frankfort;free state
+TFS-M0189;gold;active;120;8804161158081;833590264;Matuka;Dieketseng;Mary;2022/11/03;2022/11/03;no;no;;;cash;;colored;frankfort;free state
+TFS-M0190;gold;active;120;8305066409082;823643028;Mokoena;Molifi;James;2022/11/03;2022/11/03;no;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0191;gold;active;100;9311105363081;832387918;Mzizi;Makhosi;Petrus;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0193;gold;active;120;8505016296089;829749972;Nkutha;Johannes;Themba;2022/11/03;2022/11/03;yes;yes;;;cash;;black;frankfort;free state
+TFS-M0195;gold;active;140;85111130742081;712423708;Mafa;Ntombizodwa;P;2022/11/03;2022/11/03;no;yes;;;cash;;white;frankfort;free state
+TFS-M0196;gold;active;160;9702270605084;835109407;Dlamini;Joyce;Nthabiseng;2022/11/03;2022/11/03;yes;yes;;;cash;;colored;frankfort;free state
+TFS-M0197;gold;active;120;990316054080;725038428;Tsotetsi;Nthabeleng;Nelly;2022/11/03;2022/11/03;yes;yes;;;cash;;black;frankfort;free state
+TFS-M0198;gold;active;180;8907031379082;783357400;Miya;Nomasonto;Maria;2022/11/03;2022/11/03;no;no;;;bank tranfer;;black;frankfort;free state
+TFS-M0201;gold;active;120;3802045199086;837183686;Simella;Isaac;;2022/11/03;2022/11/03;no;no;;;bank tranfer;;black;frankfort;free state
+TFS-M0204;gold;active;120;9208200224087;604658902;Ncala;Thembeni;Sannah;2022/11/03;2022/11/03;no;no;;;bank tranfer;;white;frankfort;free state
+TFS-M0205;gold;active;120;4503260443089;721358255;Serathi;Moria;;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;colored;frankfort;free state
+TFS-M0206;gold;active;120;3910305135086;782619464;Mphuthi;Philemon;;2022/11/03;2022/11/03;no;no;;;bank tranfer;;black;frankfort;free state
+TFS-M0208;gold;active;160;8803151009080;no data;Mokoena;Nrateng;Gladys;2022/11/03;2022/11/03;yes;yes;;;cash;;black;frankfort;free state
+TFS-M0209;gold;active;120;6409010656087;731194691;Dlamini;Matshidiso;Maria;2022/11/03;2022/11/03;no;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0210;gold;active;140;no data;608641045;Mokoena;Tshepo;Patrick;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;white;frankfort;free state
+TFS-M0211;gold;active;120;8601066552081;no data;Mthembu;Themba;;2022/11/03;2022/11/03;no;yes;;;cash;;colored;frankfort;free state
+TFS-M0212;gold;active;140;6108220596089;790566279;Dubazana;Joyce;;2022/11/03;2022/11/03;yes;no;;;cash;;black;frankfort;free state
+TFS-M0214;gold;active;140;910305;782185016;Mphuthi;Portia;;2022/11/03;2022/11/03;no;no;;;cash;;black;frankfort;free state
+TFS-M0215;gold;active;160;8612011396086;788624313;Ndaba;Lyneldar;Londiwe;2022/11/03;2022/11/03;yes;yes;;;cash;;black;frankfort;free state
+TFS-M0216;gold;active;140;9210120844085;;Ndaba;Phethile;Phumla;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;white;frankfort;free state
+TFS-M0217;gold;active;150;NONE;no data;WAITING;FOR;A;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;colored;frankfort;free state
+TFS-M0218;gold;active;180;no data;no data;Moremi;Nthabiseng;;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0219;gold;active;180;9508031345088;no data;Molakeng;Anna;Nrateng;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0221;gold;active;120;9302090715088;787613862;Nhlapo;Thandi;Anna;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0222;gold;active;160;8909271518080;780372426;Makhubu;Lungile;Velucia;2022/11/03;2022/11/03;yes;no;;;cash;;white;frankfort;free state
+TFS-M0223;gold;active;120;no data;no data;Zwane;Mshiyeni;;2022/11/03;2022/11/03;yes;no;;;bank tranfer;;colored;frankfort;free state
+TFS-M0224;gold;active;180;900827;no data;Mofokeng;Thembi;Perseverance;2022/11/03;2022/11/03;yes;no;;;bank tranfer;;black;frankfort;free state
+TFS-M0226;gold;active;140;8209125944081;782807238;Mofokeng;Motsamai;Morgan;2022/11/03;2022/11/03;no;yes;;;cash;;black;frankfort;free state
+TFS-M0227;gold;active;120;9811070154084;no data;Tshabalala;Lindiwe;Lavonia;2022/11/03;2022/11/03;no;no;;;cash;;black;frankfort;free state
+TFS-M0228;gold;active;120;7405051820086;768912901;Moloi;Masetjhaba;Josephine;2022/11/03;2022/11/03;no;yes;;;cash;;white;frankfort;free state
+TFS-M0229;gold;active;100;721120137088;740605780;Mokoena;Khali;Evelyn;2022/11/03;2022/11/03;no;yes;;;cash;;colored;frankfort;free state
+TFS-M0230;gold;active;120;7203121221082;no data;Dlamini;Selina;Mantwa;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0231;gold;active;100;5502270489081;no data;Mbele;Mahlongwana;Josephina;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0232;gold;active;100;7312250690080;no data;Mokoena;Jemina;Sellwane;2022/11/03;2022/11/03;no;no;;;bank tranfer;;black;frankfort;free state
+TFS-M0233;gold;active;120;890807;no data;Mokoena;Lucky;;2022/11/03;2022/11/03;yes;no;;;bank tranfer;;white;frankfort;free state
+TFS-M0234;gold;active;180;9808041034080;no data;Motaung;Cinah;;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;colored;frankfort;free state
+TFS-M0235;gold;active;120;9309200436083;769961931;Mokoena;Selina;;2022/11/03;2022/11/03;no;yes;;;cash;;black;frankfort;free state
+TFS-M0236;gold;active;160;10280374082;no data;Tsotetsi;Pulane;Jaynet;2022/11/03;2022/11/03;no;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0238;gold;active;180;9410110401082;no data;Tshabangu;Thulisisle;;2022/11/03;2022/11/03;no;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0239;gold;active;160;9707156149081;761164172;Setlaelo;Lucas;;2022/11/03;2022/11/03;yes;yes;;;cash;;white;frankfort;free state
+TFS-M0242;gold;active;160;;no data;Mazibuko;Tumelo;Johannes;2022/11/03;2022/11/03;no;yes;;;cash;;colored;frankfort;free state
+TFS-M0250;gold;active;140;8906050331081;722250283;Tsotetsi;Dikeledi;Jeminah;2022/11/03;2022/11/03;yes;no;;;cash;;black;frankfort;free state
+TFS-M0251;gold;active;120;no data;no data;Nyamathi;Steve;;2022/11/03;2022/11/03;no;no;;;cash;;black;frankfort;free state
+TFS-M0253;gold;active;200;8310075557087;827658992;Mosia;Jacob;Majapela;2022/11/03;2022/11/03;yes;no;;;bank tranfer;;black;frankfort;free state
+TFS-M0254;gold;active;160;9806280985087;no data;Molise;Palesa;Vinolia;2022/11/03;2022/11/03;no;yes;;;bank tranfer;;white;frankfort;free state
+TFS-M0255;gold;active;120;680109;766518281;Motsoeneng;Piet;Malesela;2022/11/03;2022/11/03;yes;no;;;bank tranfer;;colored;frankfort;free state
+TFS-M0261;gold;active;120;6501030514080;765220607;Radebe;Adelinah;Sarah;2022/11/03;2022/11/03;no;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0262;gold;active;140;7602027155080;768243310;Mofokeng;Sajene;Tjale;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0274;gold;active;100;9604035400084;737603135;Mashabi;Mpho;;2022/11/03;2022/11/03;yes;yes;;;cash;;black;frankfort;free state
+TFS-M0275;gold;active;120;8408080828087;794673802;Mpondo;Maria;;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;white;frankfort;free state
+TFS-M0276;gold;active;180;9310200859084;631432053;Khanye;Maria;Nthabe;2022/11/03;2022/11/03;yes;no;;;bank tranfer;;colored;frankfort;free state
+TFS-M0277;gold;active;140;9911080216087;604605198;Maduna;Deliwe;Minah;2022/11/03;2022/11/03;yes;no;;;cash;;black;frankfort;free state
+TFS-M0278;gold;active;160;8408310744088;no data;Modibedi;Puleng;Constance;2022/11/03;2022/11/03;yes;yes;;;cash;;black;frankfort;free state
+TFS-M0279;gold;active;120;8412225681088;no data;Tsotetsi;Foro;Elias;2022/11/03;2022/11/03;yes;yes;;;cash;;black;frankfort;free state
+TFS-M0280;gold;active;120;8303105732085;722250283;Tsotetsi;Morena;Samuel;2022/11/03;2022/11/03;yes;yes;;;cash;;white;frankfort;free state
+TFS-M0281;gold;active;120;8206180481082;712240231;Magagula;Mthenjwase;Thembi;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;colored;frankfort;free state
+TFS-M0282;gold;active;120;8712120866084;733624229;Shabalala;Zandile;Portia;2022/11/03;2022/11/03;no;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0284;gold;active;120;3040064085;715872202;Masiteng;Relebohile;Victoriah;2022/11/03;2022/11/03;no;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0285;gold;active;140;10710;782235824;Mosia;Paballo;;2022/11/03;2022/11/03;no;no;;;bank tranfer;;black;frankfort;free state
+TFS-M0286;gold;active;140;8412110616082;no data;Sibanyoni;Nomvula;Sophie;2022/11/03;2022/11/03;no;no;;;bank tranfer;;white;frankfort;free state
+TFS-M0287;gold;active;160;9911011057089;730774348;Mosiya;Refiloe;Portia;2022/11/03;2022/11/03;yes;no;;;cash;;colored;frankfort;free state
+TFS-M0288;gold;active;120;9709170372087;763063123;Dhlamini;Thokozili;Jessie;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0291;gold;active;120;4812230532081;626249441;Nxoko;Ntombikwenzani;;2022/11/03;2022/11/03;no;no;;;bank tranfer;;black;frankfort;free state
+TFS-M0292;gold;active;160;no data;620201915;Motloung;Disebo;L;2022/11/03;2022/11/03;yes;yes;;;cash;;black;frankfort;free state
+TFS-M0294;gold;active;100;6809035827086;719862041;Nhlapho;Mishack;;2022/11/03;2022/11/03;yes;yes;;;cash;;white;frankfort;free state
+TFS-M0296;gold;active;120;;no data;Mamoso;khanye;;2022/11/03;2022/11/03;no;yes;;;cash;;colored;frankfort;free state
+TFS-M0297;gold;active;120;8608011297084;815551518;Mokoena;Zryn;Nnana;2022/11/03;2022/11/03;no;yes;;;cash;;black;frankfort;free state
+TFS-M0298;gold;active;200;8904305341088;604284352;Makhubo;Makhosonke;Samuel;2022/11/03;2022/11/03;no;no;;;bank tranfer;;black;frankfort;free state
+TFS-M0300;gold;active;160;8802121047084;744436800;Mazibuko;Lefina;Mashembe;2022/11/03;2022/11/03;yes;no;;;bank tranfer;;black;frankfort;free state
+TFS-M0301;gold;active;120;81055270453086;723073089;Mbulangwe;Maria;Phindiwe;2022/11/03;2022/11/03;no;yes;;;bank tranfer;;white;frankfort;free state
+TFS-M0302;gold;active;120;8412110629085;786334966;Makhalemele;Mpho;Katrina;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;colored;frankfort;free state
+TFS-M0303;gold;active;140;8809120749086;736155304;Mokoena;Maserame;Witney;2022/11/03;2022/11/03;no;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0304;gold;active;120;7311275719080;664075580;Radebe;Panolla;John;2022/11/03;2022/11/03;yes;yes;;;cash;;black;frankfort;free state
+TFS-M0305;gold;active;120;7706050759088;no data;Mtholo;Jeminah;Mosela;2022/11/03;2022/11/03;no;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0306;gold;active;120;9705051357080;664075580;Monareng;Dieketseng;Dora;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;white;frankfort;free state
+TFS-M0308;gold;active;180;8011185885083;;Sibanyoni;Nfisha;Isaiah;2022/11/03;2022/11/03;no;no;;;cash;;colored;frankfort;free state
+TFS-M0309;gold;active;180;9207240451080;838850162;Khanyile;Nonhlanhla;Lettia;2022/11/03;2022/11/03;yes;no;;;cash;;black;frankfort;free state
+TFS-M0310;gold;active;140;9707010808088;no data;Tsotetsi;Eunice;Puleng;2022/11/03;2022/11/03;yes;no;;;cash;;black;frankfort;free state
+TFS-M0311;gold;active;180;;810982858;Mokoena;Caroline;;2022/11/03;2022/11/03;yes;yes;;;cash;;black;frankfort;free state
+TFS-M0313;gold;active;120;;no data;Moloi;Selina;Puleng;2022/11/03;2022/11/03;yes;no;;;bank tranfer;;white;frankfort;free state
+TFS-M0314;gold;active;180;;no data;Moloi;Maria;Sibongile;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;colored;frankfort;free state
+TFS-M0315;gold;active;120;46608230397081;720773846;Semela;Josephine;;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0317;gold;active;120;6611115253088;no data;Mokoena;Isaac;Motlalepula;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0318;gold;active;140;8705180697084;784239560;Motsoeneng;Refiloe;;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0319;gold;active;120;9509280351082;no data;Mokoena;Mpho;Lizbeth;2022/11/03;2022/11/03;yes;no;;;cash;;white;frankfort;free state
+TFS-M0320;gold;active;160;9605110490080;631083467;Mkoki;Sylivia;Nthabiseng;2022/11/03;2022/11/03;no;no;;;bank tranfer;;colored;frankfort;free state
+TFS-M0322;gold;active;140;8004160815084;832784251;Tsotetsi;Ntja;Maria;2022/11/03;2022/11/03;no;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0323;gold;active;140;2270406081;619809624;Vilakazi;Lerato;Brandy;2022/11/03;2022/11/03;no;yes;;;cash;;black;frankfort;free state
+TFS-M0324;gold;active;120;8407280331082;797685764;Shabalala;Gabisile;Lizzy;2022/11/03;2022/11/03;no;yes;;;cash;;black;frankfort;free state
+TFS-M0325;gold;active;100;810207;638253995;Mokoena;Mohapi;William;2022/11/03;2022/11/03;yes;yes;;;cash;;white;frankfort;free state
+TFS-M0326;gold;active;120;8206026093083;no data;Mnguni;Jan;Mkhulu;2022/11/03;2022/11/03;yes;yes;;;cash;;colored;frankfort;free state
+TFS-M0327;gold;active;100;550714;";0768912901";Mokhulu;Siyaya;Morgan;2022/11/03;2022/11/03;no;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0328;gold;active;120;891030;no data;Masiteng;Thabo;Samson;2022/11/03;2022/11/03;yes;no;;;bank tranfer;;black;frankfort;free state
+TFS-M0329;gold;active;140;540119546708;no data;Masiteng;Mishick;Mokutse;2022/11/03;2022/11/03;yes;no;;;bank tranfer;;black;frankfort;free state
+TFS-M0330;gold;active;120;7502185402086;848190848;Mngomezulu;Thomas;Mashobani;2022/11/03;2022/11/03;no;no;;;bank tranfer;;white;frankfort;free state
+TFS-M0331;gold;active;160;9512155501088;;Thabethe;Jonas;Jonny;2022/11/03;2022/11/03;no;yes;;;bank tranfer;;colored;frankfort;free state
+TFS-M0332;gold;active;180;9502030347088;765220607;Mokoena;Mamello;;2022/11/03;2022/11/03;no;no;;;cash;;black;frankfort;free state
+TFS-M0333;gold;active;120;8801271022082;720250903;Molefe;Martha;Dipolelo;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0334;gold;active;120;8408070328080;797647585;Nyembe;Paulina;;2022/11/03;2022/11/03;no;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0335;gold;active;100;6408175490084;791326612;Mojola;Thabo;Phillip;2022/11/03;2022/11/03;yes;yes;;;cash;;white;frankfort;free state
+TFS-M0336;gold;active;120;8108140690085;735172286;Tsotetsi;Dorah;Qonqa;2022/11/03;2022/11/03;no;yes;;;cash;;colored;frankfort;free state
+TFS-M0337;gold;active;140;8310096096081;631275989;Mokoena;Isack;;2022/11/03;2022/11/03;yes;no;;;cash;;black;frankfort;free state
+TFS-M0339;gold;active;120;7107230460087;606984559;Mphuthi;Mmatsaba;Evelin;2022/11/03;2022/11/03;no;no;;;cash;;black;frankfort;free state
+TFS-M0340;gold;active;120;9301250604082;606984559;Diseko;Puseletso;Tina;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0341;gold;active;100;6260906083;603487339;Moshabi;Relebojile;;2022/11/03;2022/11/03;no;yes;;;bank tranfer;;white;frankfort;free state
+TFS-M0347;gold;active;140;7301245403089;810142094;Mokoena;Daniel;Seeiso;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;colored;frankfort;free state
+TFS-M0349;gold;active;150;9302140913089;789705708;Khanye;Patricia;Lerato;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0350;gold;active;120;8402081084089;604885600;Selepe;Baphelile;Selina;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0351;gold;active;100;8003015259084;710268862;Mnqosini;Mzwandile;Daniel;2022/11/03;2022/11/03;yes;yes;;;cash;;black;frankfort;free state
+TFS-M0354;gold;active;120;9312260308085;738684615;Mofokeng;Shelly;Lebohang;2022/11/03;2022/11/03;yes;no;;;bank tranfer;;white;frankfort;free state
+TFS-M0356;gold;active;160;9512080966083;760170097;Xaba;Theresa;;2022/11/03;2022/11/03;yes;no;;;bank tranfer;;colored;frankfort;free state
+TFS-M0357;gold;active;120;4607070678089;760170097;Mokoena;Paulina;;2022/11/03;2022/11/03;yes;no;;;cash;;black;frankfort;free state
+TFS-M0358;gold;active;180;9612315481088;640459119;Mofokeng;Ntsapo;Thomas;2022/11/03;2022/11/03;yes;yes;;;cash;;black;frankfort;free state
+TFS-M0360;gold;active;120;8211095714080;no data;Tsotetsi;Ishmael;;2022/11/03;2022/11/03;yes;no;;;cash;;black;frankfort;free state
+TFS-M0361;gold;active;140;6501030514080;765220607;Radebe;Sarah;Adelinah;2022/11/03;2022/11/03;no;yes;;;cash;;white;frankfort;free state
+TFS-M0363;gold;active;120;6503145539083;727435288;Mokoena;Mohapi;;2022/11/03;2022/11/03;no;yes;;;bank tranfer;;colored;frankfort;free state
+TFS-M0367;gold;active;120;8910021433083;722695537;Masiteng;Maki;Elizabeth;2022/11/03;2022/11/03;no;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0368;gold;active;120;8801250288084;636185999;Mofokeng;Nthabiseng;Maria;2022/11/03;2022/11/03;no;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0369;gold;active;170;6903165508085;no data;Khambule;Selane;Kingsley;2022/11/03;2022/11/03;yes;no;;;bank tranfer;;black;frankfort;free state
+TFS-M0370;gold;active;140;5603150692081;837195190;Mokoena;Joyce;Cikose;2022/11/03;2022/11/03;yes;no;;;bank tranfer;;white;frankfort;free state
+TFS-M0371;gold;active;120;5712065712080;768066699;Maloka;Petrus;Motlahae;2022/11/03;2022/11/03;no;yes;;;cash;;colored;frankfort;free state
+TFS-M0372;gold;active;120;;723931851;Maloka;Tiisetso;;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0373;gold;active;120;8405026234081;783874131;Mngomezulu;John;Mbuyiswa;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0375;gold;active;120;8307315838087;783138599;Mofokeng;Joseph;Leponesa;2022/11/03;2022/11/03;no;yes;;;cash;;black;frankfort;free state
+TFS-M0379;gold;active;120;no data;731732137;Mokoena;Thabang;Elias;2022/11/03;2022/11/03;no;yes;;;cash;;white;frankfort;free state
+TFS-M0381;gold;active;120;8911060794088;785865640;Maleke;Sonto;Evelynah;2022/11/03;2022/11/03;no;yes;;;cash;;colored;frankfort;free state
+TFS-M0382;gold;active;180;980823531086;no data;Mofokeng;Masabata;Samantha;2022/11/03;2022/11/03;yes;no;;;cash;;black;frankfort;free state
+TFS-M0383;gold;active;140;9312250278082;no data;Nhlapo;Noma;Vidah;2022/11/03;2022/11/03;no;no;;;bank tranfer;;black;frankfort;free state
+TFS-M0384;gold;active;160;8805160236083;no data;Mofokeng;Neo;Lucia;2022/11/03;2022/11/03;yes;no;;;bank tranfer;;black;frankfort;free state
+TFS-M0385;gold;active;120;7403275695087;720763400;Mzini;Johanness;Makamvana;2022/11/03;2022/11/03;no;yes;;;bank tranfer;;white;frankfort;free state
+TFS-M0386;gold;active;120;7707250418087;no data;Dlamini;Matsidiso;Lizy;2022/11/03;2022/11/03;yes;no;;;bank tranfer;;colored;frankfort;free state
+TFS-M0387;gold;active;120;7605120473086;no data;Motsoeneng;Alina;Lilienne;2022/11/03;2022/11/03;no;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0388;gold;active;120;8201040974087;no data;Kheswa;Roseline;Makhoza;2022/11/03;2022/11/03;yes;yes;;;cash;;black;frankfort;free state
+TFS-M0389;gold;active;120;8410251055086;no data;Mokoena;Selina;Mamiki;2022/11/03;2022/11/03;no;yes;;;bank tranfer;;black;frankfort;free state
+TFS-M0390;gold;active;180;8701185210080;783935824;Modise;Storm;William;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;white;frankfort;free state
+TFS-M0391;gold;active;120;8010031195085;no data;Mokoena;Nnini;Lizzy;2022/11/03;2022/11/03;yes;no;;;cash;;colored;frankfort;free state
+TFS-M0393;gold;active;120;9309200436083;789161931;Mokoena;Selina;;2022/11/03;2022/11/03;yes;no;;;cash;;black;frankfort;free state
+TFS-M0401;gold;active;120;9311160473080;738385208;Radebe;Nthabiseng;Portia;2022/11/03;2022/11/03;yes;yes;;;cash;;black;frankfort;free state
+TFS-M0501;gold;active;140;930922;608660414;Mphuthi;Mosela;Sarah;2022/11/03;2022/11/03;yes;yes;;;cash;;black;frankfort;free state
+TFS-M0502;gold;active;120;8205106251082;648181198;Mofokeng;Kordjan;Tshusi;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;white;frankfort;free state
+TFS-M0505;gold;active;160;9309290352083;828669597;Mosiya;Nthasbiseng;Belinda;2022/11/03;2022/11/03;yes;yes;;;bank tranfer;;colored;frankfort;free state
