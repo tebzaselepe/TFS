@@ -21,41 +21,56 @@ from pandas.api.types import (
 # Uses st.experimental_singleton to only run once.
 @st.experimental_singleton
 def init_connection():
-    # return pymongo.MongoClient(**st.secrets["mongo"])
-    # mongodb+srv://tebogo:<password>@cluster0.sfcysmi.mongodb.net/?retryWrites=true&w=majority
-    return pymongo.MongoClient("mongodb://localhost:27017")
-# mongodb+srv://cluster0.sfcysmi.mongodb.net/TFS_DB?tls=true&tlsCertificateKeyFile=C%3A%5CUsers%5CPfunzo%5CDesktop%5Cstreamlit_mongo%5CX509-cert-3952646099818541177.pem&authMechanism=MONGODB-X509&authSource=%24external
+    return pymongo.MongoClient(**st.secrets["mongo"])
 
 client = init_connection()
+db = client.TFS_DB
+clients_collection = db.clients
 
-try:
-# Uses st.experimental_memo to only rerun when the query changes or after 10 min.
-    @st.experimental_memo(ttl=600)
-    def get_data():
-        db = client.tfs_db
-        items = db.new_client_data.find()
-        items = list(items)  # make hashable for st.experimental_memo
-        return items
-    items = get_data()
-    
-    def get_client_collection():
-        db = client.tfs_db
-        # items = db.new_client_data.find()
-        items = db['new_client_data']
-        st.write(items)
-        return items
-    new_client_collection = get_client_collection()
+def get_old_data():
+        ss_data = db.ss_clients.find()
+        ss_data = list(ss_data)  # make hashable for st.experimental_memo
+        return ss_data
+# old_data = get_old_data()
     
     
-    
-except Exception:
-    st.warning("Unable to connect to server.")
+def get_new_data():
+        data = db.clients.find()
+        data = list(data)
+        return data
+# new_data = get_new_data()
 
-# st.write(items)
-# query_df =  pd.DataFrame(items)
-# st.dataframe(query_df)
-
-
+def insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,id_photo,payment_method,beneficiary_names,beneficiary_phone,ben_relation,policy_type,policy_cover,policy_premium,payment_date,reminder_date,age,has_paid,dependents):
+    client_document = {
+        "first_name" : first_name,
+        "last_name" : last_name,
+        "email" : email,
+        "phone_no" : phone_no,
+        "gender" : gender,
+        "race" : race,
+        "id_no" : id_no,
+        "date_of_birth" : dob.isoformat(),
+        "age" : age,
+        "photo_id" : id_photo,
+        "reminder_date" : reminder_date,
+        "premium" : policy_premium,
+        "payment_date" : payment_date,
+        "payment_method": payment_method,
+        "has_paid": has_paid,
+        "beneficiary" : {
+            "full_names" : beneficiary_names,
+            "contact_phone" : beneficiary_phone,
+            "relation" : ben_relation,
+        },
+        "policy" : {
+            "policy_number": generate_policy_number(),
+            "type" : policy_type,
+            "cover" : policy_cover,
+            "status" : init_policy_status(),
+        },
+        "dependents" : dependents
+    }
+    clients_collection.insert_one(client_document)
 
 def generate_policy_number():
     digits = string.digits
@@ -146,42 +161,11 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                     df = df[df[column].str.contains(user_text_input, na=False)]
     return df
 
-def insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,id_photo,payment_method,beneficiary_names,beneficiary_phone,ben_relation,policy_type,policy_cover,policy_premium,payment_date,reminder_date,age,has_paid,dependents):
-    clients = get_client_collection()
-    client_document = {
-        "first_name" : first_name,
-        "last_name" : last_name,
-        "email" : email,
-        "phone_no" : phone_no,
-        "gender" : gender,
-        "race" : race,
-        "id_no" : id_no,
-        "date_of_birth" : dob.isoformat(),
-        "age" : age,
-        "photo_id" : id_photo,
-        "reminder_date" : reminder_date,
-        "premium" : policy_premium,
-        "payment_date" : payment_date,
-        "payment_method": payment_method,
-        "has_paid": has_paid,
-        "beneficiary" : {
-            "full_names" : beneficiary_names,
-            "contact_phone" : beneficiary_phone,
-            "relation" : ben_relation,
-        },
-        "policy" : {
-            "policy_number": generate_policy_number(),
-            "type" : policy_type,
-            "cover" : policy_cover,
-            "status" : init_policy_status(),
-        },
-        "dependents" : dependents
-    }
-    clients.insert_one(client_document)
+
     
 def init_policy_status():
-      status = 'new'
-      return status
+    status = 'new'
+    return status
 
 def update_policy_status(policy_no):
     # TODO
