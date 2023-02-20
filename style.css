@@ -30,7 +30,7 @@ footer {
 }
 
 #MainMenu {
-    display: none;
+    /* display: none; */
 }
 
 .css-1dp5vir 
@@ -98,4 +98,10 @@ footer {
 
 .css-uc76bn {
     visibility: hidden;
+}
+
+.nav-link-horizontal.active
+{
+    font-weight: lighter !important;
+    font-size: smaller;
 }
