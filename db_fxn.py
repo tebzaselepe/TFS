@@ -6,7 +6,10 @@ import string
 import pprint
 import datetime
 import pymongo
+# import ServerApi
+from bson.objectid import ObjectId
 import pandas as pd
+from numerize.numerize import numerize
 
 from pymongo import MongoClient
 from datetime import date, timedelta
@@ -17,30 +20,61 @@ from pandas.api.types import (
     is_object_dtype,
 )
 
-# Initialize connection.
-# Uses st.experimental_singleton to only run once.
-@st.experimental_singleton
-def init_connection():
-    return pymongo.MongoClient(**st.secrets["mongo"])
-
-client = init_connection()
+connection_str = "mongodb://ramble:JYnBQFDwImfUO0SX@tfscluster.wh3gpyp.mongodb.net/?retryWrites=true&w=majority"
+client = MongoClient(connection_str)
 db = client.TFS_DB
-clients_collection = db.clients
+
+
+# client = pymongo.MongoClient("mongodb+srv://ramble:JYnBQFDwImfUO0SX@tfscluster.wh3gpyp.mongodb.net/?retryWrites=true&w=majority",)
+# db = client.test
+
+# @st.cache
+# def get_data():
+#     df = pd.read_csv('policy_data.csv')
+#     # df['payment_date']= pd.to_datetime(df['payment_date'])
+#     # df['reminder_date']= pd.to_datetime(df['reminder_date'])
+#     return df
+
+
+# df = get_data()
+
+
 
 def get_old_data():
-        ss_data = db.ss_clients.find()
-        ss_data = list(ss_data)  # make hashable for st.experimental_memo
-        return ss_data
-# old_data = get_old_data()
-    
+    old_data =  db.old_data.find()
+    old_data = list(old_data)  # make hashable for st.experimental_memo
+    return old_data
     
 def get_new_data():
-        data = db.clients.find()
-        data = list(data)
-        return data
-# new_data = get_new_data()
+    data = db.clients.find()
+    data = list(data)
+    return data
+    
+# convert db data to pandas
+def db_to_pd():
+    data = get_old_data()
+    df = pd.DataFrame(data)
+    return df
 
-def insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,id_photo,payment_method,beneficiary_names,beneficiary_phone,ben_relation,policy_type,policy_cover,policy_premium,payment_date,reminder_date,age,has_paid,dependents):
+def write_csv_file():
+    with open("data.csv", "w") as file:
+        df = db_to_pd()
+        df.to_csv(file, index=False)
+        
+def read_csv():
+    df = pd.read_csv( 
+        "data.csv"
+    )
+    return df
+
+def calculate_age(dob):
+    today = datetime.datetime.today()
+    age = today.year - dob.year
+    if today.month < dob.month or (today.month == dob.month and today.day < dob.day):
+        age -= 1
+    return age
+    
+def insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,address,id_photo,payment_method,beneficiary_names,beneficiary_phone,ben_relation,policy_type,policy_cover,policy_premium,payment_date,reminder_date,age,has_paid,dependents):
     client_document = {
         "first_name" : first_name,
         "last_name" : last_name,
@@ -53,6 +87,7 @@ def insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,
         "age" : age,
         "photo_id" : id_photo,
         "reminder_date" : reminder_date,
+        "address" : address,
         "premium" : policy_premium,
         "payment_date" : payment_date,
         "payment_method": payment_method,
@@ -70,7 +105,7 @@ def insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,
         },
         "dependents" : dependents
     }
-    clients_collection.insert_one(client_document)
+    db['clients'].insert_one(client_document)
 
 def generate_policy_number():
     digits = string.digits
@@ -81,10 +116,6 @@ def generate_employee_id():
     letters = string.ascii_letters
     employee_id = ''.join(random.choice(letters + string.digits) for i in range(10))
     return employee_id
-
-df = pd.read_csv( 
-    "data.csv"
-)
 
 def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     """
@@ -161,8 +192,29 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                     df = df[df[column].str.contains(user_text_input, na=False)]
     return df
 
-
+def determine_policy_status(member_registration_date, payment_dates, waiting_period_end, policy_cancelled):
+    current_date = datetime.now().date()
     
+    if policy_cancelled:
+        return "cancelled"
+    
+    time_since_registration = current_date - member_registration_date
+    if time_since_registration <= timedelta(days=60):
+        return "new"
+    
+    missed_payments = 0
+    for payment_date in payment_dates:
+        time_since_payment = current_date - payment_date
+        if time_since_payment > timedelta(days=30):
+            missed_payments += 1
+    
+    if missed_payments >= 3:
+        return "pending lapse"
+    elif current_date >= waiting_period_end:
+        return "newly active"
+    
+    return "unknown"
+
 def init_policy_status():
     status = 'new'
     return status
@@ -187,12 +239,6 @@ def insert_emp_doc(first_name,last_name,email,password,role,status):
     }
     inserted_id =  employees.insert_one(emp_doc).inserted_id
 
-def calculate_age(dob):
-    today = datetime.datetime.today()
-    age = today.year - dob.year
-    if today.month < dob.month or (today.month == dob.month and today.day < dob.day):
-        age -= 1
-    return age
 
 def calculate_premium(tier, cover, age, members):
     # Dictionary to store the cost for each tier and cover
@@ -224,3 +270,37 @@ def show_existing_client_data():
     items = client.find()
     items = list(items)
     return items
+
+def display_customer_info(customer):
+    st.write("**Name:**", customer["first_name"], customer["last_name"])
+    st.write("**Email:**", customer["email"])
+    st.write("**Phone Number:**", customer["phone_no"])
+    st.write("**Gender:**", customer["gender"])
+    st.write("**Race:**", customer["race"])
+    st.write("**ID Number:**", customer["id_no"])
+    st.write("**Date of Birth:**", customer["date_of_birth"])
+    st.write("**Age:**", customer["age"])
+    st.write("**Beneficiary Name:**", customer["beneficiary"]["full_names"])
+    st.write("**Policy Number:**", customer["policy"]["policy_number"])
+    st.write("**Policy Type:**", customer["policy"]["type"])
+    st.write("**Policy Cover:**", customer["policy"]["cover"])
+    st.write("**Policy Status:**", customer["policy"]["status"])
+    st.write("**Dependents:**")
+    for dependent in customer["dependents"]:
+        st.write(f"- {dependent['name']}, {dependent['id']}, {dependent['age']}, {dependent['relation']}")
+    st.write("**Premium:**", customer["premium"])
+    st.write("**Payment Date:**", customer["payment_date"])
+    st.write("**Payment Method:**", customer["payment_method"])
+    st.write("**Has Paid:**", customer["has_paid"])
+
+
+# Search for customer by policy number
+def search_customer(policy_number):
+    customer = db['clients'].find_one({"policy.policy_number": policy_number})
+    return customer
+
+
+# Update customer information
+def update_customer(customer_id, field, value):
+    db['clients'].update_one({"_id": ObjectId(customer_id)}, {"$set": {field: value}})
+
