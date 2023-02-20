@@ -7,3 +7,4 @@ pymongo
 deta
 streamlit_option_menu
 plotly
+streamlit_toggle
