@@ -1,6 +1,5 @@
 import streamlit as st
 import yaml
-import streamlit_toggle as stog
 from yaml.loader import SafeLoader
 from hasher import Hasher
 from datetime import datetime
