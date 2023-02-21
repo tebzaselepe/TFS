@@ -5,12 +5,10 @@ import random
 import string
 import pprint
 import datetime
-import pymongo
-# import ServerApi
+import os
 from bson.objectid import ObjectId
 import pandas as pd
 from numerize.numerize import numerize
-
 from pymongo import MongoClient
 from datetime import date, timedelta
 from pandas.api.types import (
@@ -20,14 +18,18 @@ from pandas.api.types import (
     is_object_dtype,
 )
 
-connection_str = "mongodb://ramble:JYnBQFDwImfUO0SX@tfscluster.wh3gpyp.mongodb.net/?retryWrites=true&w=majority"
-client = MongoClient(connection_str)
-db = client.TFS_DB
+@st.experimental_singleton
+def init_connection():
+    # return MongoClient(**st.secrets["mongo"])
+    
+    return MongoClient("mongodb://user-1:user1@ac-m55jkix-shard-00-00.f3t8izm.mongodb.net:27017/test?replicaSet=atlas-nx39y5-shard-0&tls=true&tlsAllowInvalidHostnames=true&tlsAllowInvalidCertificates=true&authSource=admin")
+client = init_connection()
+# client = pymongo.MongoClient("mongodb://tebogoselepe001:lmPmb4LyXr2eoMdY@cluster0.f3t8izm.mongodb.net/?retryWrites=true&w=majority")
+# db = client.tfs_db
 
+db = client.tfs_db
 
-# client = pymongo.MongoClient("mongodb+srv://ramble:JYnBQFDwImfUO0SX@tfscluster.wh3gpyp.mongodb.net/?retryWrites=true&w=majority",)
-# db = client.test
-
+print(db)
 # @st.cache
 # def get_data():
 #     df = pd.read_csv('policy_data.csv')
@@ -39,12 +41,19 @@ db = client.TFS_DB
 # df = get_data()
 
 
-
+def calculate_age(dob):
+    today = datetime.datetime.today()
+    age = today.year - dob.year
+    if today.month < dob.month or (today.month == dob.month and today.day < dob.day):
+        age -= 1
+    return age
+@st.experimental_memo(ttl=600)
 def get_old_data():
     old_data =  db.old_data.find()
     old_data = list(old_data)  # make hashable for st.experimental_memo
     return old_data
-    
+# od = get_old_data()
+# print(od)
 def get_new_data():
     data = db.clients.find()
     data = list(data)
@@ -67,12 +76,7 @@ def read_csv():
     )
     return df
 
-def calculate_age(dob):
-    today = datetime.datetime.today()
-    age = today.year - dob.year
-    if today.month < dob.month or (today.month == dob.month and today.day < dob.day):
-        age -= 1
-    return age
+
     
 def insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,address,id_photo,payment_method,beneficiary_names,beneficiary_phone,ben_relation,policy_type,policy_cover,policy_premium,payment_date,reminder_date,age,has_paid,dependents):
     client_document = {
