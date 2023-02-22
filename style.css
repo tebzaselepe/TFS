@@ -36,7 +36,7 @@ footer {
 .css-1dp5vir 
 {
     height: 0.325rem;
-    background-image: linear-gradient(124deg, #b10404, #efcf44)
+    background-image: linear-gradient(156deg, #b10404, #4467ef);
 }
 
 .css-vene6b {
@@ -104,4 +104,45 @@ footer {
 {
     font-weight: lighter !important;
     font-size: smaller;
+}
+css-18ni7ap {
+    background-color: transparent;
+}
+
+.css-k1ih3n {
+    padding-top: 0;
+}
+[data-testid="stToolbar"]
+{
+    display: none
+}
+[data-testid="stHeader"]
+{
+    
+    /* display: none; */
+    /* position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    --tw-backdrop-blur: blur(4px);
+    height: 3.875rem;
+    background: #1c1c1ccf;
+    outline: none;
+    z-index: 999990;
+    opacity: 0.9;
+    backdrop-filter: blur(40px);
+    display: block; */
+}
+
+.fab{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #0C9;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
 }

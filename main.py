@@ -8,16 +8,86 @@ from streamlit_option_menu import option_menu
 import plotly.express as px
 from send_email import *
 from db_fxn import *
-    
+import streamlit.components.v1 as components
+from streamlit_elements import dashboard
+from streamlit_elements import elements, mui, html
 
-
-
+st.set_page_config(
+    layout='wide'
+)
 def main():
+    # with elements ("dashboard"):
+
+    # # You can create a draggable and resizable dashboard using
+    # # any element available in Streamlit Elements.
+
+    
+    #     mui.Box(
+    #         "Some text in a styled box",
+    #         sx={
+    #             "bgcolor": "background.paper",
+    #             "boxShadow": 2,
+    #             "borderRadius": 2,
+    #             "p": 2,
+    #             "minWidth": 300,
+    #         }
+    #     )
+    # # First, build a default layout for every element you want to include in your dashboard
+
+    #     layout = [
+    #         # Parameters: element_identifier, x_pos, y_pos, width, height, [item properties...]
+    #         dashboard.Item("first_item", 0, 0, 2, 2),
+    #         dashboard.Item("second_item", 2, 0, 2, 2, isDraggable=False, moved=False),
+    #         dashboard.Item("third_item", 0, 2, 1, 1, isResizable=False),
+    #     ]
+
+    # # Next, create a dashboard layout using the 'with' syntax. It takes the layout
+    # # as first parameter, plus additional properties you can find in the GitHub links below.
+
+    #     with dashboard.Grid(layout):
+    #         mui.Paper("First item", key="first_item")
+    #         mui.Paper("Second item (cannot drag)", key="second_item")
+    #         mui.Paper("Third item (cannot resize)", key="third_item")
+
+    # # If you want to retrieve updated layout values as the user move or resize dashboard items,
+    # # you can pass a callback to the onLayoutChange event parameter.
+
+    #     def handle_layout_change(updated_layout):
+    #         # You can save the layout in a file, or do anything you want with it.
+    #         # You can pass it back to dashboard.Grid() if you want to restore a saved layout.
+    #         print(updated_layout)
+
+    #     with dashboard.Grid(layout, onLayoutChange=handle_layout_change):
+    #         mui.Paper("First item", key="first_item")
+    #         mui.Paper("Second item (cannot drag)", key="second_item")
+    #         mui.Paper("Third item (cannot resize)", key="third_item")
+            
+    
+    
+    
+    def FAB():
+        components.html("""
+                    <img class="fab" src="https://raw.githubusercontent.com/tebzaselepe/TFS/main/logo-trans.png" />
+                    <style>
+                    .fab{
+                        position: fixed;
+                        width: 160px;
+                        # height: 60px;
+                        bottom: 40px;
+                        right: 40px;
+                        # background-color: #0C9;
+                        # color: #FFF;
+                        # border-radius: 50px;
+                        # text-align: center;
+                        # box-shadow: 2px 2px 3px #999;
+                    }
+                    </style>
+                    """)
+    FAB()
     def local_css(file_name):
         with open(file_name) as f:
             st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
     local_css("style.css")
-    
     # hashed_passwords = Hasher(['xxx', 'xxx']).generate()
     with open('./config.yaml') as file:
         config = yaml.load(file, Loader=SafeLoader)
@@ -33,54 +103,50 @@ def main():
     # creating a login widget
     name, authentication_status, username = authenticator.login('Login', 'main')
     if authentication_status:
-        authenticator.logout('Logout', 'sidebar')
+        authenticator.logout('Logout', 'main')
 
-        # st.title(f'Welcome back *{name}*')
+        st.title(f'Welcome back *{name}*')
         header_left,header_mid,header_right = st.columns([1,2,1],gap='large')
         
         with st.container():
-            st.title('Thoho Admin Dashboard')
-
-        selected = option_menu(
-        menu_title=None,
-        options=["Data Entry", "Data Visualization", "Edit Data"],
-        icons=["pencil-fill", "bar-chart-fill", "bar-chart"],
-        orientation="horizontal",
-        )
-
-        # --- REGISTER NEW CLIENT --- #
-        if selected == "Data Entry":
-            # with st.expander('Principle member'):
+            st.title('Admin Dashboard')
+        reg_tab, visual_tab, update_tab = st.tabs(["📊Capture Data", "👀Visualize Data", "✍️Update Data"])
+        
+        # visual_tab.subheader('👀Visualize Data')
+        # update_tab.subheader('✍️Update Data')
+        
+        with reg_tab:
+            st.header('📊Register Clients')
             st.subheader('Principle member')
             col1,col2 = st.columns(2)
             id_photo = ""
             
             with col1:
-                first_name = st.text_input("First name", value="Tebza")
-                id_no = st.text_input("ID Number", value=1130125766082, max_chars=13)
-                email = st.text_input("Email", value="tebza.mre@gmail.com")
+                first_name = st.text_input("First name")
+                id_no = st.text_input("ID Number", max_chars=13)
+                email = st.text_input("Email")
                 gender = st.selectbox("Gender", ('Male', 'Female','Transgender', 'Rather not say'))
                 payment_date = st.date_input("Payment date").isoformat()
             
                 
             with col2:
-                last_name = st.text_input("last name", value="selepe")
+                last_name = st.text_input("last name")
                 dob = st.date_input("Date of Birth")
-                age = calculate_age(dob)
-                phone_no = st.text_input("Mobile number", value='+27', max_chars=12)
+                phone_no = st.text_input("Mobile number", max_chars=12)
                 race = st.selectbox("Ethnecity", ('African', 'Colored', 'Indian', 'Asian', 'Other' 'White'))
                 reminder_date = st.date_input("Reminder date").isoformat()
+                age = calculate_age(dob)
             address = st.text_area('Physical address', height=50)
             st.markdown('---')
             st.subheader('Beneficiary/Next of kin')
             ben_col1,ben_col2, ben_col3 = st.columns(3)
             with ben_col1:
-                beneficiary_names = st.text_input("Beneficiary's First and Last Names", value="kgomotso selepe")
+                beneficiary_names = st.text_input("Beneficiary's First and Last Names")
             with ben_col2:
-                beneficiary_phone = st.text_input("Beneficiary's contact number", value='+27', max_chars=12)
+                beneficiary_phone = st.text_input("Beneficiary's contact number", max_chars=12)
             with ben_col3:
                 ben_relation = st.text_input(f"Relation with the principle member", key='beneficiary_relation')
-        # with st.expander('Dependants & Beneficiaries'):
+        
             st.subheader('Policy Cover/Type')
             pol_col1,pol_col2,pol_col3 = st.columns(3)
             with pol_col1: 
@@ -117,6 +183,8 @@ def main():
             with sub2:
                 has_agreed = st.checkbox('Do you agree to our Terms & Conditions?', key='has_agreed_terms', help='TFS Tcs & Cs to be read out by the sales rep')
 
+            with st.container():
+                st.markdown(f"Pay Monthly Premium of :green[R{policy_premium}], maximum of 3 members, then additional **:red[R20 per member for extended family]** package.")
             if has_agreed is True:
                 submit_button = st.button('submit', disabled=False, key='submit_client')
                 if submit_button:
@@ -125,8 +193,8 @@ def main():
                     st.balloons()
             else:
                 submit_button = st.button('submit', disabled=True, key='submit_client')
-        # --- VIEW DATA --- #
-        elif selected == "Data Visualization":
+        
+        with visual_tab:
             selected_data = st.sidebar.selectbox('Selelct which data to filter', ('📈 Existing Data', '🗃 New Data'))
             if selected_data == '📈 Existing Data':  
                 df = db_to_pd()
@@ -160,8 +228,8 @@ def main():
                 total_inactive = df1['POLICY_STATUS'].value_counts().get('canceled', 0)
                 total_unkown = total_clients - total_active - total_inactive
                 
+                # st.image('images/logo-trans.png',use_column_width='Auto')
                 total1,total2,total3 = st.columns(3,gap='large')
-
                 with total1:
                     st.image('images/hand.png',use_column_width='Auto')
                     st.metric(label = 'Total Premiums', value= (f"R{total_premuims}"))
@@ -173,8 +241,8 @@ def main():
                 with total3:
                     st.image('images/impression.png',use_column_width='Auto')
                     st.metric(label = 'Total Active', value= (total_active))
-                    st.metric(label = 'Total inactive', value= (total_inactive))
-                    st.metric(label = 'Total unkown', value= (total_unkown))
+                    # st.metric(label = 'Total inactive', value= (total_inactive))
+                    # st.metric(label = 'Total unkown', value= (total_unkown))
                     
                 df_selection = df.query(
                     " POLICY_TYPE == @Policy_filter "
@@ -334,11 +402,8 @@ def main():
                             st.write("ID Number: ", dependent["id"])
                             st.write("Age: ", dependent["age"])
                             st.write("Relation: ", dependent["relation"])
-        # --- EDIT DATA --- #
-        elif selected == "Edit Data":
-            st.title("Insurance Customer Management System")
-
-                # Display search bar
+        
+        with update_tab:
             policy_number = st.text_input("Enter Policy Number to Search")
             if policy_number:
                 customer = search_customer(policy_number)
@@ -357,10 +422,8 @@ def main():
                         update_customer(str(customer["_id"]), field, value)
                         st.success("Customer information updated successfully.")
                 else:
-                    st.warning("No customer found with that policy number.")        
-                # st.write(new_data)
-                # st.dataframe(new_data)
-                # st.dataframe(sales_by_product_line)
+                    st.warning("No customer found with that policy number.")
+                    
     elif authentication_status == False:
         st.error('Username/password is incorrect')
     elif authentication_status == None:
