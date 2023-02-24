@@ -23,6 +23,7 @@ def init_connection():
     # return MongoClient(**st.secrets["mongo"])
     
     return MongoClient("mongodb://user-1:user1@ac-m55jkix-shard-00-00.f3t8izm.mongodb.net:27017/test?replicaSet=atlas-nx39y5-shard-0&tls=true&tlsAllowInvalidHostnames=true&tlsAllowInvalidCertificates=true&authSource=admin")
+    # return MongoClient("mongodb://localhost:27017")
 client = init_connection()
 # client = pymongo.MongoClient("mongodb://tebogoselepe001:lmPmb4LyXr2eoMdY@cluster0.f3t8izm.mongodb.net/?retryWrites=true&w=majority")
 # db = client.tfs_db
@@ -47,13 +48,13 @@ def calculate_age(dob):
     if today.month < dob.month or (today.month == dob.month and today.day < dob.day):
         age -= 1
     return age
+
 @st.experimental_memo(ttl=600)
 def get_old_data():
     old_data =  db.old_data.find()
     old_data = list(old_data)  # make hashable for st.experimental_memo
     return old_data
-# od = get_old_data()
-# print(od)
+
 def get_new_data():
     data = db.clients.find()
     data = list(data)
@@ -297,14 +298,16 @@ def display_customer_info(customer):
     st.write("**Payment Method:**", customer["payment_method"])
     st.write("**Has Paid:**", customer["has_paid"])
 
-
 # Search for customer by policy number
+def search_client_by_ID(id_no):
+    client = db['clients'].find_one({"id_no": id_no})
+    return client
+
 def search_customer(policy_number):
     customer = db['clients'].find_one({"policy.policy_number": policy_number})
     return customer
 
 
-# Update customer information
 def update_customer(customer_id, field, value):
     db['clients'].update_one({"_id": ObjectId(customer_id)}, {"$set": {field: value}})
 

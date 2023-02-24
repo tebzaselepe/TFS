@@ -1,3 +1,5 @@
+/* RED  */
+/* #862933 */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;600;700&display=swap');
 * 
 {
@@ -6,56 +8,37 @@
     box-sizing: border-box;
     font-family: 'Montserrat';
 }
-
 .stAlert > div {
     border: 1px solid #6faadc33;
     width: max-content;
     margin: auto;
     background-color: #6faadc00;
 }
-
 footer {
     display: none;
 }
-
-
-/* RED  */
-/* #862933 */
-
 [data-testid="stSidebarNav"] {
     background-size: contain;
     background-position: 12px 30px;
     height: 200px;
     padding-top: 200px;
 }
-
-#MainMenu {
-    /* display: none; */
-}
-
-.css-1dp5vir 
-{
+.css-1dp5vir {
     height: 0.325rem;
-    background-image: linear-gradient(124deg, #b10404, #efcf44)
+    background-image: linear-gradient(156deg, #862933, #4467ef);
 }
-
+.css-1vq4p4l {
+    padding-top: 4rem;
+}
 .css-vene6b {
     z-index: 999989;
 }
-
-[data-testid="stSidebar"] {
-    max-width: 310px;
-    top: 5px;
-}
-
 .css-1rs6os {
     color: #862933;
 }
-
 .nav-link[data-v-4323f8ce] {
     font-size: small !important;
 }
-
 .e1fqkh3o3 {
     display: flex;
     flex-direction: column;
@@ -63,45 +46,63 @@ footer {
     position: fixed;
     width: inherit;
 }
-
 .css-91z34k {
     padding: 1rem 1rem 10rem;
 }
-
 [data-testid="stForm"] {
-    border: 1px solid #7d0a2f;
+    border: 1px solid #862933;
 }
-
+.st-f5 {
+    border: 1px solid #862933;
+    background: transparent;
+    color: #862933;
+}
 .st-bz {
     /* background-color: rgb(249, 249, 255); */
     /* border: 1px solid #7d0a2f; */
     border-radius: 5px;
     /* background-color: #e1e1e90f */
 }
-
 .st-cz {
-    border-bottom-color: #b02635;
-    border-top-color: #b02635;
+    border-bottom-color: #862933;
+    border-top-color: #862933;
 }
-
 .st-cy {
-    border-right-color: #b02635;
+    border-right-color: #862933;
 }
-
 .st-cx {
-    border-left-color: #b02635;
+    border-left-color: #862933;
 }
-
 .st-bw:hover {
     box-shadow: rgb(4 4 4 / 22%) 1px 2px 3px 2px;
 }
-
 .css-uc76bn {
     visibility: hidden;
 }
-
-.nav-link-horizontal.active
-{
+.nav-link-horizontal.active {
     font-weight: lighter !important;
     font-size: smaller;
+}
+css-18ni7ap {
+    background-color: transparent;
+}
+.css-k1ih3n {
+    padding-top: 0;
+}
+
+[data-testid="stToolbar"] {
+    display: none
+}
+
+.fab{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #0C9;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
 }
