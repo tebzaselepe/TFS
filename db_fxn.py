@@ -298,14 +298,16 @@ def display_customer_info(customer):
     st.write("**Payment Method:**", customer["payment_method"])
     st.write("**Has Paid:**", customer["has_paid"])
 
-
 # Search for customer by policy number
+def search_client_by_ID(id_no):
+    client = db['clients'].find_one({"id_no": id_no})
+    return client
+
 def search_customer(policy_number):
     customer = db['clients'].find_one({"policy.policy_number": policy_number})
     return customer
 
 
-# Update customer information
 def update_customer(customer_id, field, value):
     db['clients'].update_one({"_id": ObjectId(customer_id)}, {"$set": {field: value}})
 
