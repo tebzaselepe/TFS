@@ -22,8 +22,8 @@ from pandas.api.types import (
 def init_connection():
     # return MongoClient(**st.secrets["mongo"])
     
-    # return MongoClient("mongodb://user-1:user1@ac-m55jkix-shard-00-00.f3t8izm.mongodb.net:27017/test?replicaSet=atlas-nx39y5-shard-0&tls=true&tlsAllowInvalidHostnames=true&tlsAllowInvalidCertificates=true&authSource=admin")
-    return MongoClient("mongodb://localhost:27017")
+    return MongoClient("mongodb://user-1:user1@ac-m55jkix-shard-00-00.f3t8izm.mongodb.net:27017/test?replicaSet=atlas-nx39y5-shard-0&tls=true&tlsAllowInvalidHostnames=true&tlsAllowInvalidCertificates=true&authSource=admin")
+    # return MongoClient("mongodb://localhost:27017")
 client = init_connection()
 # client = pymongo.MongoClient("mongodb://tebogoselepe001:lmPmb4LyXr2eoMdY@cluster0.f3t8izm.mongodb.net/?retryWrites=true&w=majority")
 # db = client.tfs_db
