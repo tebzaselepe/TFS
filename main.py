@@ -8,7 +8,7 @@ import plotly.express as px
 from send_email import *
 from db_fxn import *
 import streamlit.components.v1 as components
-from streamlit_toggle import st_toggle_switch
+from streamlit_extras import *
 from streamlit_elements import dashboard
 from streamlit_elements import elements, mui, html
 import pandas as pd

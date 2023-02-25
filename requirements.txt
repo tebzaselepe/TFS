@@ -7,5 +7,5 @@ pymongo
 deta
 streamlit_option_menu
 plotly
-streamlit_toggle
+streamlit_extras
 numerize
