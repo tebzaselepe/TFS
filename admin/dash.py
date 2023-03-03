@@ -48,7 +48,6 @@ if selected_data == '📈 Existing Data':
 
     df1 = df.query('HAS_PAID == @Has_Paid_filter & GENDER == @Gender_filter & PAY_METHOD == @Payment_Method_filter & POLICY_STATUS == @Policy_Status_filter & POLICY_TYPE == @Policy_filter')    
 
-
     total_premuims = float(df1['MONTHLY_PREMIUM'].sum())
     total_clients = int(df1['POLICY_TYPE'].count())
     total_active = df1['POLICY_STATUS'].value_counts().get('active', 0)
@@ -56,21 +55,27 @@ if selected_data == '📈 Existing Data':
     total_unkown = total_clients - total_active - total_inactive
 
     # st.image('images/logo-trans.png',use_column_width='Auto')
-    total1,total2,total3 = st.columns(3,gap='large')
+    total1,total2,total3,total4,total5 = st.columns(5,gap='large')
     with total1:
-        st.image('images/hand.png',use_column_width='Auto')
-        st.metric(label = 'Total Premiums', value= (f"R{total_premuims}"))
+        st.image('images/svgexport-17.png',use_column_width='Auto')
+        st.metric(label = 'Total Premiums', value=numerize(total_premuims))
 
     with total2:
-        st.image('images/conversion.png',use_column_width='Auto')
+        st.image('images/svgexport-20.png',use_column_width='Auto')
         st.metric(label = 'Total Clients', value= (total_clients))
 
     with total3:
-        st.image('images/impression.png',use_column_width='Auto')
+        st.image('images/svgexport-21.png',use_column_width='Auto')
         st.metric(label = 'Total Active', value= (total_active))
-    st.metric(label = 'Total inactive', value= (total_inactive))
-    st.metric(label = 'Total unkown', value= (total_unkown))
-
+    
+    with total4:
+        st.image('images/svgexport-22.png',use_column_width='Auto')
+        st.metric(label = 'Total inactive', value= (total_inactive))
+        
+    with total5:
+        st.image('images/svgexport-23.png',use_column_width='Auto')
+        st.metric(label = 'Total unkown', value= (total_unkown))
+            
     df_selection = df.query(
     " POLICY_TYPE == @Policy_filter "
     )
@@ -84,25 +89,65 @@ if selected_data == '📈 Existing Data':
     st.subheader("Estimated Total Premiums:")
     st.subheader(f"R {total_sales:,}")
 
-    with st.expander('selection'):
-        st.dataframe(sales_by_product_line)
-        st.dataframe(df1)
-        fig_product_sales = px.bar(
-        sales_by_product_line,
-        x="MONTHLY_PREMIUM",
-        y=sales_by_product_line.index,
-        orientation="h",
-        title="<b>Sales by Policy Type</b>",
-        color_discrete_sequence=["#0083B8"] * len(sales_by_product_line),
-        template="plotly_white",
-        )
-        fig_product_sales.update_layout(
-        plot_bgcolor="rgba(0,0,0,0)",
-        xaxis=(dict(showgrid=True))
-        )
+        # with st.expander('selection'):
+            
+        # with elements("dashboard"):
 
-        # left_column.plotly_chart(fig_hourly_sales, use_container_width=True)
-        st.plotly_chart(fig_product_sales, use_container_width=True)
+        #     # You can create a draggable and resizable dashboard using
+        #     # any element available in Streamlit Elements.
+
+        #     # from streamlit_elements import dashboard
+
+        #     # First, build a default layout for every element you want to include in your dashboard
+
+        #         layout = [
+        #             # Parameters: element_identifier, x_pos, y_pos, width, height, [item properties...]
+        #             dashboard.Item("first_item", 0, 0, 2, 2),
+        #             dashboard.Item("second_item", 2, 0, 2, 2, isDraggable=False, moved=False),
+        #             dashboard.Item("third_item", 0, 2, 1, 1, isResizable=False),
+        #         ]
+
+        #         # Next, create a dashboard layout using the 'with' syntax. It takes the layout
+        #         # as first parameter, plus additional properties you can find in the GitHub links below.
+
+        #         with dashboard.Grid(layout):
+        #             mui.Paper("First item", key="first_item")
+        #             mui.Paper("Second item (cannot drag)", key="second_item")
+        #             mui.Paper("Third item (cannot resize)", key="third_item")
+
+        #         # If you want to retrieve updated layout values as the user move or resize dashboard items,
+        #         # you can pass a callback to the onLayoutChange event parameter.
+
+        #         def handle_layout_change(updated_layout):
+        #             # You can save the layout in a file, or do anything you want with it.
+        #             # You can pass it back to dashboard.Grid() if you want to restore a saved layout.
+        #             print(updated_layout)
+
+        #         with dashboard.Grid(layout, onLayoutChange=handle_layout_change):
+        #             mui.Paper("First item", key="first_item")
+        #             mui.Paper("Second item (cannot drag)", key="second_item")
+        #             mui.Paper("Third item (cannot resize)", key="third_item")
+                
+            # st.dataframe(sales_by_product_line)
+            
+            # st.dataframe(df1)
+            
+            # fig_product_sales = px.bar(
+            # sales_by_product_line,
+            # x="MONTHLY_PREMIUM",
+            # y=sales_by_product_line.index,
+            # orientation="h",
+            # title="<b>Sales by Policy Type</b>",
+            # color_discrete_sequence=["#0083B8"] * len(sales_by_product_line),
+            # template="plotly_white",
+            # )
+            # fig_product_sales.update_layout(
+            # plot_bgcolor="rgba(0,0,0,0)",
+            # xaxis=(dict(showgrid=True))
+            # )
+
+            # left_column.plotly_chart(fig_hourly_sales, use_container_width=True)
+            # st.plotly_chart(fig_product_sales, use_container_width=True)
 
 elif selected_data == '🗃 New Data':
     new_data = get_new_data()

@@ -18,19 +18,13 @@ from pandas.api.types import (
     is_object_dtype,
 )
 
-@st.experimental_singleton
+@st.cache_resource
 def init_connection():
     # return MongoClient(**st.secrets["mongo"])
-    
     return MongoClient("mongodb://user-1:user1@ac-m55jkix-shard-00-00.f3t8izm.mongodb.net:27017/test?replicaSet=atlas-nx39y5-shard-0&tls=true&tlsAllowInvalidHostnames=true&tlsAllowInvalidCertificates=true&authSource=admin")
     # return MongoClient("mongodb://localhost:27017")
 client = init_connection()
-# client = pymongo.MongoClient("mongodb://tebogoselepe001:lmPmb4LyXr2eoMdY@cluster0.f3t8izm.mongodb.net/?retryWrites=true&w=majority")
-# db = client.tfs_db
 
-db = client.tfs_db
-
-print(db)
 # @st.cache
 # def get_data():
 #     df = pd.read_csv('policy_data.csv')
@@ -38,10 +32,9 @@ print(db)
 #     # df['reminder_date']= pd.to_datetime(df['reminder_date'])
 #     return df
 
+db = client.tfs_db
 
-# df = get_data()
-
-
+@st.cache_resource
 def calculate_age(dob):
     today = datetime.datetime.today()
     age = today.year - dob.year
@@ -49,18 +42,16 @@ def calculate_age(dob):
         age -= 1
     return age
 
-@st.experimental_memo(ttl=600)
 def get_old_data():
-    old_data =  db.old_data.find()
-    old_data = list(old_data)  # make hashable for st.experimental_memo
-    return old_data
+    data =  db.old_data.find()
+    data = list(data)  # make hashable for st.experimental_memo
+    return data
 
 def get_new_data():
     data = db.clients.find()
     data = list(data)
     return data
     
-# convert db data to pandas
 def db_to_pd():
     data = get_old_data()
     df = pd.DataFrame(data)
@@ -77,8 +68,6 @@ def read_csv():
     )
     return df
 
-
-    
 def insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,address,id_photo,payment_method,beneficiary_names,beneficiary_phone,ben_relation,policy_type,policy_cover,policy_premium,payment_date,reminder_date,age,has_paid,dependents):
     client_document = {
         "first_name" : first_name,
@@ -122,6 +111,50 @@ def generate_employee_id():
     employee_id = ''.join(random.choice(letters + string.digits) for i in range(10))
     return employee_id
 
+def check_if_cp_exists(cpp_collection, value):
+    if cpp_collection.find_one({'policy_number': value}):
+        return True
+    else:
+        return False
+    
+def enter_cpp(pol_no):
+    pn = pol_no
+    cpp_collection = db.cpp
+    chkpol = check_if_cp_exists(cpp_collection, pn)
+    print("POLICY NUMBER")
+    print(pn)
+    print(pol_no)
+    print(pn)
+    print("=====")
+    print("POLICY NUMBER CHECK")
+    print(chkpol)
+    if chkpol is False:
+        print(chkpol)
+        policy_no_doc = {
+            "policy_number" : pol_no
+        }  
+        st.write( " new entery successfull")
+        cpp_collection.insert_one(policy_no_doc)
+    elif chkpol is True: {
+        st.write("policy number exists")
+    }
+
+def register_employee(emp_id,first_name,last_name,email,password,role,status):
+    employee_collection = db.employees
+    today = datetime.date.today()
+    
+    employee_document = {
+        "employee_Id" : emp_id,
+        "first_name" : first_name,
+        "last_name" : last_name,
+        "email" : email,
+        "password" : password,
+        "role" : role,
+        "hire_date" : today.isoformat(),
+        "status" : status
+    }
+    inserted_id = employee_collection.insert_one(employee_document).inserted_id
+    
 def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     """
     Adds a UI on top of a dataframe to let viewers filter columns
@@ -231,20 +264,6 @@ def update_policy_status(policy_no):
     status = 'new'
     return status
 
-def insert_emp_doc(first_name,last_name,email,password,role,status):
-    today = datetime.date.today()
-    emp_doc = {
-        "first_name" : first_name,
-        "last_name" : last_name,
-        "email" : email,
-        "password" : password,
-        "role" : role,
-        "hire_date" : today,
-        "status" : status
-    }
-    inserted_id =  employees.insert_one(emp_doc).inserted_id
-
-
 def calculate_premium(tier, cover, age, members):
     # Dictionary to store the cost for each tier and cover
     tier_cost = {'silver': {'single': {'age_64': 70, 'age_65': 90}, 'family': 110},
@@ -298,7 +317,6 @@ def display_customer_info(customer):
     st.write("**Payment Method:**", customer["payment_method"])
     st.write("**Has Paid:**", customer["has_paid"])
 
-# Search for customer by policy number
 def search_client_by_ID(id_no):
     client = db['clients'].find_one({"id_no": id_no})
     return client
@@ -306,7 +324,6 @@ def search_client_by_ID(id_no):
 def search_customer(policy_number):
     customer = db['clients'].find_one({"policy.policy_number": policy_number})
     return customer
-
 
 def update_customer(customer_id, field, value):
     db['clients'].update_one({"_id": ObjectId(customer_id)}, {"$set": {field: value}})

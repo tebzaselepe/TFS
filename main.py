@@ -18,7 +18,6 @@ import streamlit_book as stb
 
 def main():
     
-    
     components.html("""
                 <img class="fab" src="https://raw.githubusercontent.com/tebzaselepe/TFS/main/logo-trans.png" />
                 <style>
@@ -59,27 +58,27 @@ def main():
     if authentication_status:
         stb.set_book_config(
                 menu_title=None,
-                menu_icon="private",
+                menu_icon="admin",
                 options=[
                     "Dashboard",
                     "Clients",
                     "Employees",
+                    "Cherry Picked",
                     ], 
                 paths=[
                     "admin/dash.py",
                     "admin/clients.py",
-                    "admin/employees.py"
+                    "admin/employees.py",
+                    "admin/cp_data.py"
                     ],
                 save_answers=False,
                 styles={
                     "nav-link": {"--hover-color": "#fde8ec"},
                     "nav-link-selected": {"background-color": "#862933"},
                     "nav-link": {"background": "0 0"}
-    
                 }
-                )
+        )
         authenticator.logout('Logout', 'sidebar')
-
         
         # reg_tab, visual_tab, update_tab = st.tabs(["📊Capture Data", "👀Visualize Data", "✍️Update Data"])
         
