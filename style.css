@@ -17,6 +17,9 @@
 footer {
     display: none;
 }
+[data-testid="stHeader"] {
+    height: min-content;
+}
 [data-testid="stSidebarNav"] {
     background-size: contain;
     background-position: 12px 30px;
@@ -47,7 +50,8 @@ footer {
     width: inherit;
 }
 .css-91z34k {
-    padding: 1rem 1rem 10rem;
+    padding: 0 3rem;
+    max-width: unset;
 }
 [data-testid="stForm"] {
     border: 1px solid #862933;
@@ -58,10 +62,7 @@ footer {
     color: #862933;
 }
 .st-bz {
-    /* background-color: rgb(249, 249, 255); */
-    /* border: 1px solid #7d0a2f; */
     border-radius: 5px;
-    /* background-color: #e1e1e90f */
 }
 .st-cz {
     border-bottom-color: #862933;
@@ -94,15 +95,10 @@ css-18ni7ap {
     display: none
 }
 
-.fab{
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
-    right: 40px;
-    background-color: #0C9;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    box-shadow: 2px 2px 3px #999;
+.css-1v0mbdj {
+    width: 100px;
+}
+
+.css-18sng8a {
+    top: 5px;
 }

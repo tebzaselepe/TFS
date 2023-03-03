@@ -8,6 +8,10 @@ credentials:
       email: tebogo.selepe001@gmail.com
       name: tebogo
       password: $2b$12$7vVmqmD.lVE76LlxQwGZxOw1lzQVZQ6U889.cTp2.csE8Pc0c2JSm
+    admin_tebza:
+      email: tebogo.selepe001@gmail.com
+      name: admin
+      password: 123_Admin
     ntavha:
       email: nnemkula@gmail.com
       name: ntavha
