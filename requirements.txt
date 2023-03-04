@@ -9,3 +9,4 @@ streamlit_option_menu
 plotly
 streamlit_extras
 numerize
+streamlit_elements
