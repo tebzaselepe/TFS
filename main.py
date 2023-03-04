@@ -18,23 +18,8 @@ import streamlit_book as stb
 
 def main():
     
-    components.html("""
-                <img class="fab" src="https://raw.githubusercontent.com/tebzaselepe/TFS/main/logo-trans.png" />
-                <style>
-                .fab{
-                    position: fixed;
-                    width: 250px;
-                    # height: 60px;
-                    bottom: 40px;
-                    # right: 40px;
-                    # background-color: #0C9;
-                    # color: #FFF;
-                    # border-radius: 50px;
-                    # text-align: center;
-                    # box-shadow: 2px 2px 3px #999;
-                }
-                </style>
-                """)
+    logo_col,total2 = st.columns(2,gap='small')
+    st.logo_col = st.image('images/logo.png',use_column_width='Auto')
     
     def local_css(file_name):
         with open(file_name) as f:
@@ -53,8 +38,9 @@ def main():
         config['cookie']['expiry_days'],
         config['preauthorized']
     )
+
     # creating a login widget
-    name, authentication_status, username = authenticator.login('Login', 'main')
+    st.total2 = name, authentication_status, username = authenticator.login('Login', 'main')
     if authentication_status:
         stb.set_book_config(
                 menu_title=None,

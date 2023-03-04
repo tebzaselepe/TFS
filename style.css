@@ -9,10 +9,11 @@
     font-family: 'Montserrat';
 }
 .stAlert > div {
-    border: 1px solid #6faadc33;
+    border: none;
     width: max-content;
     margin: auto;
     background-color: #6faadc00;
+    color: #8b8dcb;
 }
 footer {
     display: none;
@@ -101,4 +102,10 @@ css-18ni7ap {
 
 .css-18sng8a {
     top: 5px;
+}
+
+/*login form*/
+.css-1730068.epcbefy1 {
+    width: 33rem;
+    margin: auto;
 }
