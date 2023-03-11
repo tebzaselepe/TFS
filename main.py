@@ -1,3 +1,4 @@
+import streamlit_book as stb
 import streamlit as st
 import yaml
 from yaml.loader import SafeLoader
@@ -13,7 +14,6 @@ from streamlit_elements import dashboard
 from streamlit_elements import elements, mui, html
 import pandas as pd
 # from streamlit_login_auth_ui.widgets import __login__
-import streamlit_book as stb
 import streamlit.components.v1 as stc
 
 py_script =   """
