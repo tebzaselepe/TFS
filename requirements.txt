@@ -10,4 +10,3 @@ plotly
 streamlit_extras
 numerize
 streamlit_elements
-streamlit_login_auth_ui
