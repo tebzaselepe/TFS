@@ -94,19 +94,6 @@ button:hover {
     }
 }
 
-/* [data-testid="stImage"] */
-div[data-testid="stVerticalBlock"] img:first-child {
-    /* position: fixed;
-    width: 171px;
-    z-index: 999999; */
-}
-
-.css-1kyxreq.etr89bj2 {
-   /* position: fixed;
-    width: 171px;
-    z-index: 999999;*/
-}
-
 .css-1vq4p4l {
     padding-top: 4rem;
 }
@@ -177,7 +164,7 @@ css-18ni7ap {
 }
 
 [data-testid="stToolbar"] {
-    display: none
+    /* display: none */
 }
 
 .css-1v0mbdj {
