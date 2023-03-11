@@ -12,23 +12,24 @@ from streamlit_extras import *
 from streamlit_elements import dashboard
 from streamlit_elements import elements, mui, html
 import pandas as pd
-from streamlit_login_auth_ui.widgets import __login__
+# from streamlit_login_auth_ui.widgets import __login__
 import streamlit_book as stb
 import streamlit.components.v1 as stc
+
 py_script =   """
                 <script defer src="https://pyscript.net/latest/pyscript.js"></script>
                 <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
                 """
-                
+
 def main():
-    
+
     # stc.html(py_script,width=0)
-        
+
     def local_css(file_name):
         with open(file_name) as f:
             st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
-    
-    
+
+
     # hashed_passwords = Hasher(['xxx', 'xxx']).generate()
     with open('./config.yaml') as file:
         config = yaml.load(file, Loader=SafeLoader)
@@ -36,8 +37,8 @@ def main():
     # Creating the authenticator object
     authenticator = Authenticate(
         config['credentials'],
-        config['cookie']['name'], 
-        config['cookie']['key'], 
+        config['cookie']['name'],
+        config['cookie']['key'],
         config['cookie']['expiry_days'],
         config['preauthorized']
     )
@@ -54,7 +55,7 @@ def main():
                     "Clients",
                     "Employees",
                     "Cherry Picked",
-                    ], 
+                    ],
                 paths=[
                     "admin/dash.py",
                     "admin/clients.py",
@@ -69,13 +70,13 @@ def main():
                 }
         )
         authenticator.logout('Logout', 'sidebar')
-        
-            
+
+
     elif authentication_status == False:
         st.error('Username/password is incorrect')
     elif authentication_status == None:
         st.warning('Please enter your username and password')
-        
+
 if __name__ == "__main__":
     # st.set_page_config(layout="wide")
     header_left,header_mid,header_right = st.columns([3,3,3],gap='small')

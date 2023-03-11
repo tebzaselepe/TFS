@@ -46,17 +46,17 @@ try:
         data = db.clients.find()
         data = list(data)
         return data
-    
+
     def calculate_age(dob):
         today = datetime.datetime.today()
         age = today.year - dob.year
         if today.month < dob.month or (today.month == dob.month and today.day < dob.day):
             age -= 1
         return age
-    
+
 except Exception:
     st.warning("Unable to connect to server")
-    
+
 def db_to_pd():
     data = get_old_data()
     df = pd.DataFrame(data)
@@ -66,9 +66,9 @@ def write_csv_file():
     with open("data.csv", "w") as file:
         df = db_to_pd()
         df.to_csv(file, index=False)
-        
+
 def read_csv():
-    df = pd.read_csv( 
+    df = pd.read_csv(
         "data.csv"
     )
     return df
@@ -122,7 +122,7 @@ def check_if_cp_exists(cpp_collection, value):
         return True
     else:
         return False
-    
+
 def enter_cpp(pol_no):
     db = client.tfs_db
     pn = pol_no
@@ -139,7 +139,7 @@ def enter_cpp(pol_no):
         print(chkpol)
         policy_no_doc = {
             "policy_number" : pol_no
-        }  
+        }
         st.write( " new entery successfull")
         cpp_collection.insert_one(policy_no_doc)
     elif chkpol is True: {
@@ -150,7 +150,7 @@ def register_employee(emp_id,first_name,last_name,email,password,role,status):
     db = client.tfs_db
     employee_collection = db.employees
     today = datetime.date.today()
-    
+
     employee_document = {
         "employee_Id" : emp_id,
         "first_name" : first_name,
@@ -162,7 +162,7 @@ def register_employee(emp_id,first_name,last_name,email,password,role,status):
         "status" : status
     }
     inserted_id = employee_collection.insert_one(employee_document).inserted_id
-    
+
 def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     """
     Adds a UI on top of a dataframe to let viewers filter columns
@@ -178,7 +178,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     if not modify:
         return df
     df = df.copy()
-    
+
 
     # Try to convert datetimes into a standard format (datetime, no timezone)
     for col in df.columns:
@@ -240,25 +240,25 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
 
 def determine_policy_status(member_registration_date, payment_dates, waiting_period_end, policy_cancelled):
     current_date = datetime.now().date()
-    
+
     if policy_cancelled:
         return "cancelled"
-    
+
     time_since_registration = current_date - member_registration_date
     if time_since_registration <= timedelta(days=60):
         return "new"
-    
+
     missed_payments = 0
     for payment_date in payment_dates:
         time_since_payment = current_date - payment_date
         if time_since_payment > timedelta(days=30):
             missed_payments += 1
-    
+
     if missed_payments >= 3:
         return "pending lapse"
     elif current_date >= waiting_period_end:
         return "newly active"
-    
+
     return "unknown"
 
 def init_policy_status():
@@ -277,7 +277,7 @@ def calculate_premium(tier, cover, age, members):
     tier_cost = {'silver': {'single': {'age_64': 70, 'age_65': 90}, 'family': 110},
                 'gold': {'single': {'age_64': 100, 'age_65': 120}, 'family': 130},
                 'platinum': {'single': {'age_64': 130, 'age_65': 150}, 'family': 160}}
-    
+
     # Cost for each tier and cover
     cost = tier_cost.get(tier.lower(), {'single': {'age_64': 0, 'age_65': 0}, 'family': 0}).get(cover.lower(), 0)
 
@@ -287,7 +287,7 @@ def calculate_premium(tier, cover, age, members):
             cost = cost['age_64']
         else:
             cost = cost['age_65']
-    
+
     # Additional cost for members
     if members > 3:
         cost += (members - 3) * 20
