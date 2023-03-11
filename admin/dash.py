@@ -15,15 +15,14 @@ import pandas as pd
 
 from streamlit_login_auth_ui.widgets import __login__
 import streamlit_book as stb
-# st.title(f'Welcome back *{name}*')
-        # header_left,header_mid,header_right = st.columns([1,2,1],gap='large')
-        
-with st.container():
-    st.title('Admin Dashboard')
-            
+
+header_left,header_mid,header_right = st.columns([3,3,3],gap='large')
+header_mid.subheader('Admin Board')
+
+
 # with visual_tab:
-selected_data = st.sidebar.selectbox('Selelct which data to filter', ('📈 Existing Data', '🗃 New Data'))
-if selected_data == '📈 Existing Data':  
+selected_data = st.sidebar.selectbox('📊 Selelct which data to use', ('Existing Data', 'New Data'))
+if selected_data == 'Existing Data':  
     df = db_to_pd()
     with st.sidebar:
         Policy_filter = st.multiselect(label= 'Select The Policy Type',
@@ -149,7 +148,7 @@ if selected_data == '📈 Existing Data':
             # left_column.plotly_chart(fig_hourly_sales, use_container_width=True)
             # st.plotly_chart(fig_product_sales, use_container_width=True)
 
-elif selected_data == '🗃 New Data':
+elif selected_data == 'New Data':
     new_data = get_new_data()
     df = pd.DataFrame(new_data)
     with st.sidebar:
@@ -248,19 +247,36 @@ policy_number = st.text_input("Search by Policy")
 # id_no = st.text_input("Search by ID number",max_chars=13 )
 if policy_number:
     customer = search_customer(policy_number)
-    if customer:
-        display_customer_info(customer)
+    old_customer = search_old_customer(policy_number)
+    
+    if old_customer:
+        display_old_customer_info(old_customer)
 
         # Display update form
         st.subheader("Update Customer Information")
-        field = st.selectbox("Field to Update", ["first_name", "last_name", "email", "phone_no", "gender", "race",
-                                                "id_no", "date_of_birth", "beneficiary.full_names",
-                                                "policy.policy_number", "policy.type", "policy.cover",
-                                                "policy.status", "dependents", "premium", "payment_date",
-                                                "payment_method", "has_paid"])
+        field = st.selectbox("Field to Update", ["FIRST_NAME", "LAST_NAME", "ID_NO","MOBILE_NO",
+                                                "POLICY_NO", "POLICY_TYPE", "POLICY_STATUS",
+                                                "MONTHLY_PREMIUM", "DEBIT_DATE", "PAY_METHOD", "HAS_PAID"])
         value = st.text_input("New Value")
         if st.button("Update"):
             update_customer(str(customer["_id"]), field, value)
             st.success("Customer information updated successfully.")
     else:
         st.warning("No customer found with that policy number.")
+    
+    # if customer:
+    #     display_customer_info(customer)
+
+    #     # Display update form
+    #     st.subheader("Update Customer Information")
+    #     field = st.selectbox("Field to Update", ["first_name", "last_name", "email", "phone_no", "gender", "race",
+    #                                             "id_no", "date_of_birth", "beneficiary.full_names",
+    #                                             "policy.policy_number", "policy.type", "policy.cover",
+    #                                             "policy.status", "dependents", "premium", "payment_date",
+    #                                             "payment_method", "has_paid"])
+    #     value = st.text_input("New Value")
+    #     if st.button("Update"):
+    #         update_customer(str(customer["_id"]), field, value)
+    #         st.success("Customer information updated successfully.")
+    # else:
+    #     st.warning("No customer found with that policy number.")

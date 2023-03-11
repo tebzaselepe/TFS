@@ -5,6 +5,9 @@ from hasher import Hasher
 from datetime import datetime
 from authenticate import Authenticate
 import plotly.express as px
+from PIL import Image
+from io import BytesIO
+import time
 from send_email import *
 from db_fxn import *
 import streamlit.components.v1 as components
@@ -23,7 +26,14 @@ with st.container():
     # with reg_tab:
     st.header('📊Register Clients')
     st.subheader('Principle member')
+    
     col1,col2 = st.columns(2)
+    if "photo" not in st.session_state:
+        st.session_state["photo"]="not done"
+        
+    def change_photo_state():
+        st.session_state["photo"]="done"
+        
     id_photo = ""
     
     with col1:
@@ -32,6 +42,15 @@ with st.container():
         email = st.text_input("Email")
         gender = st.selectbox("Gender", ('Male', 'Female','Transgender', 'Rather not say'))
         payment_date = st.date_input("Payment date").isoformat()
+        image_file = st.camera_input(label='Take a picture of the ID photo' ,key=None, help='picture must be clear, well lit and not cropped', on_change=change_photo_state, args=None, kwargs=None, disabled=False)
+    if image_file is not None:
+        progress_bar = st.progress(0)
+        for percent_bar in range(100):
+            time.sleep(.05)
+            progress_bar.progress(percent_bar+1)
+        
+        # Convert the image to bytes
+        image_bytes = BytesIO(image_file.read())
     
         
     with col2:
@@ -41,6 +60,10 @@ with st.container():
         race = st.selectbox("Ethnecity", ('African', 'Colored', 'Indian', 'Asian', 'Other' 'White'))
         reminder_date = st.date_input("Reminder date").isoformat()
         age = calculate_age(dob)
+        if image_file is not None:
+            progress_bar.progress(100)
+            image = Image.open(image_bytes)
+            st.image(image, caption="Uploaded image", use_column_width=True)
     address = st.text_area('Physical address', height=50)
     st.markdown('---')
     st.subheader('Beneficiary/Next of kin')
@@ -93,7 +116,7 @@ with st.container():
     if has_agreed is True:
         submit_button = st.button('submit', disabled=False, key='submit_client')
         if submit_button:
-            insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,address,id_photo,payment_method,beneficiary_names,beneficiary_phone,ben_relation,policy_type,policy_cover,policy_premium,payment_date,reminder_date,age,has_paid,dependents)
+            insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,address,image_bytes.getvalue(),payment_method,beneficiary_names,beneficiary_phone,ben_relation,policy_type,policy_cover,policy_premium,payment_date,reminder_date,age,has_paid,dependents)
             st.success('success')
             st.balloons()
     else:

@@ -6,7 +6,7 @@ textColor="#1d1e33"
 
 [runner]
 magicEnabled = true
-fastReruns = true
+
 
 [server]
 runOnSave = true
