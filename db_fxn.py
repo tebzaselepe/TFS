@@ -32,25 +32,30 @@ client = init_connection()
 #     # df['reminder_date']= pd.to_datetime(df['reminder_date'])
 #     return df
 
-db = client.tfs_db
 
-@st.cache_resource
-def calculate_age(dob):
-    today = datetime.datetime.today()
-    age = today.year - dob.year
-    if today.month < dob.month or (today.month == dob.month and today.day < dob.day):
-        age -= 1
-    return age
+try:
+    @st.cache_resource
+    def get_old_data():
+        db = client.tfs_db
+        data =  db.old_data.find()
+        data = list(data)  # make hashable for st.experimental_memo
+        return data
 
-def get_old_data():
-    data =  db.old_data.find()
-    data = list(data)  # make hashable for st.experimental_memo
-    return data
-
-def get_new_data():
-    data = db.clients.find()
-    data = list(data)
-    return data
+    def get_new_data():
+        db = client.tfs_db
+        data = db.clients.find()
+        data = list(data)
+        return data
+    
+    def calculate_age(dob):
+        today = datetime.datetime.today()
+        age = today.year - dob.year
+        if today.month < dob.month or (today.month == dob.month and today.day < dob.day):
+            age -= 1
+        return age
+    
+except Exception:
+    st.warning("Unable to connect to server")
     
 def db_to_pd():
     data = get_old_data()
@@ -68,7 +73,8 @@ def read_csv():
     )
     return df
 
-def insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,address,id_photo,payment_method,beneficiary_names,beneficiary_phone,ben_relation,policy_type,policy_cover,policy_premium,payment_date,reminder_date,age,has_paid,dependents):
+def insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,address, image_file,payment_method,beneficiary_names,beneficiary_phone,ben_relation,policy_type,policy_cover,policy_premium,payment_date,reminder_date,age,has_paid,dependents):
+    db = client.tfs_db
     client_document = {
         "first_name" : first_name,
         "last_name" : last_name,
@@ -79,7 +85,7 @@ def insert_client_doc(first_name,last_name,email,phone_no,gender,race,id_no,dob,
         "id_no" : id_no,
         "date_of_birth" : dob.isoformat(),
         "age" : age,
-        "photo_id" : id_photo,
+        "photo_id" : image_file,
         "reminder_date" : reminder_date,
         "address" : address,
         "premium" : policy_premium,
@@ -118,6 +124,7 @@ def check_if_cp_exists(cpp_collection, value):
         return False
     
 def enter_cpp(pol_no):
+    db = client.tfs_db
     pn = pol_no
     cpp_collection = db.cpp
     chkpol = check_if_cp_exists(cpp_collection, pn)
@@ -140,6 +147,7 @@ def enter_cpp(pol_no):
     }
 
 def register_employee(emp_id,first_name,last_name,email,password,role,status):
+    db = client.tfs_db
     employee_collection = db.employees
     today = datetime.date.today()
     
@@ -295,36 +303,57 @@ def show_existing_client_data():
     items = list(items)
     return items
 
-def display_customer_info(customer):
-    st.write("**Name:**", customer["first_name"], customer["last_name"])
-    st.write("**Email:**", customer["email"])
-    st.write("**Phone Number:**", customer["phone_no"])
-    st.write("**Gender:**", customer["gender"])
-    st.write("**Race:**", customer["race"])
-    st.write("**ID Number:**", customer["id_no"])
-    st.write("**Date of Birth:**", customer["date_of_birth"])
-    st.write("**Age:**", customer["age"])
-    st.write("**Beneficiary Name:**", customer["beneficiary"]["full_names"])
-    st.write("**Policy Number:**", customer["policy"]["policy_number"])
-    st.write("**Policy Type:**", customer["policy"]["type"])
-    st.write("**Policy Cover:**", customer["policy"]["cover"])
-    st.write("**Policy Status:**", customer["policy"]["status"])
-    st.write("**Dependents:**")
-    for dependent in customer["dependents"]:
-        st.write(f"- {dependent['name']}, {dependent['id']}, {dependent['age']}, {dependent['relation']}")
-    st.write("**Premium:**", customer["premium"])
-    st.write("**Payment Date:**", customer["payment_date"])
-    st.write("**Payment Method:**", customer["payment_method"])
-    st.write("**Has Paid:**", customer["has_paid"])
+
+def display_old_customer_info(customer):
+    st.write("**Name:**", customer["FIRST_NAME"], customer["LAST_NAME"])
+    st.write("**Phone Number:**", customer["MOBILE_NO"])
+    st.write("**ID Number:**", customer["ID_NO"])
+    st.write("**Date of Birth:**", customer["POLICY_NO"])
+    st.write("**Policy Type:**", customer["POLICY_TYPE"])
+    st.write("**Policy Status:**", customer["POLICY_STATUS"])
+    st.write("**Premium:**", customer["MONTHLY_PREMIUM"])
+    st.write("**Payment Date:**", customer["DEBIT_DATE"])
+    st.write("**Payment Method:**", customer["PAY_METHOD"])
+    st.write("**Has Paid:**", customer["HAS_PAID"])
+
+
+# def display_customer_info(customer):
+#     st.write("**Name:**", customer["first_name"], customer["last_name"])
+#     st.write("**Email:**", customer["email"])
+#     st.write("**Phone Number:**", customer["phone_no"])
+#     st.write("**Gender:**", customer["gender"])
+#     st.write("**Race:**", customer["race"])
+#     st.write("**ID Number:**", customer["id_no"])
+#     st.write("**Date of Birth:**", customer["date_of_birth"])
+#     st.write("**Age:**", customer["age"])
+#     st.write("**Beneficiary Name:**", customer["beneficiary"]["full_names"])
+#     st.write("**Policy Number:**", customer["policy"]["policy_number"])
+#     st.write("**Policy Type:**", customer["policy"]["type"])
+#     st.write("**Policy Cover:**", customer["policy"]["cover"])
+#     st.write("**Policy Status:**", customer["policy"]["status"])
+#     st.write("**Dependents:**")
+#     for dependent in customer["dependents"]:
+#         st.write(f"- {dependent['name']}, {dependent['id']}, {dependent['age']}, {dependent['relation']}")
+#     st.write("**Premium:**", customer["premium"])
+#     st.write("**Payment Date:**", customer["payment_date"])
+#     st.write("**Payment Method:**", customer["payment_method"])
+#     st.write("**Has Paid:**", customer["has_paid"])
 
 def search_client_by_ID(id_no):
+    db = client.tfs_db
     client = db['clients'].find_one({"id_no": id_no})
     return client
 
 def search_customer(policy_number):
+    db = client.tfs_db
     customer = db['clients'].find_one({"policy.policy_number": policy_number})
     return customer
 
+def search_old_customer(policy_number):
+    db = client.tfs_db
+    customer = db['old_data'].find_one({"POLICY_NO": policy_number})
+    return customer
 def update_customer(customer_id, field, value):
+    db = client.tfs_db
     db['clients'].update_one({"_id": ObjectId(customer_id)}, {"$set": {field: value}})
 

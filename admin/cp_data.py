@@ -25,6 +25,17 @@ with st.expander('Entering Policy'):
         else:
             st.warning('Error Policy number already exists')
 
+with elements("style_mui_sx"):
+    mui.Box(
+        "Some text in a styled box",
+        sx={
+            "bgcolor": "background.paper",
+            "boxShadow": 1,
+            "borderRadius": 2,
+            "p": 2,
+            "minWidth": 300,
+        }
+    )
 
 # with st.expander('Captured Poilcies'):
 #     st.write()
