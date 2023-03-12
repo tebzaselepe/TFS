@@ -21,7 +21,7 @@ import streamlit_book as stb
 
 with st.container():
     st.title('Admin Dashboard')
-    # reg_tab, visual_tab, update_tab = st.tabs(["📊Capture Data", "👀Visualize Data", "✍️Update Data"])
+    reg_tab, visual_tab, update_tab = st.tabs(["📊Capture Data", "👀Visualize Data", "✍️Update Data"])
     
     # with reg_tab:
     st.header('📊Register Clients')

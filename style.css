@@ -59,8 +59,8 @@ button {
     border: 1px solid #862933;
 }
 
-button:hover {
-    background-color: #862933;
+button:hover:not([role="tab"]) {
+    background-color: #862933 !important;
     color: #ffffff !important;
 }
 
@@ -120,11 +120,14 @@ button:hover {
 [data-testid="stForm"] {
     border: 1px solid #862933;
 }
-.st-f5 {
-    border: 1px solid #862933;
+
+.st-ef:not(svg) {
+    padding-left: 0.5rem;
     background: transparent;
-    color: #862933;
+    color: darkred;
+    border: 1px solid;
 }
+
 .st-bz {
     border-radius: 5px;
 }
@@ -140,14 +143,14 @@ button:hover {
     border-left-color: #862933;
 
 } 
-.st-ef {
+/* .st-ef {
     background: transparent;
     color: #862933;
     border: 1px solid #862933;
-}
+} */
 
 .st-bw:hover {
-    box-shadow: rgb(4 4 4 / 22%) 1px 2px 3px 2px;
+    /* box-shadow: rgb(4 4 4 / 22%) 1px 2px 3px 2px; */
 }
 .css-uc76bn {
     visibility: hidden;
